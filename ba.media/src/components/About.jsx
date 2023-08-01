@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { AboutContainer , TextContainer, Text, VideoContainer} from '../styles/AboutComponents';
+import { AboutContainer , TextContainer, Text, VideoContainer, Video} from '../styles/AboutComponents';
 import Player from '@vimeo/player';
 
 const About = () => {
@@ -38,7 +38,7 @@ const About = () => {
       {
         root: null,
         rootMargin: '0px',
-        threshold: 1,
+        threshold: 0.2,
       }
     );
 
@@ -59,7 +59,7 @@ const About = () => {
           <Text>Con <span style={{color: "#3D9BE9"}}>el mejor equipo</span> de trabajo, combinamos creatividad, agilidad y eficiencia consiguiendo como resultado contenido audiovisual <span style={{color: "#FF0099"}}>de alta calidad.</span></Text>
         </TextContainer>
         <VideoContainer>
-          <div ref={videoRef}></div>
+          <Video ref={videoRef}/>
         </VideoContainer>
     </AboutContainer>
   );

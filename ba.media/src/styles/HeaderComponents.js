@@ -1,14 +1,29 @@
 import styled,  { keyframes }  from "styled-components"
 
-export const HeaderBox = styled.div`
-    
+export const HeaderBox = styled.div`    
+`;
+
+export const DesktopView = styled.div`
+    display:none;
+    @media (min-width:1600px){
+        height: 50vh; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #EDEDED;
+    }
+`;
+
+export const MobileView = styled.div`
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #EDEDED;
-
+    @media (min-width:1600px){ 
+        display: none;
+    }
 `;
 
 const slideInUp = keyframes`
@@ -29,11 +44,21 @@ export const Title = styled.div`
     }
     opacity: 0;
     animation: ${slideInUp} 1s ease-in-out 1s forwards;
+    @media (min-width:1600px){ 
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 50%;
+    }
 `;
 
 export const TVgif = styled.img`
     width: 60vw;
     opacity: 0;
     animation: ${slideInUp} 1s ease-in-out 1.5s forwards;
+    @media (min-width:1600px){ 
+        z-index: -1;
+        height: 100%;
+    }
 `
 
