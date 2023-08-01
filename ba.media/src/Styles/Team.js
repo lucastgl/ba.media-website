@@ -16,7 +16,7 @@ export const H3 = styled.div`
     font-size:30px;
     text-align:center;
     font-weight: bold;
-    margin-bottom:40px;
+    margin-bottom:50px;
         span{
             color:#FF0099;
         }
@@ -24,6 +24,7 @@ export const H3 = styled.div`
             font-size:63px;
             text-align:left;
             margin-left:340px;
+            margin-bottom:80px;
         }
 `
 
@@ -32,10 +33,13 @@ export const DivContent = styled.div`
     display:flex;
     justify-content:center;
     flex-direction:column;
+    margin-bottom:60px;
     @media (min-width:1600px){                       
         display:flex;
         justify-content:center;
         flex-direction:row;
+        margin-left:100px;
+        height:40vh;
     }
 `
 
@@ -47,6 +51,7 @@ export const Div = styled.div`
         border: solid 5px white;
         width:190px;
         height:190px;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
     }
     h4{
         animation: ${InUp} 1s ease-out;
@@ -59,8 +64,8 @@ export const Div = styled.div`
     @media (min-width:1600px){  
         margin-right:80px;
         img{
-            width:240px;
-            height:240px;
+            width:233px;
+            height:233px;
         }
     }
 `

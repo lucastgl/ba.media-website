@@ -1,4 +1,4 @@
-import {DivContent,H5, H2, GIF3, Content, SVG, StyledDiv, StyledDiv2} from "../Styles/TrackRecord";
+import {DivContent,H5, H2, GIF3, DivTitles,Content, SVG, StyledDiv, StyledDiv2} from "../Styles/TrackRecord";
 import gif3 from "../Images/gif3.gif";
 
 
@@ -6,8 +6,10 @@ import gif3 from "../Images/gif3.gif";
 function TrackRecord(){
     return(
         <DivContent>
-            <H2>Track <span>Record</span> <GIF3 src={gif3} alt="" /></H2> 
+            <DivTitles>
             <H5>GESTIÓN, PROFESIONALISMO Y TRAYECTORIA</H5>
+            <H2>Track <span>Record</span> <GIF3 src={gif3} alt="" /></H2> 
+            </DivTitles>
             <Content>
                 <StyledDiv>
                     <SVG viewBox="17 42 166.667 116.667" role="img">

@@ -1,15 +1,15 @@
-import manolo from "../Images/MANOLO.jpg";
+import manolo from "../Images/manolo.jpg";
 import gustavo from "../Images/Gustavo.jpg";
-import jochi from "../Images/JOCHI.jpg";
-import martin from "../Images/MARTIN.jpg";
+import jochi from "../Images/jochi.jpg";
+import martin from "../Images/martin.jpg";
 import { DivContent,Div,H3 } from "../Styles/Team";
 
 
 function Team(){
     return(
         <>
-        <H3>Quiénes <span>somos</span></H3>
-        <DivContent id="team" >
+        <H3 id="team">Quiénes <span>somos</span></H3>
+        <DivContent>
             <Div>
                 <img src={manolo} alt="" />
                 <h4>Juan M. Urdampilleta </h4>
