@@ -7,54 +7,94 @@ const InUp = keyframes`
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0px);
     }
 `;
 
+export const DivTitles = styled.div`
+    display:flex;
+    flex-direction:column-reverse;
+    @media (min-width:1600px){
+        flex-direction:column;
+    }
+`
 export const DivContent = styled.div`
     margin-bottom:160px;
     @media (min-width:1600px){
-        margin-bottom:40px;
+        margin-bottom:0px;
     }
 `
 export const SVG = styled.svg`
-    width:90px;
-    height:90px;
+    width:105px;
+    height:105px;
+    margin-top:20px;
+    margin-bottom:30px;
+    @media (min-width:1600px){
+        width:90px;
+        height:90px;
+        margin-top:10px;
+        margin-bottom:0px;
+        animation: ${InUp} 1s ease-out;
+    }
+`
+export const SVGVIDEO = styled.svg`
+    width:130px;
+    height:130px;
+    @media (min-width:1600px){
+        width:110px;
+        height:110px;
+        margin-top:10px;
+        animation: ${InUp} 1s ease-out;
+    }
 `
 export const GIF3 = styled.img`
     display:none;
     @media (min-width:1600px){
         display:inline;                       
         width:139px;
+        margin-left:25px;
+        
     }
 `
 export const H2 = styled.h2`
-    animation: ${InUp} 1s ease-out;
+    animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-out;
     font-size:30px;
     text-align:center;
     font-weight: bold;
-    display:flex;
-    align-items:center;
     span{
         color:#FF0099;
-        margin-left:20px;
     }
-    @media (min-width:1600px){  
-        letter-spacing: 3px;                    
+    @media (min-width:1600px){ 
+        display:flex;
+        align-items:center; 
+        letter-spacing: 2.5px;                    
         font-size:67px;
         text-align:left;
-        margin-left:320px;
+        margin-left:340px;
+        margin-bottom:30px;
+        span{
+            margin-left:20px;
+        }
     }
 `
 export const H5 = styled.h5`
-    animation: ${InUp} 1s ease-out;
+    animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-out;
     color:#21A6F3;
     font-weight: bold;
     text-align:center;
+    position:relative;
+    font-weight: 900;
+    bottom:0px;
+    font-size:12px;
+    margin-bottom:50px;
     @media (min-width:1600px){                       
-        font-size:15px;
+        font-size:14px;
         text-align:left;
-        margin-left:320px;
+        margin-left:345px;
+        position:relative;
+        font-weight: 900;
+        margin-bottom:0px;
+        top:30px;
     }
 `
 
@@ -68,13 +108,17 @@ export const Content = styled.div`
         display:flex;
         justify-content:center;
         flex-direction:row;
+        margin-bottom:0px;
     }
 }
 `
+export const DivChild = styled.div`
+    animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-out;
+`
 
 export const StyledDiv = styled.div`
-    background-color:black;
-    height:270px;
+    background-color:#282626;
+    height:280px;
     text-align:center;
     color:white;
     padding:10px;
@@ -84,18 +128,19 @@ export const StyledDiv = styled.div`
     width:300px;
     p{
         font-size:40px;
-        animation: ${InUp} 1s ease-out;
+
     }
     span{
         font-size:19px;
-        animation: ${InUp} 1s ease-out;
     }
-    @media (min-width:1600px){                        
-        width:265px;
-        height:300px;
+    @media (min-width:1600px){                       
+        width:255px;
+        height:280px;
         margin-right:30px;
         p{
             padding:0px;
+            font-weight: 900;
+            margin-top:20px;
         }
         span{
             padding:10px;
@@ -105,7 +150,7 @@ export const StyledDiv = styled.div`
 `
 export const StyledDiv2 = styled.div`
     background-color:#21A6F3;
-    height:270px;
+    height:280px;
     border-radius:14px;
     text-align:center;
     color:white;
@@ -113,24 +158,20 @@ export const StyledDiv2 = styled.div`
     padding-top:40px;
     width:300px;
     margin-bottom:30px;
-    
     p{
         font-size:40px;
-        animation: ${InUp} 1s ease-out;
     }
     span{
         font-size:19px;
-        animation: ${InUp} 1s ease-out;
     }
     @media (min-width:1600px){                    
-        width:265px;
-        height:300px;
+        width:255px;
+        height:280px;
         margin-right:30px;
-        span{
-            padding:10px;
-        }
         p{
             padding:0px;
+            font-weight: 900;
+            margin-top:20px;
         }
     }
 `;

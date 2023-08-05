@@ -12,19 +12,20 @@ const InUp = keyframes`
 `;
 
 export const H3 = styled.div`
-    animation: ${InUp} 1s ease-out;
+    animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-out;
     font-size:30px;
     text-align:center;
     font-weight: bold;
-    margin-bottom:40px;
-        span{
-            color:#FF0099;
-        }
-        @media (min-width:1600px){                     
-            font-size:63px;
-            text-align:left;
-            margin-left:340px;
-        }
+    margin-bottom:50px;
+    span{
+        color:#FF0099;
+    }
+    @media (min-width:1600px){                     
+        font-size:63px;
+        text-align:left;
+        margin-left:340px;
+        margin-bottom:80px;
+    }
 `
 
 export const DivContent = styled.div`
@@ -32,35 +33,56 @@ export const DivContent = styled.div`
     display:flex;
     justify-content:center;
     flex-direction:column;
+    margin-bottom:70px;
     @media (min-width:1600px){                       
         display:flex;
         justify-content:center;
         flex-direction:row;
+        margin-left:100px;
+        height:43vh;
+        margin-bottom:60px;
     }
 `
 
 export const Div = styled.div`
     text-align:center;
-    margin-bottom:30px;
+    margin-bottom:45px;
     img{
         border-radius:100%;
-        border: solid 5px white;
-        width:190px;
-        height:190px;
-    }
-    h4{
-        animation: ${InUp} 1s ease-out;
-    }
-    p{
-        color:#1D67CD;
-        font-weight:bold;
-        animation: ${InUp} 1s ease-out;
+        border: solid 6px white;
+        //width:185px;
+        height:185px;
+        //box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 0 10px #BCBCBC, 0 0 10px #BCBCBC;
     }
     @media (min-width:1600px){  
-        margin-right:80px;
+        margin-right:85px;
+        margin-bottom:30px;
         img{
-            width:240px;
-            height:240px;
+            width:225px;
+           // width:auto;
+            height:225px;
+            box-shadow: inset 0 0 10px #BCBCBC, 0 0 10px #BCBCBC;
         }
+        h4{
+            margin-top:20px;
+        }
+    }
+`
+export const H4 = styled.h4`
+    margin-top:20px;
+    font-family: 'Poppins', sans-serif;
+    animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-in-out 0.5s forwards;
+    @media (min-width:1600px){
+        animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-out;
+    }
+`
+export const P = styled.p`
+    color:#1D67CD;
+    font-weight:600;
+    font-family: 'Poppins', sans-serif;
+    animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-in-out 0.5s forwards;
+    @media (min-width:1600px){
+        animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-out;
     }
 `

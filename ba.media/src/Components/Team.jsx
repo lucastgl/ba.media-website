@@ -1,36 +1,56 @@
-import manolo from "../Images/MANOLO.jpg";
+import manolo from "../Images/manolo.jpg";
 import gustavo from "../Images/Gustavo.jpg";
-import jochi from "../Images/JOCHI.jpg";
-import martin from "../Images/MARTIN.jpg";
-import { DivContent,Div,H3 } from "../Styles/Team";
+import jochi from "../Images/jochi.jpg";
+import martin from "../Images/martin.jpg";
+import { DivContent,Div,H3, H4, P } from "../Styles/Team";
+import { useState,useEffect } from "react";
 
 
 function Team(){
+    const [showAnimate, setShowAnimate] = useState(false);
+    const PercentageMin = 1;
+
+    useEffect(() => {
+        const handleScroll = () => {
+          const partnersSection = document.getElementById('team');
+          if (partnersSection) {
+            const rect = partnersSection.getBoundingClientRect();
+            const scrollMin = partnersSection.offsetHeight * PercentageMin;
+            const isVisible = rect.top < window.innerHeight - scrollMin && rect.bottom  >= scrollMin;
+            if (isVisible) {
+                setShowAnimate(true);
+            }
+          }
+        };
+        window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
     return(
         <>
-        <H3>Quiénes <span>somos</span></H3>
-        <DivContent id="team" >
+        <H3 id="team" showAnimate={showAnimate}>Quiénes <span>somos</span></H3>
+        <DivContent>
             <Div>
                 <img src={manolo} alt="" />
-                <h4>Juan M. Urdampilleta </h4>
-                <p>CEO & Founder</p>
+                <H4 showAnimate={showAnimate}>Juan M. Urdampilleta </H4>
+                <P showAnimate={showAnimate}>CEO & Founder</P>
             </Div>
             <Div>
                 <img src={gustavo} alt="" />
-                <h4>Gustavo N. Perednik</h4>
-                <p>CCO & Founder</p>
+                <H4 showAnimate={showAnimate}>Gustavo N. Perednik</H4>
+                <P showAnimate={showAnimate}>CCO & Founder</P>
             </Div>
             <Div>
                 <img src={jochi} alt="" />
-                <h4>Jochi Urdampilleta </h4>
-                <p>COO & Partner</p>
+                <H4 showAnimate={showAnimate}>Jochi Urdampilleta </H4>
+                <P showAnimate={showAnimate}>COO & Partner</P>
             </Div>
             <Div>
                 <img src={martin} alt="" />
-                <h4>Martín Galleano</h4>
-                <p>CFO</p>
+                <H4 showAnimate={showAnimate}>Martín Galleano</H4>
+                <P showAnimate={showAnimate}>CFO</P>
             </Div>
-
         </DivContent>
         </>
     )
