@@ -12,64 +12,67 @@ const InUp = keyframes`
 `;
 const ScrollToEnd = keyframes`
     0% {
-    transform: translateX(0);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-32%);
+        transform: translateX(-37%);
     }
 `;
 
 export const H3 = styled.span`
-    animation: ${InUp} 1s ease-out;
+    animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-out;
     display:block;
     font-size:30px;
-    padding-bottom:30px;
-    margin-bottom:40px;
+    margin-bottom:44px;
     text-align:center;
     font-weight: bold;
     padding-top:10px;
+    span{
+        color:#FF0099;
+    }
+    @media (min-width:1600px){ 
+        font-weight: 700; 
+        display:flex;
+        align-items:center;                     
+        font-size:63px;
+        text-align:left;
+        margin-left:340px;
+        padding-top:0px;
+        padding-bottom:0px;
+        margin-bottom:20px;
         span{
-            color:#FF0099;
+            margin-left:20px;
         }
-        @media (min-width:1600px){  
-            display:flex;
-            align-items:center;                     
-            font-size:63px;
-            text-align:left;
-            margin-left:340px;
-            padding-top:0px;
-            padding-bottom:0px;
-            margin-bottom:20px;
-            span{
-                margin-left:20px;
-            }
-        }
+    }
 `
 export const H5 = styled.span`
-    animation: ${InUp} 1s ease-out;
+    animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-out;
     color:#21A6F3;
     text-align:center;
     font-size:12px;
     padding:10px;
     font-weight: bold;
-    margin-left:60px;
+    margin-left:65px;
+    letter-spacing: 0.03em;
     font-weight: 900;
+    position:relative;
+    top:10px;
     @media (min-width:1600px){                       
         font-size:16px;
-        margin-left:340px;
+        margin-left:333px;
         position:relative;
-        top:30px;
+        top:40px;
     }
 `
 export const GIF = styled.img`
     display:none;
     @media (min-width:1600px){ 
         display:inline;                       
-        width:150px;
+        width:158px;
+        width:158px;
     }
 `
 export const DivContent = styled.div`
-    margin-top:100px;
     margin-bottom:130px;
     @media (min-width:1600px){ 
         animation:none;
@@ -80,6 +83,7 @@ export const DivContent = styled.div`
 export const ColumnWrapper = styled.div`
     display: grid;
     animation: ${ScrollToEnd} 5s linear;
+    animation-fill-mode: forwards;
     grid-template-columns: repeat(8, 1fr);
     margin: 0 auto;
     width:600px;
@@ -89,16 +93,14 @@ export const ColumnWrapper = styled.div`
         transition: filter 0.5s ease;
         margin-left: 15px;
     }
-
     @media (min-width: 1200px) {
         justify-content: center;
         animation: none;
         gap:40px;
         img {
-            width: 105px;
+            width: 108px;
             height: 100px;
-            //padding: 15px;
-            margin-left: 15px;
+            margin-left: 12px;
         }
         img:hover {
             filter: grayscale(0%);

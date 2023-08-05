@@ -3,8 +3,29 @@ import logo from "../Images/logo.webp";
 import vimeo from "../Images/vimeo.png";
 import instagram from "../Images/instagram.png";
 import linkedin from "../Images/linkedin.png";
-
+import { useEffect, useState } from "react";
 function Footer(){
+    const [showAnimate, setShowAnimate] = useState(false);
+    const [animationShown, setAnimationShown] = useState(false);
+    const PercentageMin = 0.3;
+    useEffect(() => {
+        const handleScroll = () => {
+          const partnersSection = document.getElementById('footer');
+          if (partnersSection && !animationShown) {
+            const rect = partnersSection.getBoundingClientRect();
+            const scrollMin = partnersSection.offsetHeight * PercentageMin;
+            const isVisible = rect.top < window.innerHeight - scrollMin && rect.bottom  >= scrollMin;
+            if (isVisible) {
+                setShowAnimate(true);
+              setAnimationShown(true);
+            }
+          }
+        };
+        window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [animationShown]);
     const handleLinkClick = (event, targetId) => {
         event.preventDefault();
         const targetElement = document.getElementById(targetId);
@@ -14,9 +35,9 @@ function Footer(){
       };
     return(
         <>
-        <DivContent>
+        <DivContent id="footer">
             <DivLogos>
-                <Logo src={logo} alt="" />
+                <Logo src={logo} alt="" showAnimate={showAnimate} />
                 <div>
                     <a href="https://vimeo.com/bamediaok" target="_black" ><LogoApps src={vimeo} alt="vimeo" /></a>
                     <a href="https://www.instagram.com/buenosaires.media/" target="_black" ><LogoApps src={instagram} alt="instagram" /></a>
