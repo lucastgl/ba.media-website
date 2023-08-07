@@ -1,25 +1,26 @@
 import React from 'react'
 import './App.css'
-import Header from './components/Header'
-import About from './components/About'
-import Partners from "./Components/Partners"
-import Team from "./Components/Team"
-import TrackRecord from "./Components/TrackRecord"
-import Footer from "./Components/Footer"
-import Navbar from './components/Navbar'
+import { routes, Navbar } from './Routes/Routes'
+import {BrowserRouter, Route, Routes, Navigate} from "react-router-dom"
+import LenguageContextProvider from './components/Context/LanguagesContext'
+
 
 function App() {
 
   return (
-    <>
-      <Navbar/>
-      <Header/>
-      <About/>
-      <Partners/>
-      <Team/>
-      <TrackRecord/>
-      <Footer/>
-    </>
+    <LenguageContextProvider>
+      <BrowserRouter>
+        <Navbar/>
+        <Routes>
+          {
+            routes.map(({id, path, Component}) =>(
+              <Route key={id} path={path} element={<Component/>}/>
+            ))
+          }
+          <Route path='*' element={<Navigate to="/" />}/>
+        </Routes>
+      </BrowserRouter>
+    </LenguageContextProvider>
   )
 }
 

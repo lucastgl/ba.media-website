@@ -4,6 +4,11 @@ export const Container = styled.div`
     width: 100%;
     height: 70px;
     background-color: #EDEDED;
+    position: fixed;
+    top: 0;
+    transition: top 0.3s;
+    top: ${({show}) => (show ? "0" : "-70px")};
+    z-index: 100;
 `;
 
 export const Wrapper = styled.div`
@@ -14,6 +19,11 @@ export const Wrapper = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     margin: auto;
+    @media screen and (max-width: 425px){
+        background-color: ${({open}) => (open ? "#035772" : "#EDEDED")};
+        transition: 0.5s all ease;
+    }
+
 `;
 
 export const LogContainer = styled.div`
@@ -35,7 +45,7 @@ export const Menu = styled.ul`
         background-color: #035772;
         position: absolute;
         top: 70px;
-        right: ${({open}) => (open ? "0" : "-100%")};
+        left: ${({open}) => (open ? "0" : "-100%")};
         width: 100%;
         height: 90vh;
         justify-content: center;
@@ -90,8 +100,8 @@ export const MobileIcon = styled.div`
         align-items: center;
 
         svg{
-            fill: #212121;
-            margin-right: 0.5rem;
+            fill: ${({open}) => (open ? "#FFFFFF" : "#212121")};
+            margin-right: 1.6rem;
             font-size: 2em;
         }
     }
