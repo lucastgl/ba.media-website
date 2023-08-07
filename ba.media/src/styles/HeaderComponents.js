@@ -41,6 +41,7 @@ export const Title = styled.div`
     display: flex;
     img{
         height: 70px;
+        position: relative;  // Agregar esta línea
     }
     opacity: 0;
     animation: ${slideInUp} 1s ease-in-out 1s forwards;
@@ -49,16 +50,29 @@ export const Title = styled.div`
         align-items: center;
         width: 50%;
         height: 50%;
+        img{
+            height: 150px;
+        }
+        img:first-child {
+            right: -60px; // Ajustar según tus necesidades
+            padding-top: 25px;
+        }
+        img:last-child {
+            left: -50px; // Ajustar según tus necesidades
+            padding-top: 25px;
+        }
     }
 `;
 
 export const TVgif = styled.img`
     width: 60vw;
+    height: auto; // Cambiar a auto
     opacity: 0;
     animation: ${slideInUp} 1s ease-in-out 1.5s forwards;
     @media (min-width:1600px){ 
         z-index: -1;
-        height: 100%;
+        width: auto;
+        height: 250px!important;
     }
 `
 

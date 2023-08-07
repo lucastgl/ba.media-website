@@ -19,7 +19,7 @@ const Header = () => {
       <DesktopView>
         <Title>
           <img src={BA} alt="Logo-part1" />
-          {/* <TVgif src={TVGif} alt="TV-gif" /> */}
+          <TVgif src={TVGif} alt="TV-gif" />
           <img src={Media} alt="Logo-part1" />
         </Title>
       </DesktopView>
