@@ -2,6 +2,7 @@ import {Container, Image} from "../Styles/ProyectsPageBox";
 
 function ProyectPageBox({image, title, episodes, country, genre, network, liveEvent, days, location, season,streamLiveEvent}){
     return (
+      //Pasarle al container dentro del onClick la función para setear el estado de del productSelected y mostrar el detail
       <Container>
           <Image src={image} alt="proyect image" />
           <h3>{title}</h3>

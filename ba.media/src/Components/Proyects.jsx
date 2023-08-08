@@ -1,4 +1,3 @@
-//import React from 'react'
 import Footer from './Footer';
 import {H1, P,GalleryBox } from "../Styles/Proyects.js";
 import MasterChefimage from "../Images/MASTERCHEF.jpg"
@@ -193,8 +192,12 @@ const Proyects = () => {
     }
   ];
 
+  //el estado de producto seleccionado
+
   return (
     <>
+      {/* Aca va el productDetail */}
+
       <H1 id="inicio">Proyectos</H1>
       <P>Descubrí nuestros proyectos audiovisuales de <span>gran impacto</span> </P>
       <ButtonMobile/>
@@ -203,7 +206,17 @@ const Proyects = () => {
               gallery.map((proyect) => (
                 <ProyectPageBox 
                   key={gallery.id}
-                  {... proyect}
+                  image={proyect.image}
+                  title={proyect.title}
+                  episodes={proyect.episodes}
+                  country={proyect.country}
+                  genre={proyect.genre}
+                  network={proyect.network}
+                  location={proyect.location}
+                  days={proyect.days}
+                  liveEvent={proyect.liveEvent}
+
+                  //pasarle el handle click para abrir el detail
                 >
                 </ProyectPageBox>
               ))

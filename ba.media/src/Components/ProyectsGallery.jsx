@@ -1,62 +1,18 @@
-//import React from 'react'
+import { useState } from 'react'
 import { GalleryContainer, GalleryBox, Header } from '../styles/ProyectsGalleryComponents'
-import MasterChefimage from "../Images/MASTERCHEF.jpg"
-import BakeOffimage from "../Images/BAKEOFF.jpg"
-import ElDomoimage from "../Images/ELDOMODELDINERO.jpg"
-import QatarLatinoimage from "../Images/QATARLATINO.png"
-import Elementoimage from "../Images/4ELEMENTOS.jpg"
-import ElToqueimage from "../Images/ELTOQUEDEAARON.png"
 import ProyectBox from './ProyectBox'
+import ProductDetail from './ProductDetail'
+import { gallery } from '../mocks/proyects'
 
 const ProyectsGallery = () => {
 
-  const gallery = [
-    {
-      id: 1,
-      image: MasterChefimage,
-      title: "MasterChef",
-      country: "6",
-      episodes: 120,
-    },
-    {
-      id: 2,
-      image: BakeOffimage,
-      title: "Bake Off Celebrity",
-      country: "USA",
-      episodes: 8,
-    },
-    {
-      id: 3,
-      image: ElDomoimage,
-      title: "El Domo del Dinero",
-      country: "USA",
-      episodes: 62,
-    },
-    {
-      id: 4,
-      image: QatarLatinoimage,
-      title: "Qatar Latino",
-      country: "USA",
-      episodes: 4,
-    },
-    {
-      id: 5,
-      image: Elementoimage,
-      title: "4 Elementos",
-      country: "México",
-      episodes: 80,
-    },
-    {
-      id: 6,
-      image: ElToqueimage,
-      title: "El toque de Aarón",
-      country: "USA",
-      episodes: 6,
-    }
-  ];
-
+  const [productSelected, setProductSelected] = useState();
+  
   return (
-    <div>
+    <div style={{position: "relative"}}>
+      
+      <ProductDetail productSelected={productSelected} onClose={()=>setProductSelected(undefined)}/>
+      
       <Header>
         <p>¿QUÉ HACEMOS?</p>
         <h2><span>Trabajos</span> destacados</h2>
@@ -66,10 +22,13 @@ const ProyectsGallery = () => {
           {gallery.map((proyect) => (
             <ProyectBox
               key={proyect.id}
-              image={proyect.image}
-              title={proyect.title}
-              episodes={proyect.episodes}
-              country={proyect.country}
+              {...proyect} //esto reemplaza lo de abajo
+              // image={proyect.image}
+              // title={proyect.title}
+              // episodes={proyect.episodes}
+              // country={proyect.country}
+              // proyect={proyect}
+              handleClick={setProductSelected}
             />
           ))}
         </GalleryBox>
