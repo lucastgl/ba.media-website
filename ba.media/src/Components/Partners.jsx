@@ -2,6 +2,7 @@ import gif2 from "../Images/gif2.gif";
 import images from "../Images/images.js";
 import {H3, H5, DivContent,GIF, ColumnWrapper } from "../Styles/Partners";
 import { useEffect, useState } from 'react';
+import ButtonMobile from "./ButtonMobile.jsx";
 
 
 function Partners(){
@@ -25,6 +26,7 @@ function Partners(){
   }, []);
     return(
         <DivContent id="partners">
+          <ButtonMobile/>
             <H5 showAnimate={showAnimate}>CONFIANZA, CALIDAD Y RESULTADOS</H5> 
             <H3 showAnimate={showAnimate}>Nuestros <span>socios</span><GIF src={gif2} alt=""/></H3>
             <div style={{ overflowX: "hidden" }}>

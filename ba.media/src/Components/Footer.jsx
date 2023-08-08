@@ -4,6 +4,7 @@ import vimeo from "../Images/vimeo.png";
 import instagram from "../Images/instagram.png";
 import linkedin from "../Images/linkedin.png";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 function Footer(){
     const [showAnimate, setShowAnimate] = useState(false);
     const [animationShown, setAnimationShown] = useState(false);
@@ -26,6 +27,7 @@ function Footer(){
       window.removeEventListener('scroll', handleScroll);
     };
   }, [animationShown]);
+  
     const handleLinkClick = (event, targetId) => {
         event.preventDefault();
         const targetElement = document.getElementById(targetId);
@@ -47,7 +49,7 @@ function Footer(){
             <Content>
                 <Div>
                     <h4>EXPLORA</h4>
-                    <p>Proyectos</p>
+                    <p> <Link to="/proyects">Proyectos</Link></p>
                     <p><a href="#partners" onClick={(event) => handleLinkClick(event, 'partners')} >Socios</a></p>
                     <p><a href="#team" onClick={(event) => handleLinkClick(event, 'team')}>Nosotros</a></p>
                 </Div>

@@ -7,9 +7,12 @@ import { gallery } from '../mocks/proyects'
 const ProyectsGallery = () => {
 
   const [productSelected, setProductSelected] = useState();
+  
   return (
     <div style={{position: "relative"}}>
+      
       <ProductDetail productSelected={productSelected} onClose={()=>setProductSelected(undefined)}/>
+      
       <Header>
         <p>¿QUÉ HACEMOS?</p>
         <h2><span>Trabajos</span> destacados</h2>

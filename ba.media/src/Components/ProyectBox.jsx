@@ -5,8 +5,8 @@ const ProyectBox = ({handleClick, image, title, episodes, country, id}) => {
     <Contaier onClick={()=>{handleClick(id)}}>
         <Image src={image} alt="proyect image" />
         <p>{title}</p>
-        <p>{country}</p>
-        <p>Episodes: {episodes}</p>
+        <p>Paises: {country}</p>
+        <p>Espisodios: {episodes}</p>
     </Contaier>
   )
 }

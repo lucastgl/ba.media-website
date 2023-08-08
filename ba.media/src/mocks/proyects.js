@@ -49,3 +49,5 @@ export const gallery = [
     episodes: 6,
   }
 ];
+
+//Sumas la lista galleryPage
