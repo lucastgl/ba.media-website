@@ -1,9 +1,8 @@
-import React from 'react'
 import { Contaier, Image } from '../styles/ProyectBoxComponents'
 
-const ProyectBox = ({image, title, episodes, country}) => {
+const ProyectBox = ({handleClick, image, title, episodes, country, id}) => {
   return (
-    <Contaier>
+    <Contaier onClick={()=>{handleClick(id)}}>
         <Image src={image} alt="proyect image" />
         <p>{title}</p>
         <p>{country}</p>
