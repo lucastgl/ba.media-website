@@ -1,4 +1,4 @@
-import React from 'react'
+//import React from 'react'
 import { GalleryContainer, GalleryBox, Header } from '../styles/ProyectsGalleryComponents'
 import MasterChefimage from "../Images/MASTERCHEF.jpg"
 import BakeOffimage from "../Images/BAKEOFF.jpg"

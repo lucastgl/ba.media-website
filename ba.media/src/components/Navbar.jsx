@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import  {useState, useEffect} from 'react'
 import BAM from "../Images/BAM.webp"
 import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper } from '../styles/NavbarComponents'
 import {FaBars, FaTimes} from "react-icons/fa"
+import {Link} from "react-router-dom";
 
 const Navbar = () => {
     
@@ -23,17 +24,23 @@ const Navbar = () => {
         };
     }, [scrollPos]);
 
+    const handleLinkClick = (event, targetId) => {
+        event.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+
     return (
-        <Container show={showNavbar}>
+        <Container show={showNavbar} >
             <Wrapper open={showMobileMenu}>
                 <LogContainer>
-                    <img src={BAM}/>
+                    <Link to="/"><img src={BAM}/></Link>
                 </LogContainer>
-
                 <MobileIcon open={showMobileMenu} onClick={()=> setShowMobileMenu(!showMobileMenu)}>
                     {showMobileMenu ? <FaTimes/> : <FaBars/>}  
                 </MobileIcon>
-                
                 <Menu open={showMobileMenu}>
                     <MenuItem>
                         <MenuItemLink>
@@ -41,18 +48,20 @@ const Navbar = () => {
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
-                        <MenuItemLink>
-                            Proyectos
-                        </MenuItemLink>
+                        <Link to="/proyects">
+                            <MenuItemLink>
+                                Proyectos
+                            </MenuItemLink>
+                        </Link>
                     </MenuItem>
                     <MenuItem>
-                        <MenuItemLink>
+                        <MenuItemLink onClick={(event) => handleLinkClick(event, 'partners')} >
                             Socios
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
-                        <MenuItemLink>
-                            Negocio
+                        <MenuItemLink onClick={(event) => handleLinkClick(event, 'team')}>
+                            Nosotros
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
@@ -62,7 +71,6 @@ const Navbar = () => {
                     </MenuItem>
                 </Menu>
             </Wrapper>
-
         </Container>
     )
 }

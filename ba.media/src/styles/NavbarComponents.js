@@ -57,7 +57,7 @@ export const Menu = styled.ul`
 
 export const MenuItem = styled.li`
     height: 100%;
-
+    
     @media screen and  (max-width: 425px){
         width: 100%;
         height: 70px;

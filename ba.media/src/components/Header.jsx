@@ -6,7 +6,7 @@ import TVGif from "../Images/TV.gif"
 
 const Header = () => {
   return (
-    <HeaderBox>
+    <HeaderBox id="inicio">
         
       <MobileView>
         <Title>
