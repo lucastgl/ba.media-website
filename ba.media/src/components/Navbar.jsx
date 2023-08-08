@@ -1,6 +1,6 @@
 import  {useState, useEffect} from 'react'
 import BAM from "../Images/BAM.webp"
-import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper } from '../styles/NavbarComponents'
+import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper,StyledLink } from '../styles/NavbarComponents'
 import {FaBars, FaTimes} from "react-icons/fa"
 import {Link} from "react-router-dom";
 
@@ -26,6 +26,7 @@ const Navbar = () => {
 
     const handleLinkClick = (event, targetId) => {
         event.preventDefault();
+        setShowMobileMenu(!showMobileMenu);
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
           targetElement.scrollIntoView({ behavior: "smooth" });
@@ -48,11 +49,11 @@ const Navbar = () => {
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
-                        <Link to="/proyects">
+                        <StyledLink to="/proyects">
                             <MenuItemLink>
                                 Proyectos
                             </MenuItemLink>
-                        </Link>
+                        </StyledLink>
                     </MenuItem>
                     <MenuItem>
                         <MenuItemLink onClick={(event) => handleLinkClick(event, 'partners')} >

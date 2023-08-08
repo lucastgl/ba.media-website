@@ -1,4 +1,5 @@
 import styled  from "styled-components"
+import {Link} from "react-router-dom";
 
 export const Container = styled.div`
     width: 100%;
@@ -68,6 +69,7 @@ export const MenuItem = styled.li`
 `;
 
 export const MenuItemLink = styled.a`
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,7 +96,7 @@ export const MenuItemLink = styled.a`
 
 export const MobileIcon = styled.div`
     display: none;
-
+    
     @media screen and  (max-width: 425px){
         display: flex;
         align-items: center;
@@ -106,3 +108,8 @@ export const MobileIcon = styled.div`
         }
     }
 `
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    margin-right:80px;
+`;

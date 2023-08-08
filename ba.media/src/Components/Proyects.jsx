@@ -144,9 +144,6 @@ const Proyects = () => {
       image: nerdeala,
       title: "Nerdeala",
       country: "Argentina",
-      //network: " nose",
-      //genre:"no se",
-      //episodes: "dias : 5",
       location: "Konex",
       streamLiveEvent: "conferences & workshops",
       days: 5
@@ -206,15 +203,7 @@ const Proyects = () => {
               gallery.map((proyect) => (
                 <ProyectPageBox 
                   key={gallery.id}
-                  image={proyect.image}
-                  title={proyect.title}
-                  episodes={proyect.episodes}
-                  country={proyect.country}
-                  genre={proyect.genre}
-                  network={proyect.network}
-                  location={proyect.location}
-                  days={proyect.days}
-                  liveEvent={proyect.liveEvent}
+                  {... proyect}
                 >
                 </ProyectPageBox>
               ))

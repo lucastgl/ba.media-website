@@ -1,4 +1,5 @@
 import { Button } from "../Styles/ButtonMobile"
+import {FaAngleUp} from "react-icons/fa"
 
 function ButtonMobile(){
     const handleLinkClick = (event, targetId) => {
@@ -9,7 +10,7 @@ function ButtonMobile(){
         }
       };
     return(
-        <Button onClick={(event) => handleLinkClick(event, 'inicio')}> ˄ </Button>
+        <Button onClick={(event) => handleLinkClick(event, 'inicio')}>  <FaAngleUp/> </Button>
     )
 }
 
