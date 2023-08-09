@@ -25,6 +25,7 @@ export const gallery = [
     title: "MasterChef",
     country: "6",
     episodes: 120,
+    video: "https://player.vimeo.com/video/823205473?h=a7a62002c6"
   },
   {
     id: 2,
@@ -60,6 +61,7 @@ export const gallery = [
     title: "El toque de Aarón",
     country: "USA",
     episodes: 6,
+    video: "https://player.vimeo.com/video/823204981?h=8c6c1d03e5"
   }
 ];
 
