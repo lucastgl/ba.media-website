@@ -3,12 +3,16 @@ import logo from "../Images/logo.webp";
 import vimeo from "../Images/vimeo.png";
 import instagram from "../Images/instagram.png";
 import linkedin from "../Images/linkedin.png";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import {LenguageContext} from "../Components/Context/LanguagesContext";
+
 function Footer(){
     const [showAnimate, setShowAnimate] = useState(false);
     const [animationShown, setAnimationShown] = useState(false);
     const PercentageMin = 0.3;
+    const {state} = useContext(LenguageContext);
+
     useEffect(() => {
         const handleScroll = () => {
           const partnersSection = document.getElementById('footer');
@@ -47,18 +51,40 @@ function Footer(){
                 </div>
             </DivLogos>
             <Content>
-                <Div>
+              {
+                state.lenguage ? (
+                  <>
+                  <Div>
                     <h4>EXPLORA</h4>
                     <p> <Link to="/proyects">Proyectos</Link></p>
                     <p><a href="#partners" onClick={(event) => handleLinkClick(event, 'partners')} >Socios</a></p>
                     <p><a href="#team" onClick={(event) => handleLinkClick(event, 'team')}>Nosotros</a></p>
-                </Div>
-                <Div>
+                  </Div>
+                  <Div>
                     <h4>CONTACTO</h4>
                     <p>11 de Septiembre de 1888 2761,</p>
                     <p>C1428AJI CABA.</p>
                     <p>info@ba.media</p>
-                </Div>
+                  </Div>
+                  </>
+                ) : (
+                  <>
+                  <Div>
+                    <h4>EXPLORE</h4>
+                    <p> <Link to="/proyects">Proyects</Link></p>
+                    <p><a href="#partners" onClick={(event) => handleLinkClick(event, 'partners')} >Partners</a></p>
+                    <p><a href="#team" onClick={(event) => handleLinkClick(event, 'team')}>Us</a></p>
+                  </Div>
+                  <Div>
+                    <h4>CONTACT</h4>
+                    <p>September 11,1888 2761,</p>
+                    <p>C1428AJI CABA.</p>
+                    <p>info@ba.media</p>
+                  </Div>
+                  </>
+                 
+                )
+              }
             </Content>
         </DivContent>
         </>

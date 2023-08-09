@@ -23,11 +23,9 @@ const InUpMobile = keyframes`
 export const Logo = styled.img`
     width:200px;
     margin-top:20px;
-    //animation: ${InUpMobile} 1s ease-in-out 1s forwards;
     animation:  ${({ showAnimate }) => (showAnimate ? InUpMobile : 'none')} 1s ease-in-out ;
     @media (min-width:1600px){ 
         width:330px;
-        //animation: ${InUp} 1s ease 2s forwards;
         animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-in-out ;
         height:53px; 
         margin-top:0px;

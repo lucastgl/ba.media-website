@@ -1,10 +1,18 @@
-import  {useState, useEffect} from 'react'
+import  {useState, useEffect, useContext} from 'react'
 import BAM from "../Images/BAM.webp"
-import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper,StyledLink } from '../styles/NavbarComponents'
+import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper,StyledLink, Select , Option} from '../styles/NavbarComponents'
 import {FaBars, FaTimes} from "react-icons/fa"
 import {Link} from "react-router-dom";
+import {LenguageContext} from "../Components/Context/LanguagesContext";
 
 const Navbar = () => {
+
+    const { state, dispatch } = useContext(LenguageContext);
+
+    const toggleLanguage = () => {
+        dispatch({ type: 'lenguage' });
+    };
+
     
     const [showMobileMenu, setShowMobileMenu] = useState(false);
     const [showNavbar, setShowNavbar] = useState(true);
@@ -51,25 +59,52 @@ const Navbar = () => {
                     <MenuItem>
                         <StyledLink to="/proyects">
                             <MenuItemLink>
-                                Proyectos
+                            {
+                                state.lenguage ?  "Proyectos" : "Proyects"
+                            }
                             </MenuItemLink>
                         </StyledLink>
                     </MenuItem>
                     <MenuItem>
                         <MenuItemLink onClick={(event) => handleLinkClick(event, 'partners')} >
-                            Socios
+                            {
+                                state.lenguage ?  "Socios" : "Partners"
+                            }
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
                         <MenuItemLink onClick={(event) => handleLinkClick(event, 'team')}>
-                            Nosotros
+                            {   
+                                state.lenguage ?  "Nosotros" : "Us"
+                            }
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
                         <MenuItemLink>
-                            Contacto
+                            {   
+                                state.lenguage ?  "Contacto" : "Contact"
+                            }
                         </MenuItemLink>
                     </MenuItem>
+                    <MenuItem>
+                        <MenuItemLink>
+                            <Select onChange={toggleLanguage} name = "hola " onClick={state.language ? 'ES' : 'EN'}>
+                                {state.language ? (
+                                    <>
+                                        <Option value="EN">EN</Option>
+                                        <Option value="ES">ES</Option>
+                                    </>
+                                ) 
+                                : (
+                                    <>
+                                        <option value="ES">ES</option>
+                                        <option value="EN">EN</option>
+                                    </>
+                                )
+                                }
+                            </Select>
+                        </MenuItemLink>
+                        </MenuItem>
                 </Menu>
             </Wrapper>
         </Container>

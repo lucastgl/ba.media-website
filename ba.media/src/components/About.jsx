@@ -1,8 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { AboutContainer , TextContainer, Text, VideoContainer, Video} from '../styles/AboutComponents';
 import Player from '@vimeo/player';
+import {LenguageContext} from "../Components/Context/LanguagesContext";
 
 const About = () => {
+
+  const {state} = useContext(LenguageContext);
   const videoRef = useRef(null);
   const playerRef = useRef(null);
 
@@ -56,7 +59,16 @@ const About = () => {
   return (
     <AboutContainer>
         <TextContainer>
-          <Text>Con <span style={{color: "#3D9BE9"}}>el mejor equipo</span> de trabajo, combinamos creatividad, agilidad y eficiencia consiguiendo como resultado contenido audiovisual <span style={{color: "#FF0099"}}>de alta calidad.</span></Text>
+          {
+            state.lenguage ? (
+              <Text>Con <span style={{color: "#3D9BE9"}}>el mejor equipo</span> de trabajo, combinamos creatividad, agilidad y eficiencia consiguiendo como resultado contenido audiovisual <span style={{color: "#FF0099"}}>de alta calidad.</span></Text>
+
+            ) 
+            :
+            ( <Text>
+              With the<span style={{color: "#3D9BE9"}}> best team</span>, we combine creativity, agility, and efficiency, 
+              achieving high-quality audiovisual <span style={{color: "#FF0099"}}> content as a result.</span></Text>)
+          }
         </TextContainer>
         <VideoContainer>
           <Video ref={videoRef}/>

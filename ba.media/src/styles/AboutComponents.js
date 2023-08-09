@@ -27,12 +27,13 @@ export const Text = styled.div`
     line-height: 1;
     width: 85%;
     text-align: center;
+    color: #242323;
     span{
         margin: 0px;
         padding: 0px;
     }
     @media (min-width:1600px){ 
-        width: 45%;
+        width: 46%;
         font-size: 4rem;
         line-height: 1em;
     }

@@ -3,12 +3,14 @@ import gustavo from "../Images/Gustavo.jpg";
 import jochi from "../Images/jochi.jpg";
 import martin from "../Images/martin.jpg";
 import { DivContent,Div,H3, H4, P } from "../Styles/Team";
-import { useState,useEffect } from "react";
+import { useState,useEffect, useContext } from "react";
+import { LenguageContext } from "./Context/LanguagesContext";
 
 
 function Team(){
     const [showAnimate, setShowAnimate] = useState(false);
     const PercentageMin = 1;
+    const {state} = useContext(LenguageContext);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -29,7 +31,16 @@ function Team(){
   }, []);
     return(
         <>
-        <H3 id="team" showAnimate={showAnimate}>Quiénes <span>somos</span></H3>
+        {
+            state.lenguage ? (
+            <H3 id="team" showAnimate={showAnimate}>Quiénes <span>somos</span></H3>
+            )
+            :
+            (
+                <H3 id="team" showAnimate={showAnimate}>Who we <span> are</span></H3>
+            )
+        }
+        
         <DivContent>
             <Div>
                 <img src={manolo} alt="" />

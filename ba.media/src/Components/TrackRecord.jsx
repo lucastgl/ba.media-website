@@ -1,12 +1,14 @@
 import {DivContent,H5, H2, GIF3, DivTitles,DivChild,Content, SVG, SVGVIDEO,StyledDiv, StyledDiv2} from "../Styles/TrackRecord";
 import gif3 from "../Images/gif3.gif";
-import { useState,useEffect } from "react";
+import { useState,useEffect, useContext } from "react";
+import { LenguageContext } from "./Context/LanguagesContext";
 
 
 function TrackRecord(){
     const [showAnimate, setShowAnimate] = useState(false);
     const [animationShown, setAnimationShown] = useState(false);
     const PercentageMin = 0.3;
+    const {state} = useContext(LenguageContext);
     
     useEffect(() => {
         const handleScroll = () => {
@@ -30,7 +32,15 @@ function TrackRecord(){
     return(
         <DivContent id="trackrecord">
             <DivTitles>
-            <H5 showAnimate={showAnimate}>GESTIÓN, PROFESIONALISMO Y TRAYECTORIA</H5>
+              {
+                state.lenguage
+                ? (
+                  <H5 showAnimate={showAnimate}>GESTIÓN, PROFESIONALISMO Y TRAYECTORIA</H5>
+                )
+                :(
+                  <H5 showAnimate={showAnimate}>MANAGEMENT, PROFESSIONALISM AND TRAJECTORY</H5>
+                )
+              }
             <H2 showAnimate={showAnimate}>Track <span>Record</span> <GIF3 src={gif3} alt="" /></H2> 
             </DivTitles>
             <Content >
@@ -44,7 +54,15 @@ function TrackRecord(){
                       8.404 0 0 0 4.4 1.25 8.346 8.346 0 0 0 8.334-8.334v-73.6a8.334 8.334 0 0 0-4.334-7.308Z" 
                       fill="rgba(255, 255, 255, 0.9)"></path></SVG>
                       <p>3900+</p>
-                      <span>HORAS DE CONTENIDO</span>
+                      {
+                        state.lenguage ? (
+                          <span>HORAS DE CONTENIDO</span>
+                        )
+                        : (
+                          <span>HOURS OF CONTENT</span>
+                        )
+                      }
+                      
                       </DivChild>
                 </StyledDiv>
 
@@ -54,7 +72,15 @@ function TrackRecord(){
                       d="M28.5 35.5v97.345h47.631L63.318 164.5h11.384l12.813-31.655h7.21V164.5h10.55v-31.655h7.211l12.811 
                       31.655h11.384l-12.812-31.655h47.63V35.5H28.5zm132.448 86.79H39.05V46.055h121.898v76.235z"></path></SVG>
                       <p>5000+</p>
-                      <span>EPISODIOS ENTREGADOS</span>
+                      {
+                        state.lenguage ? (
+                          <span>EPISODIOS ENTREGADOS</span>
+                        )
+                        : (
+                          <span>EPISODES DELIVERED</span>
+                        )
+                      }
+                      
                     </DivChild>
                 </StyledDiv2>
 
@@ -64,7 +90,14 @@ function TrackRecord(){
                       65s-29.16 65-65 65-65-29.16-65-65 29.16-65 65-65Zm0 10c-30.33 0-55 24.67-55 55s24.67 55 55 55 55-24.67 
                       55-55-24.67-55-55-55ZM85 75l40 25-40 25V75Z" ></path></SVGVIDEO>
                       <p>150+</p>
-                      <span>SHOWS DISTINTOS PRODUCIDOS</span>
+                      {
+                        state.lenguage ? (
+                          <span>SHOWS DISTINTOS PRODUCIDOS</span>
+                        )
+                        : (
+                          <span>DIFFERENT SHOWS PRODUCED</span>
+                        )
+                      }
                     </DivChild>
                 </StyledDiv>
 
@@ -82,7 +115,15 @@ function TrackRecord(){
                       1.575 1.284 3.159 3.084 3.75l15.925 5.292c28.925 9.5 28.358 32.15 28.316 33.108l.009 5.434c0 6.891-5.609 12.5-12.5 12.5Z" 
                       ></path></SVG>
                       <p>70+</p>
-                      <span>CLIENTES ALREDEDOR DEL MUNDO</span>
+                      
+                      {
+                        state.lenguage ? (
+                          <span>CLIENTES ALREDEDOR DEL MUNDO</span>
+                        )
+                        : (
+                          <span>CUSTOMERS AROUND THE WORLD</span>
+                        )
+                      }
                     </DivChild>
                 </StyledDiv2>
             </Content>

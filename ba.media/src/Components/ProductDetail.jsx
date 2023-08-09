@@ -1,9 +1,9 @@
 import {ModalContainer} from "../styles/ProductDetailComponents"
-import { gallery } from '../mocks/proyects.js'
+import { galleryPage } from '../mocks/proyects.js'
 //Que el product detail consuma el listado de componentes completo
 const ProductDetail = ({productSelected, onClose}) => {
 
-    const proyect = gallery.find(p => p.id === productSelected)
+    const proyect = galleryPage.find(p => p.id === productSelected)
     
     return (
         <>

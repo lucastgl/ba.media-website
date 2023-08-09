@@ -7,7 +7,7 @@ const initialState = {
 const reducer = (state, action) => {
     switch (action.type) {
       case "lenguage":
-        return { ...state, lenguage: !lenguage };
+        return { ...state, lenguage: !state.lenguage };
       default:
         return state;
     }

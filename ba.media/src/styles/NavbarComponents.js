@@ -35,6 +35,25 @@ export const LogContainer = styled.div`
     font-family: 'Inter Tight', sans-serif;
 `;
 
+export const Select = styled.select`
+    background-color: #035772;
+    border: none;
+    width:90px;
+    @media (min-width:1600px){
+        background-color: #EDEDED;
+        border: none;
+        width:60px;
+    }
+`
+export const Option = styled.option`
+    background-color:white;
+    @media (min-width:1600px){
+        background-color: #EDEDED;
+        border: none;
+        width: 50px;
+    }
+`
+
 export const Menu = styled.ul`
     z-index: 100;
     height: 100%;
