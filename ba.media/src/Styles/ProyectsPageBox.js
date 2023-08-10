@@ -35,6 +35,9 @@ export const Image = styled.img`
         }
     }
 `;
+
+
+
 export const DetailSection = styled.div`
     display: flex;
     flex-direction:column;

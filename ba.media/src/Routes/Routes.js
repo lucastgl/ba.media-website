@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar"
 import Home from "../components/Home";
-import Proyects from "../components/Proyects";
+import ProyectsPage from "../components/ProyectsPage";
 
 export const routes = [
     {
@@ -11,7 +11,7 @@ export const routes = [
     {
         id: 2,
         path: "/projects",
-        Component: Proyects 
+        Component: ProyectsPage 
     }
 ];
 

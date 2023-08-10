@@ -2,12 +2,12 @@ import Footer from "./Footer"
 import {H1, P,GalleryBox } from "../Styles/Proyects.js";
 import ButtonMobile from "./ButtonMobile";
 import ProyectPageBox from "./ProyectPageBox";
+import ProyectPageDetail from "./ProyectPageDetail"
 import { galleryPage } from '../mocks/proyects'
-import ProductPageDetail from "./ProductPageDetail"
 import { useState, useContext } from 'react';
 import { LenguageContext } from './Context/LanguagesContext';
 
-const Proyects = () => {
+const ProyectsPage = () => {
 
   const [productSelected, setProductSelected] = useState();
   const {state} = useContext(LenguageContext)
@@ -15,7 +15,7 @@ const Proyects = () => {
   return (
     <>
     <div style={{position: "relative"}}>
-      <ProductPageDetail productSelected={productSelected} onClose={()=>setProductSelected(undefined)}/>
+      <ProyectPageDetail productSelected={productSelected} onClose={()=>setProductSelected(undefined)}/>
       </div>
       {state.lenguage ? (
         <>
@@ -46,4 +46,4 @@ const Proyects = () => {
   )
 }
 
-export default Proyects
+export default ProyectsPage

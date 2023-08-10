@@ -72,9 +72,6 @@ export const DetailSection = styled.div`
         h2{
             font-size:50px;
         }
-        // p{
-        //     color:#21A6F3;
-        // }
         img{
             max-width: 30vw:
             height: auto;
@@ -95,7 +92,7 @@ export const FaTimesIcono = styled(FaTimes)`
 export const FaArrowLeftIcono = styled(FaArrowLeft)`
     margin-left:10px;
     font-size:20px;
-    background-color:red;
+    z-index: 130;
     @media (min-width:1600px){
        display:none;
     }
