@@ -50,9 +50,7 @@ export const Div = styled.div`
     img{
         border-radius:100%;
         border: solid 6px white;
-        //width:185px;
         height:185px;
-        //box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
         box-shadow: inset 0 0 10px #BCBCBC, 0 0 10px #BCBCBC;
     }
     @media (min-width:1600px){  
@@ -60,7 +58,6 @@ export const Div = styled.div`
         margin-bottom:30px;
         img{
             width:225px;
-           // width:auto;
             height:225px;
             box-shadow: inset 0 0 10px #BCBCBC, 0 0 10px #BCBCBC;
         }

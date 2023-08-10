@@ -4,7 +4,7 @@ import Header from './Header'
 import Partners from './Partners'
 import Team from "./Team"
 import TrackRecord from './TrackRecord'
-import ProyectsGallery from './ProyectsGallery'
+import HomeProyectsGallery from './HomeProyectsGallery'
 
 const Home = () => {
 
@@ -12,7 +12,7 @@ const Home = () => {
     <>
       <Header/>
       <About/>
-      <ProyectsGallery/>
+      <HomeProyectsGallery/>
       <Partners/>
       <Team/>
       <TrackRecord/>

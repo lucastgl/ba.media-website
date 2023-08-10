@@ -4,7 +4,7 @@ import {gallery} from '../mocks/proyects.js';
 //import {FaAngleRight, FaAngleLeft, FaTimes} from "react-icons/fa"
 
 
-const ProductDetail = ({ productSelected, onClose }) => {
+const HomeProductDetail = ({ productSelected, onClose }) => {
     const initialProjectIndex = gallery.findIndex(p => p.id === productSelected);
     const [currentImageIndex, setCurrentImageIndex] = useState(initialProjectIndex);
     const proyect = gallery[currentImageIndex];
@@ -31,11 +31,9 @@ const ProductDetail = ({ productSelected, onClose }) => {
                 proyect &&
                 (
                     <ModalContainer>
-                        {/* icono de la flecha izq para mobile  */}
-                            <FaArrowLeftIcono onClick={onClose}/> 
+                        <FaArrowLeftIcono onClick={onClose}/> 
                        
                         <GalleryContent>
-                            {/* Gallery section */}
                             <GallerySection>
                                 <FaAngleLeftIcono onClick={handlePrev}/>
                                 {
@@ -52,9 +50,8 @@ const ProductDetail = ({ productSelected, onClose }) => {
                                         <img src={proyect.image} alt={proyect.title} />
                                     )
                                 }
-                                <FaAngleRightIcono onClick={handleNext}/>
+                            <FaAngleRightIcono onClick={handleNext}/>
                             </GallerySection>
-                            {/* Details section */}
                             <DetailSection>
                                 <h2>{proyect.title}</h2>
                                 <p>Country: {proyect.country}</p>
@@ -69,4 +66,4 @@ const ProductDetail = ({ productSelected, onClose }) => {
     )
 }
 
-export default ProductDetail;
+export default HomeProductDetail;

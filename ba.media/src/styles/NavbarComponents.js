@@ -90,7 +90,6 @@ export const MenuItemLink = styled.a`
     align-items: center;
     height: 100%;
     padding: 0.5rem 2.5rem;
-    //margin-right:50px;
     color: #212121;
     font-family: 'Inter Tight', sans-serif;
     font-size: 1rem;

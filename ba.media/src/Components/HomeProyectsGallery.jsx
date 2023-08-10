@@ -1,11 +1,11 @@
 import { useContext, useState } from 'react'
 import { GalleryContainer, GalleryBox, Header } from '../Styles/ProyectsGalleryComponents'
-import ProyectBox from './ProyectBox'
-import ProductDetail from './ProductDetail'
+import HomeProyectBox from './HomeProyectBox'
+import HomeProductDetail from './HomeProductDetail'
 import { gallery } from '../mocks/proyects'
 import { LenguageContext } from "./Context/LanguagesContext"
 
-const ProyectsGallery = () => {
+const HomeProyectsGallery = () => {
 
   const [productSelected, setProductSelected] = useState();
   const {state} = useContext(LenguageContext);
@@ -13,7 +13,7 @@ const ProyectsGallery = () => {
   return (
     <div style={{position: "relative"}}>
       
-      <ProductDetail productSelected={productSelected} onClose={()=>setProductSelected(undefined)}/>
+      <HomeProductDetail productSelected={productSelected} onClose={()=>setProductSelected(undefined)}/>
       
       <Header>
         {
@@ -22,7 +22,7 @@ const ProyectsGallery = () => {
             <p>¿QUÉ HACEMOS?</p>
             <h2><span>Trabajos</span> destacados</h2>
             </>
-          ) :(
+          ):(
             <>
             <p>WHAT DO WE DO?</p>
             <h2><span>Featured </span> Works</h2>
@@ -33,7 +33,7 @@ const ProyectsGallery = () => {
       <GalleryContainer>
         <GalleryBox>
           {gallery.map((proyect) => (
-            <ProyectBox
+            <HomeProyectBox
               key={proyect.id}
               {...proyect} 
               handleClick={setProductSelected}
@@ -45,4 +45,4 @@ const ProyectsGallery = () => {
   )
 }
 
-export default ProyectsGallery
+export default HomeProyectsGallery

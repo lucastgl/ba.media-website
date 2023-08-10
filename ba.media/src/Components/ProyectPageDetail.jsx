@@ -4,7 +4,7 @@ import { ModalContainer, GalleryContent, GallerySection,FaTimesIcono,FaAngleLeft
 import {galleryPage} from '../mocks/proyects.js';
 
 
-const ProductPageDetail = ({ productSelected, onClose }) => {
+const ProyectPageDetail = ({ productSelected, onClose }) => {
     const initialProjectIndex = galleryPage.findIndex(p => p.id === productSelected);
     const [currentImageIndex, setCurrentImageIndex] = useState(initialProjectIndex);
     const proyect = galleryPage[currentImageIndex];
@@ -77,4 +77,4 @@ const ProductPageDetail = ({ productSelected, onClose }) => {
     )
 }
 
-export default ProductPageDetail;
+export default ProyectPageDetail;

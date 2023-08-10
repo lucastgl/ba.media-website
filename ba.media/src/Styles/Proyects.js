@@ -43,7 +43,6 @@ export const P = styled.p`
 export const GalleryBox =  styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    //grid-template-rows: repeat(9,1fr);
     margin : 0 auto;
     margin-left:20px;
     
