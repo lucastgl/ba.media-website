@@ -33,24 +33,47 @@ export const LogContainer = styled.div`
     align-items: center;
     font-size: 1.2rem;
     font-family: 'Inter Tight', sans-serif;
+    @media screen and (mix-width: 1600px){
+    }
 `;
 
 export const Select = styled.select`
     background-color: #035772;
     border: none;
-    width:90px;
+    width:80px;
+    color:grey;
+    position:relative;
+    bottom:450px;
+    font-size:18px;
     option{
         background-color:white;
+        font-size:12px;
     }
     @media (min-width:1000px){
+        font-size:15px;
         background-color: #EDEDED;
         border: none;
         width:90px;
+        position:static;
+        option{
+            font-size:14px;
+        }
+        
     }
-    option{
-        background-color: #EDEDED;
-        padding:30px;
+    
+`
+export const Option = styled.option`
+    option::-moz-selection {
+        background-color: red;
+        color: initial;
+    }
 
+    option::selection {
+        background-color: red;
+        color: initial;
+    }
+    .bIruLN option {
+        background-color: ORANGE;
     }
 `
 
@@ -120,7 +143,8 @@ export const MobileIcon = styled.div`
     @media screen and  (max-width: 425px){
         display: flex;
         align-items: center;
-
+        justify-content: ${({ alignEnd }) => (alignEnd ? "flex-end" : "flex-start")}; // Alinea a la derecha si alignEnd es true
+        width:${({ alignEnd }) => (alignEnd ? "100%" : "auto")};
         svg{
             fill: ${({open}) => (open ? "#FFFFFF" : "#212121")};
             margin-right: 1.6rem;

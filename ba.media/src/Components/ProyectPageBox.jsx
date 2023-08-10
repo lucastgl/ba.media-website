@@ -1,19 +1,21 @@
-import {Container, Image} from "../Styles/ProyectsPageBox";
+import {Container,ImageContainer, Image, InfoText} from "../Styles/ProyectsPageBox";
 
 function ProyectPageBox({handleClick, image, title, episodes, country, genre, network, liveEvent, days, location, season,streamLiveEvent,id}){
     return (
       <Container onClick={()=>{handleClick(id)}}>
-          <Image src={image} alt="proyect image" />
+        <ImageContainer>
+            <Image src={image} alt="proyect image" />
+          </ImageContainer>
           <h3>{title}</h3>
-          <p>Country : {country}</p>
-          {network && <p>Network: {network}</p>}
-          {genre && <p>Genre: {genre}</p>}
-          {episodes && <p>Episodes: {episodes}</p>}
-          {season && <p>Season: {season}</p>}
-          {location && <p>Location: {location}</p>}
-          {days && <p>Days: {days}</p>}
-          {liveEvent && <p>Live Stream: {liveEvent}</p>}
-          {streamLiveEvent && <p>Stream Live Event: {streamLiveEvent}</p>}
+          <InfoText>Country : {country}</InfoText>
+          {network && <InfoText>Network: {network}</InfoText>}
+          {genre && <InfoText>Genre: {genre}</InfoText>}
+          {episodes && <InfoText>Episodes: {episodes}</InfoText>}
+          {season && <InfoText>Season: {season}</InfoText>}
+          {location && <InfoText>Location: {location}</InfoText>}
+          {days && <InfoText>Days: {days}</InfoText>}
+          {liveEvent && <InfoText>Live Stream: {liveEvent}</InfoText>}
+          {streamLiveEvent && <InfoText>Stream Live Event: {streamLiveEvent}</InfoText>}
       </Container>
     )
   }

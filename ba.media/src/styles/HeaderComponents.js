@@ -5,7 +5,7 @@ export const HeaderBox = styled.div`
 
 export const DesktopView = styled.div`
     display:none;
-    @media (min-width:1600px){
+    @media (min-width:1400px){
         height: 50vh; 
         display: flex;
         align-items: center;
@@ -21,7 +21,7 @@ export const MobileView = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #EDEDED;
-    @media (min-width:1600px){ 
+    @media (min-width:1200px){ 
         display: none;
     }
 `;
@@ -45,10 +45,9 @@ export const Title = styled.div`
     }
     opacity: 0;
     animation: ${slideInUp} 1s ease-in-out 1s forwards;
-    @media (min-width:1600px){ 
+    @media (min-width:1400px){ 
         display: flex;
         align-items: center;
-        width: 50%;
         height: 50%;
         img{
             height: 150px;
@@ -62,6 +61,12 @@ export const Title = styled.div`
             padding-top: 25px;
         }
     }
+    @media (min-width:1600px){ 
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 50%;
+    }
 `;
 
 export const TVgif = styled.img`
@@ -69,6 +74,11 @@ export const TVgif = styled.img`
     height: auto; // Cambiar a auto
     opacity: 0;
     animation: ${slideInUp} 1s ease-in-out 1.5s forwards;
+    @media (min-width:1400px){ 
+        z-index: -1;
+        width: auto;
+        height: 250px!important;
+    }
     @media (min-width:1600px){ 
         z-index: -1;
         width: auto;

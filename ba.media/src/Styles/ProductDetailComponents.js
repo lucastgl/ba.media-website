@@ -52,7 +52,7 @@ export const GallerySection = styled.div`
     }
     @media (min-width:1600px){
         align-items: center;
-        justify-content:center;
+        justify-content:space-between;
         width:1300px;
         height:auto;
         img{
@@ -94,7 +94,7 @@ export const FaArrowLeftIcono = styled(FaArrowLeft)`
     font-size:20px;
     z-index: 130;
     @media (min-width:1600px){
-       display:none;
+        display:none;
     }
 `
 export const FaAngleRightIcono = styled(FaAngleRight)`

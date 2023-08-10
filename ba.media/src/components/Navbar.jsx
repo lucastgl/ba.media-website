@@ -1,6 +1,6 @@
 import  {useState, useEffect, useContext} from 'react'
 import BAM from "../Images/BAM.webp"
-import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper,StyledLink, Select} from '../styles/NavbarComponents'
+import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper,StyledLink, Select, Option} from '../styles/NavbarComponents'
 import {FaBars, FaTimes} from "react-icons/fa"
 import {Link} from "react-router-dom";
 import {LenguageContext} from "../Components/Context/LanguagesContext";
@@ -43,10 +43,12 @@ const Navbar = () => {
     return (
         <Container show={showNavbar} >
             <Wrapper open={showMobileMenu}>
-                <LogContainer>
-                    <Link to="/"><img src={BAM}/></Link>
-                </LogContainer>
-                <MobileIcon open={showMobileMenu} onClick={()=> setShowMobileMenu(!showMobileMenu)}>
+                {!showMobileMenu && (  // Renderiza el LogContainer condicionalmente
+                    <LogContainer>
+                        <Link to="/"><img src={BAM} alt="Logo" /></Link>
+                    </LogContainer>
+                )}
+                <MobileIcon open={showMobileMenu} alignEnd={showMobileMenu}  onClick={()=> setShowMobileMenu(!showMobileMenu)}>
                     {showMobileMenu ? <FaTimes/> : <FaBars/>}  
                 </MobileIcon>
                 <Menu open={showMobileMenu}>
@@ -84,14 +86,14 @@ const Navbar = () => {
                             <Select onChange={toggleLanguage} name = "hola " onClick={state.language ? 'ES' : 'EN'}>
                                 {state.language ? (
                                     <>
-                                    <option value="EN">EN</option>
-                                    <option value="ES">ES</option>
+                                    <Option value="EN" >EN</Option>
+                                    <Option value="ES" >ES</Option>
                                     </>
                                 ) 
                                 : (
                                     <>
-                                    <option value="ES">ES</option>
-                                    <option value="EN">EN</option>
+                                    <Option value="ES" >ES</Option>
+                                    <Option value="EN" >EN</Option>
                                     </>
                                 )
                                 }

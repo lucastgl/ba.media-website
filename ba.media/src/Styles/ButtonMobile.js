@@ -11,7 +11,7 @@ export const Button = styled.button`
     margin-right:20px;
     margin-bottom:20px;
     z-index:99;
-    @media (min-width:1600px){ 
+    @media (min-width:1400px){ 
         display:none;
     }
 `

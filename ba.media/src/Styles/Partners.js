@@ -114,7 +114,6 @@ export const ColumnWrapper = styled.div`
     @media (min-width: 1400px){
         justify-content: center;
         animation: none;
-        //ojo este width  de abajo quizas cambia la pc
         width:1250px;
         img{
             width:110px;
