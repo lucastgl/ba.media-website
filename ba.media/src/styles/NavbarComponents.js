@@ -42,10 +42,15 @@ export const Select = styled.select`
     option{
         background-color:white;
     }
-    @media (min-width:1600px){
+    @media (min-width:1000px){
         background-color: #EDEDED;
         border: none;
-        width:60px;
+        width:90px;
+    }
+    option{
+        background-color: #EDEDED;
+        padding:30px;
+
     }
 `
 

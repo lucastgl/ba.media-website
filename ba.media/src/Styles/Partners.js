@@ -30,6 +30,11 @@ export const H3 = styled.span`
     span{
         color:#FF0099;
     }
+    @media (min-width: 1400px){
+        font-size:63px;
+        text-align:left;
+        margin-left:120px;
+    }
     @media (min-width:1600px){ 
         font-weight: 700; 
         display:flex;
@@ -57,6 +62,13 @@ export const H5 = styled.span`
     font-weight: 900;
     position:relative;
     top:10px;
+    @media (min-width: 1400px){
+        font-size:16px;
+        text-align:left;
+        margin-left:120px;
+        position:relative;
+        top:90px;
+    }
     @media (min-width:1600px){                       
         font-size:16px;
         margin-left:333px;
@@ -66,6 +78,11 @@ export const H5 = styled.span`
 `
 export const GIF = styled.img`
     display:none;
+    @media (min-width: 1400px){
+        display:inline;                       
+        width:158px;
+        width:158px;
+    }
     @media (min-width:1600px){ 
         display:inline;                       
         width:158px;
@@ -74,6 +91,7 @@ export const GIF = styled.img`
 `
 export const DivContent = styled.div`
     margin-bottom:130px;
+    
     @media (min-width:1600px){ 
         animation:none;
         margin-bottom:200px;
@@ -93,10 +111,20 @@ export const ColumnWrapper = styled.div`
         transition: filter 0.5s ease;
         margin-left: 15px;
     }
-    @media (min-width: 1200px) {
+    @media (min-width: 1400px){
         justify-content: center;
         animation: none;
-        gap:40px;
+        //ojo este width  de abajo quizas cambia la pc
+        width:1250px;
+        img{
+            width:110px;
+            margin-right: 15px;
+        }
+    }
+    @media (min-width: 1600px) {
+        justify-content: center;
+        animation: none;
+        gap:20px;
         img {
             width: 108px;
             height: 100px;

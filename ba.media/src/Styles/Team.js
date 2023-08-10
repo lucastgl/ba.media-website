@@ -20,6 +20,12 @@ export const H3 = styled.div`
     span{
         color:#FF0099;
     }
+    @media (min-width:1400px){
+        font-size:63px;
+        text-align:left;
+        margin-left:120px;
+        margin-bottom:90px;
+    }
     @media (min-width:1600px){                     
         font-size:63px;
         text-align:left;
@@ -34,6 +40,11 @@ export const DivContent = styled.div`
     justify-content:center;
     flex-direction:column;
     margin-bottom:70px;
+    @media (min-width:1400px){
+        display:flex;
+        justify-content:center;
+        flex-direction:row;
+    }
     @media (min-width:1600px){                       
         display:flex;
         justify-content:center;
@@ -50,22 +61,36 @@ export const Div = styled.div`
     img{
         border-radius:100%;
         border: solid 6px white;
-        //width:185px;
         height:185px;
-        //box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
         box-shadow: inset 0 0 10px #BCBCBC, 0 0 10px #BCBCBC;
+    }
+    @media (min-width:1400px){
+        img{
+            margin-right:50px;
+            margin-left:30px;
+            width:225px;
+            height:225px;
+        }
+        p,h4{
+            margin-right:20px;
+        }
     }
     @media (min-width:1600px){  
         margin-right:85px;
         margin-bottom:30px;
+        margin-right:0px;
         img{
             width:225px;
-           // width:auto;
             height:225px;
+            margin-right:80px;
+            margin-left:0px;
             box-shadow: inset 0 0 10px #BCBCBC, 0 0 10px #BCBCBC;
         }
         h4{
             margin-top:20px;
+        }
+        p,h4{
+            margin-right:80px;
         }
     }
 `

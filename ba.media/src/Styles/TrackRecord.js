@@ -20,6 +20,9 @@ export const DivTitles = styled.div`
 `
 export const DivContent = styled.div`
     margin-bottom:160px;
+    @media (min-width:1400px){
+        margin-bottom:0px;
+    }
     @media (min-width:1600px){
         margin-bottom:0px;
     }
@@ -49,6 +52,11 @@ export const SVGVIDEO = styled.svg`
 `
 export const GIF3 = styled.img`
     display:none;
+    @media (min-width:1400px){
+        display:inline;                       
+        width:139px;
+        margin-left:25px;
+    }
     @media (min-width:1600px){
         display:inline;                       
         width:139px;
@@ -63,6 +71,12 @@ export const H2 = styled.h2`
     font-weight: bold;
     span{
         color:#FF0099;
+    }
+    @media (min-width:1400px){
+        font-size:67px;
+        text-align:left;
+        margin-left:110px;
+        letter-spacing: 2.5px;
     }
     @media (min-width:1600px){ 
         display:flex;
@@ -87,6 +101,13 @@ export const H5 = styled.h5`
     bottom:0px;
     font-size:12px;
     margin-bottom:50px;
+    @media (min-width:1400px){
+        font-size:14px;
+        text-align:left;
+        margin-left:117px;
+        position:relative;
+        bottom:120px;
+    }
     @media (min-width:1600px){                       
         font-size:14px;
         text-align:left;
@@ -95,6 +116,8 @@ export const H5 = styled.h5`
         font-weight: 900;
         margin-bottom:0px;
         top:30px;
+        // ojo aca con el bottom
+        bottom:0;
     }
 `
 
@@ -104,6 +127,11 @@ export const Content = styled.div`
     flex-direction:column;
     align-items:center;
     font-weight: bold;
+    @media (min-width:1400px){
+        display:flex;
+        justify-content:center;
+        flex-direction:row;
+    }
     @media (min-width:1600px){                     
         display:flex;
         justify-content:center;
@@ -133,6 +161,12 @@ export const StyledDiv = styled.div`
     span{
         font-size:19px;
     }
+    @media (min-width:1400px){
+        margin-right:35px;
+        width:250px;
+        height:300px;
+        
+    }
     @media (min-width:1600px){                       
         width:255px;
         height:280px;
@@ -151,18 +185,23 @@ export const StyledDiv = styled.div`
 export const StyledDiv2 = styled.div`
     background-color:#21A6F3;
     height:280px;
+    width:300px;
     border-radius:14px;
     text-align:center;
     color:white;
     padding:10px;
     padding-top:40px;
-    width:300px;
     margin-bottom:30px;
     p{
         font-size:40px;
     }
     span{
         font-size:19px;
+    }
+    @media (min-width:1400px){
+        margin-right:35px;
+        width:250px;
+        height:300px;
     }
     @media (min-width:1600px){                    
         width:255px;

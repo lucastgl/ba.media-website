@@ -37,7 +37,7 @@ export const LogoApps = styled.img`
     height:45px;
     margin-right: 10px;
     cursor: pointer;
-    @media (min-width:1600px){ 
+    @media (min-width:1400px){ 
         width:40px;
         height:40px;
         margin-top:40px;
@@ -48,7 +48,7 @@ export const DivLogos = styled.div`
     display:flex;
     flex-direction:column;
     align-items:center;
-    @media (min-width:1600px){ 
+    @media (min-width:1400px){ 
         margin-right:50px;
         margin-top:100px;
     }
@@ -59,7 +59,7 @@ export const DivContent = styled.div`
     text-align:center;
     padding:10px;
     height:410px;
-    @media (min-width:1600px){  
+    @media (min-width:1400px){  
         display:flex;
         justify-content:center;
         height:390px;
@@ -71,7 +71,7 @@ export const Content = styled.div`
     justify-content:center;
     margin-left:40px;
     margin-bottom:40px;
-    @media (min-width:1600px){
+    @media (min-width:1400px){
         width:450px;
         justify-content:space-around;
         margin-top:90px;
@@ -100,7 +100,7 @@ export const Div = styled.div`
         margin-bottom:5px;
         text-align:left;
     }
-    @media (min-width:1600px){
+    @media (min-width:1400px){
         width:220px;
         align-items:start;
         margin-left:0px;
