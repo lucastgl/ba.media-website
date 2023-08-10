@@ -1,16 +1,15 @@
 import { useContext, useState } from 'react'
-import { GalleryContainer, GalleryBox, Header } from '../styles/ProyectsGalleryComponents'
+import { GalleryContainer, GalleryBox, Header } from '../Styles/ProyectsGalleryComponents'
 import ProyectBox from './ProyectBox'
 import ProductDetail from './ProductDetail'
 import { gallery } from '../mocks/proyects'
-import { LenguageContext } from './Context/LanguagesContext'
+import { LenguageContext } from "./Context/LanguagesContext"
 
 const ProyectsGallery = () => {
 
   const [productSelected, setProductSelected] = useState();
   const {state} = useContext(LenguageContext);
 
-  
   return (
     <div style={{position: "relative"}}>
       
@@ -23,8 +22,7 @@ const ProyectsGallery = () => {
             <p>¿QUÉ HACEMOS?</p>
             <h2><span>Trabajos</span> destacados</h2>
             </>
-          ) :
-          (
+          ) :(
             <>
             <p>WHAT DO WE DO?</p>
             <h2><span>Featured </span> Works</h2>

@@ -82,7 +82,6 @@ function Footer(){
                     <p>info@ba.media</p>
                   </Div>
                   </>
-                 
                 )
               }
             </Content>

@@ -2,8 +2,8 @@ import gif2 from "../Images/gif2.gif";
 import images from "../mocks/images"
 import {H3, H5, DivContent,GIF, ColumnWrapper } from "../Styles/Partners";
 import { useEffect, useState, useContext } from 'react';
-import ButtonMobile from "./ButtonMobile.jsx";
-import { LenguageContext } from "./Context/LanguagesContext";
+import ButtonMobile from "../Components/ButtonMobile";
+import { LenguageContext } from "../Components/Context/LanguagesContext"
 
 
 function Partners(){
@@ -33,8 +33,8 @@ function Partners(){
             state.lenguage ? (
               <>
               <H5 showAnimate={showAnimate}>CONFIANZA, CALIDAD Y RESULTADOS</H5> 
-             <H3 showAnimate={showAnimate}>Nuestros <span>socios</span><GIF src={gif2} alt=""/></H3>
-             </>
+              <H3 showAnimate={showAnimate}>Nuestros <span>socios</span><GIF src={gif2} alt=""/></H3>
+              </>
             ) :
             (
               <>
@@ -43,7 +43,6 @@ function Partners(){
               </>
             )
           }
-            
             <div style={{ overflowX: "hidden" }}>
               <ColumnWrapper>
                   {images.map((image,index) => (

@@ -1,6 +1,6 @@
 import  {useState, useEffect, useContext} from 'react'
 import BAM from "../Images/BAM.webp"
-import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper,StyledLink, Select , Option} from '../styles/NavbarComponents'
+import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper,StyledLink, Select} from '../styles/NavbarComponents'
 import {FaBars, FaTimes} from "react-icons/fa"
 import {Link} from "react-router-dom";
 import {LenguageContext} from "../Components/Context/LanguagesContext";
@@ -13,7 +13,6 @@ const Navbar = () => {
         dispatch({ type: 'lenguage' });
     };
 
-    
     const [showMobileMenu, setShowMobileMenu] = useState(false);
     const [showNavbar, setShowNavbar] = useState(true);
     const [scrollPos, setScrollPos] = useState(window.scrollY);
@@ -52,38 +51,32 @@ const Navbar = () => {
                 </MobileIcon>
                 <Menu open={showMobileMenu}>
                     <MenuItem>
-                        <MenuItemLink>
-                            Home
-                        </MenuItemLink>
+                        <StyledLink to="/">
+                            <MenuItemLink>
+                                Home
+                            </MenuItemLink>
+                        </StyledLink>
                     </MenuItem>
                     <MenuItem>
-                        <StyledLink to="/proyects">
+                        <StyledLink to="/projects" onClick={()=> setShowMobileMenu(!showMobileMenu)}>
                             <MenuItemLink>
-                            {
-                                state.lenguage ?  "Proyectos" : "Proyects"
-                            }
+                                {state.lenguage ?  "Proyectos" : "Projects"}
                             </MenuItemLink>
                         </StyledLink>
                     </MenuItem>
                     <MenuItem>
                         <MenuItemLink onClick={(event) => handleLinkClick(event, 'partners')} >
-                            {
-                                state.lenguage ?  "Socios" : "Partners"
-                            }
+                            {state.lenguage ?  "Socios" : "Partners"}
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
                         <MenuItemLink onClick={(event) => handleLinkClick(event, 'team')}>
-                            {   
-                                state.lenguage ?  "Nosotros" : "Us"
-                            }
+                            {state.lenguage ?  "Nosotros" : "Us"}
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
                         <MenuItemLink>
-                            {   
-                                state.lenguage ?  "Contacto" : "Contact"
-                            }
+                            { state.lenguage ?  "Contacto" : "Contact"}
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
@@ -91,14 +84,14 @@ const Navbar = () => {
                             <Select onChange={toggleLanguage} name = "hola " onClick={state.language ? 'ES' : 'EN'}>
                                 {state.language ? (
                                     <>
-                                        <Option value="EN">EN</Option>
-                                        <Option value="ES">ES</Option>
+                                    <option value="EN">EN</option>
+                                    <option value="ES">ES</option>
                                     </>
                                 ) 
                                 : (
                                     <>
-                                        <option value="ES">ES</option>
-                                        <option value="EN">EN</option>
+                                    <option value="ES">ES</option>
+                                    <option value="EN">EN</option>
                                     </>
                                 )
                                 }

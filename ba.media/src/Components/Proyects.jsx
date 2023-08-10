@@ -1,22 +1,22 @@
-import Footer from './Footer';
+import Footer from "./Footer"
 import {H1, P,GalleryBox } from "../Styles/Proyects.js";
-import ButtonMobile from "../Components/ButtonMobile";
-import ProyectPageBox from "../Components/ProyectPageBox";
+import ButtonMobile from "./ButtonMobile";
+import ProyectPageBox from "./ProyectPageBox";
 import { galleryPage } from '../mocks/proyects'
-import ProductDetail from './ProductDetail'
+import ProductPageDetail from "./ProductPageDetail"
 import { useState, useContext } from 'react';
 import { LenguageContext } from './Context/LanguagesContext';
 
 const Proyects = () => {
 
-  //el estado de producto seleccionado
   const [productSelected, setProductSelected] = useState();
   const {state} = useContext(LenguageContext)
 
   return (
     <>
-      {/* Aca va el productDetail */}
-      <ProductDetail productSelected={productSelected} onClose={()=>setProductSelected(undefined)}/>
+    <div style={{position: "relative"}}>
+      <ProductPageDetail productSelected={productSelected} onClose={()=>setProductSelected(undefined)}/>
+      </div>
       {state.lenguage ? (
         <>
         <H1 id="inicio">Proyectos</H1>
@@ -24,13 +24,11 @@ const Proyects = () => {
         </>
       ) : (
         <>
-        <H1 id="inicio">Proyects</H1>
+        <H1 id="inicio">Projects</H1>
         <P>Discover our high-impact <span> audiovisual projects.</span> </P>
         </>
-
       )
     }
-      
       <ButtonMobile/>
           <GalleryBox>
             {
@@ -38,10 +36,7 @@ const Proyects = () => {
                 <ProyectPageBox 
                   key={galleryPage.id}
                   {... proyect}
-                  handleClick={setProductSelected}
-
-                  //pasarle el handle click para abrir el detail
-                >
+                  handleClick={setProductSelected}>
                 </ProyectPageBox>
               ))
             }

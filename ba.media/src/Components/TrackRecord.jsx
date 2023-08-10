@@ -1,7 +1,7 @@
 import {DivContent,H5, H2, GIF3, DivTitles,DivChild,Content, SVG, SVGVIDEO,StyledDiv, StyledDiv2} from "../Styles/TrackRecord";
 import gif3 from "../Images/gif3.gif";
 import { useState,useEffect, useContext } from "react";
-import { LenguageContext } from "./Context/LanguagesContext";
+import { LenguageContext } from "../Components/Context/LanguagesContext"
 
 
 function TrackRecord(){
@@ -62,7 +62,6 @@ function TrackRecord(){
                           <span>HOURS OF CONTENT</span>
                         )
                       }
-                      
                       </DivChild>
                 </StyledDiv>
 
@@ -80,7 +79,6 @@ function TrackRecord(){
                           <span>EPISODES DELIVERED</span>
                         )
                       }
-                      
                     </DivChild>
                 </StyledDiv2>
 
@@ -115,7 +113,6 @@ function TrackRecord(){
                       1.575 1.284 3.159 3.084 3.75l15.925 5.292c28.925 9.5 28.358 32.15 28.316 33.108l.009 5.434c0 6.891-5.609 12.5-12.5 12.5Z" 
                       ></path></SVG>
                       <p>70+</p>
-                      
                       {
                         state.lenguage ? (
                           <span>CLIENTES ALREDEDOR DEL MUNDO</span>

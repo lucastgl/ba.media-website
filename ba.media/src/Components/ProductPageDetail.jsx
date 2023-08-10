@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { ModalContainer, GalleryContent, GallerySection, DetailSection,FaTimesIcono,FaAngleLeftIcono, FaAngleRightIcono,FaArrowLeftIcono} from '../styles/ProductDetailComponents';
-import {gallery} from '../mocks/proyects.js';
-//import {FaAngleRight, FaAngleLeft, FaTimes} from "react-icons/fa"
+import { DetailSection } from '../Styles/ProyectsPageBox';
+import { ModalContainer, GalleryContent, GallerySection,FaTimesIcono,FaAngleLeftIcono, FaAngleRightIcono, FaArrowLeftIcono} from '../styles/ProductDetailComponents';
+import {galleryPage} from '../mocks/proyects.js';
 
 
-const ProductDetail = ({ productSelected, onClose }) => {
-    const initialProjectIndex = gallery.findIndex(p => p.id === productSelected);
+const ProductPageDetail = ({ productSelected, onClose }) => {
+    const initialProjectIndex = galleryPage.findIndex(p => p.id === productSelected);
     const [currentImageIndex, setCurrentImageIndex] = useState(initialProjectIndex);
-    const proyect = gallery[currentImageIndex];
+    const proyect = galleryPage[currentImageIndex];
 
     const handleNext = () => {
-        if (currentImageIndex < gallery.length - 1) {
+        if (currentImageIndex < galleryPage.length - 1) {
             setCurrentImageIndex(currentImageIndex + 1);
         }
     };
@@ -26,14 +26,15 @@ const ProductDetail = ({ productSelected, onClose }) => {
     }, [productSelected]);
 
     return (
-        <>
+        <>  
+         
             {
                 proyect &&
                 (
                     <ModalContainer>
-                        {/* icono de la flecha izq para mobile  */}
-                            <FaArrowLeftIcono onClick={onClose}/> 
-                       
+                         {/* icono de la flecha izq para mobile  */}
+                         <FaArrowLeftIcono onClick={onClose}/>
+                        
                         <GalleryContent>
                             {/* Gallery section */}
                             <GallerySection>
@@ -42,8 +43,8 @@ const ProductDetail = ({ productSelected, onClose }) => {
                                     proyect.video ? (
                                         <iframe
                                             src={proyect.video}
-                                            width="1340"
-                                            height="560"
+                                            width="1640"
+                                            height="660"
                                             frameborder="0"
                                             allow="autoplay; fullscreen; picture-in-picture"
                                             allowfullscreen
@@ -58,7 +59,14 @@ const ProductDetail = ({ productSelected, onClose }) => {
                             <DetailSection>
                                 <h2>{proyect.title}</h2>
                                 <p>Country: {proyect.country}</p>
-                                <p>Episodes: {proyect.episodes}</p>
+                                {proyect.network && <p>Network: {proyect.network}</p>}
+                                {proyect.genre && <p>Genre: {proyect.genre}</p>}
+                                {proyect.episodes && <p>Episodes: {proyect.episodes}</p>}
+                                {proyect.season && <p>Season: {proyect.season}</p>}
+                                {proyect.location && <p>Location: {proyect.location}</p>}
+                                {proyect.days && <p>Days: {proyect.days}</p>}
+                                {proyect.liveEvent && <p>Live Stream: {proyect.liveEvent}</p>}
+                                {proyect.streamLiveEvent && <p>Stream Live Event: {proyect.streamLiveEvent}</p>}
                             </DetailSection>
                             <FaTimesIcono onClick={onClose}/>
                         </GalleryContent>
@@ -69,4 +77,4 @@ const ProductDetail = ({ productSelected, onClose }) => {
     )
 }
 
-export default ProductDetail;
+export default ProductPageDetail;

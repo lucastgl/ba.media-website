@@ -39,20 +39,16 @@ export const Select = styled.select`
     background-color: #035772;
     border: none;
     width:90px;
+    option{
+        background-color:white;
+    }
     @media (min-width:1600px){
         background-color: #EDEDED;
         border: none;
         width:60px;
     }
 `
-export const Option = styled.option`
-    background-color:white;
-    @media (min-width:1600px){
-        background-color: #EDEDED;
-        border: none;
-        width: 50px;
-    }
-`
+
 
 export const Menu = styled.ul`
     z-index: 100;
@@ -94,6 +90,7 @@ export const MenuItemLink = styled.a`
     align-items: center;
     height: 100%;
     padding: 0.5rem 2.5rem;
+    //margin-right:50px;
     color: #212121;
     font-family: 'Inter Tight', sans-serif;
     font-size: 1rem;

@@ -7,6 +7,7 @@ import TrackRecord from './TrackRecord'
 import ProyectsGallery from './ProyectsGallery'
 
 const Home = () => {
+
   return (
     <>
       <Header/>

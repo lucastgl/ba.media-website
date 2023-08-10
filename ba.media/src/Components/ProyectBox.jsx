@@ -1,4 +1,4 @@
-import { Contaier, Image } from '../styles/ProyectBoxComponents'
+import { Contaier, Image } from '../Styles/ProyectBoxComponents'
 
 const ProyectBox = ({handleClick, image, title, episodes, country, id}) => {
   return (

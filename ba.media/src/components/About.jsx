@@ -62,7 +62,6 @@ const About = () => {
           {
             state.lenguage ? (
               <Text>Con <span style={{color: "#3D9BE9"}}>el mejor equipo</span> de trabajo, combinamos creatividad, agilidad y eficiencia consiguiendo como resultado contenido audiovisual <span style={{color: "#FF0099"}}>de alta calidad.</span></Text>
-
             ) 
             :
             ( <Text>
