@@ -1,5 +1,5 @@
 import { DivContent,DivLogos,Logo,LogoApps, Content, Div} from "../Styles/Footer";
-import logo from "../Images/logo.webp";
+import logo from "../Images/Logo.webp";
 import vimeo from "../Images/vimeo.png";
 import instagram from "../Images/instagram.png";
 import linkedin from "../Images/linkedin.png";
