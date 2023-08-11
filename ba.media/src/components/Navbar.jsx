@@ -53,13 +53,13 @@ const Navbar = () => {
                 <Menu open={showMobileMenu}>
                     <MenuItem>
                         <StyledLink to="/">
-                            <MenuItemLink onClick={()=> setShowMobileMenu(!showMobileMenu)}>
+                            <MenuItemLink onClick={()=> setShowMobileMenu(false)}>
                                 Home
                             </MenuItemLink>
                         </StyledLink>
                     </MenuItem>
                     <MenuItem>
-                        <StyledLink to="/projects" onClick={()=> setShowMobileMenu(!showMobileMenu)}>
+                        <StyledLink to="/projects" onClick={()=> setShowMobileMenu(false)}>
                             <MenuItemLink>
                                 {state.lenguage ?  "Proyectos" : "Projects"}
                             </MenuItemLink>
