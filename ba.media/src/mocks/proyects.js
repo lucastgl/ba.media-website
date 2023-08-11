@@ -68,7 +68,6 @@ export const gallery = [
   }
 ];
 
-//Sumas la lista galleryPage
 export const galleryPage = [
   {
     id: 1,

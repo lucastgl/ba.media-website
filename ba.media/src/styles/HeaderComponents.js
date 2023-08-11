@@ -77,10 +77,11 @@ export const Title = styled.div`
             height: 150px;
         }
         img:first-child {
-            right: -10px; 
+            right: -40px; 
             padding-top: 25px;
         }
         img:last-child {
+            left: -25px; 
             padding-top: 25px;
         }
     }
