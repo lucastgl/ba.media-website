@@ -12,11 +12,10 @@ export const Image = styled.img`
 export const Container = styled.div`
     width:165px;
     margin-bottom:30px;
-    p{
-        font-size:14px;
-    }
     h3{
+        margin-top:10px;
         font-size:16px;
+        margin-left:8px;
     }
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         margin-bottom:70px;
@@ -24,11 +23,8 @@ export const Container = styled.div`
         h3{
             margin-top:20px;
             font-size:25px;
+            margin-left:0px;
             font-family: 'Inter Tight', sans-serif;
-        }
-        p{
-            color:#21A6F3;
-            font-weight: 700;
         }
         &:hover ${Image} { // Al hacer hover en el contenedor, se aplica el efecto de zoom a la imagen
             transform: scale(1.1); // Aumenta el tamaño de la imagen en un 10%
@@ -41,11 +37,8 @@ export const Container = styled.div`
         h3{
             margin-top:20px;
             font-size:25px;
+            margin-left:0px;
             font-family: 'Inter Tight', sans-serif;
-        }
-        p{
-            color:#21A6F3;
-            font-weight: 700;
         }
         &:hover ${Image} { // Al hacer hover en el contenedor, se aplica el efecto de zoom a la imagen
             transform: scale(1.1); // Aumenta el tamaño de la imagen en un 10%
@@ -99,8 +92,21 @@ export const DetailSection = styled.div`
     }
 `;
 export const InfoText = styled.p`
-    font-size:14px;
+    font-size:12px;
     font-family: 'Inter Tight', sans-serif;
-    font-weight: 700;
-    color: #3D9BE9;
+    margin-left:8px;
+    color:#5C5C5C;
+    @media screen and  (min-width: 725px) and (max-width: 1599px){
+        font-size:14px;
+        color:#21A6F3;
+        font-weight: 700;
+        font-size:14px;
+        margin-left:0px;
+    }
+    @media (min-width:1600px){
+        color:#21A6F3;
+        font-weight: 700;
+        font-size:14px;
+        margin-left:0px;
+    }
 `;

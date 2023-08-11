@@ -20,7 +20,7 @@ const ProyectsPage = () => {
     {
       state.lenguage ? (
         <>
-          <H1 id="inicio">Proyectos</H1>
+          <H1 id="inicio" >Proyectos</H1>
           <P>Descubrí nuestros proyectos audiovisuales de <span>gran impacto</span> </P>
         </>
       ) : 
@@ -32,7 +32,7 @@ const ProyectsPage = () => {
       )
     }
     {/* <ButtonMobile/> */}
-    <GalleryBox>
+    <GalleryBox >
       {
         galleryPage.map((proyect) => (
           <ProyectPageBox 

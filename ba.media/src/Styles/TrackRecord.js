@@ -73,7 +73,9 @@ export const H2 = styled.h2`
         color:#FF0099;
     }
     @media screen and  (min-width: 725px) and (max-width: 1599px){ 
-        font-size:67px;
+        //font-size:67px;
+        padding-top:10px;
+        font-size:5rem;
         text-align:left;
         margin-left:110px;
         letter-spacing: 2.5px;
@@ -105,7 +107,8 @@ export const H5 = styled.h5`
     font-size:12px;
     margin-bottom:50px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){ 
-        font-size:14px;
+        //font-size:14px;
+        font-size:1rem;
         text-align:left;
         margin-left:117px;
         position:relative;

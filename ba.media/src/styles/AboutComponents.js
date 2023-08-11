@@ -8,8 +8,10 @@ export const AboutContainer = styled.div`
         height: auto;
     }
     @media (min-width:1600px){ 
-        height: auto;
-        width: 100vw;
+        //height: auto;
+        //width: 100vw;
+        width: 100%;
+        height: 100%;
     }
 `;
 
@@ -61,9 +63,13 @@ export const VideoContainer = styled.div`
     }
     @media (min-width:1600px){ 
         width: 100vw;
+        height: auto;
+        //height: 100vw;
+        //flex:1;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        //justify-content: center;
+        //align-items: center;
+        //background-color:blue;
     }
 `;
 
@@ -78,9 +84,12 @@ export const Video = styled.div`
         }
     }
     @media (min-width:1600px){ 
+        margin-bottom:100px;
         iframe{
-            width: 1200px;
-            height: 800px;
+            // width: 1999px;
+            // height: 800px;
+            width: 100vw;
+            height: 60vw;
         }
     }
 `
