@@ -82,7 +82,7 @@ const Navbar = () => {
                     </MenuItem>
                     <MenuItem>
                         <MenuItemLink>
-                            <Select onChange={toggleLanguage}  onClick={state.language ? 'ES' : 'EN'}>
+                            <Select onChange={toggleLanguage}  onClick={()=>{state.language ? 'ES' : 'EN'}}>
                                 {state.language ? (
                                     <>
                                     <Option value="EN" >EN</Option>
