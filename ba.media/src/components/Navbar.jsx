@@ -1,13 +1,14 @@
 import  {useState, useEffect, useContext} from 'react'
 import BAM from "../Images/BAM.webp"
-import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper,StyledLink, Select, Option} from '../styles/NavbarComponents'
+import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper,StyledLink, Select,Option} from '../styles/NavbarComponents'
 import {FaBars, FaTimes} from "react-icons/fa"
 import {Link} from "react-router-dom";
 import {LenguageContext} from "../Components/Context/LanguagesContext";
 
+
 const Navbar = () => {
 
-    const { state, dispatch } = useContext(LenguageContext);
+   const { state, dispatch } = useContext(LenguageContext);
 
     const toggleLanguage = () => {
         dispatch({ type: 'lenguage' });
@@ -43,18 +44,16 @@ const Navbar = () => {
     return (
         <Container show={showNavbar} >
             <Wrapper open={showMobileMenu}>
-                {!showMobileMenu && (  // Renderiza el LogContainer condicionalmente
-                    <LogContainer>
+                <LogContainer>
                         <Link to="/"><img src={BAM} alt="Logo" /></Link>
                     </LogContainer>
-                )}
-                <MobileIcon open={showMobileMenu} alignEnd={showMobileMenu}  onClick={()=> setShowMobileMenu(!showMobileMenu)}>
+                <MobileIcon open={showMobileMenu} onClick={()=> setShowMobileMenu(!showMobileMenu)}>
                     {showMobileMenu ? <FaTimes/> : <FaBars/>}  
                 </MobileIcon>
                 <Menu open={showMobileMenu}>
                     <MenuItem>
                         <StyledLink to="/">
-                            <MenuItemLink>
+                            <MenuItemLink onClick={()=> setShowMobileMenu(!showMobileMenu)}>
                                 Home
                             </MenuItemLink>
                         </StyledLink>
@@ -77,13 +76,13 @@ const Navbar = () => {
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
-                        <MenuItemLink>
+                        <MenuItemLink onClick={(event) => handleLinkClick(event, 'footer')}>
                             { state.lenguage ?  "Contacto" : "Contact"}
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
                         <MenuItemLink>
-                            <Select onChange={toggleLanguage} name = "hola " onClick={state.language ? 'ES' : 'EN'}>
+                            <Select onChange={toggleLanguage}  onClick={state.language ? 'ES' : 'EN'}>
                                 {state.language ? (
                                     <>
                                     <Option value="EN" >EN</Option>
@@ -99,7 +98,7 @@ const Navbar = () => {
                                 }
                             </Select>
                         </MenuItemLink>
-                        </MenuItem>
+                    </MenuItem>
                 </Menu>
             </Wrapper>
         </Container>

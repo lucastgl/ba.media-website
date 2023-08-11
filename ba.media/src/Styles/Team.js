@@ -20,11 +20,12 @@ export const H3 = styled.div`
     span{
         color:#FF0099;
     }
-    @media (min-width:1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         font-size:63px;
         text-align:left;
         margin-left:120px;
         margin-bottom:90px;
+        
     }
     @media (min-width:1600px){                     
         font-size:63px;
@@ -40,7 +41,7 @@ export const DivContent = styled.div`
     justify-content:center;
     flex-direction:column;
     margin-bottom:70px;
-    @media (min-width:1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         display:flex;
         justify-content:center;
         flex-direction:row;
@@ -64,9 +65,9 @@ export const Div = styled.div`
         height:185px;
         box-shadow: inset 0 0 10px #BCBCBC, 0 0 10px #BCBCBC;
     }
-    @media (min-width:1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         img{
-            margin-right:50px;
+            margin-right:20px;
             margin-left:30px;
             width:225px;
             height:225px;

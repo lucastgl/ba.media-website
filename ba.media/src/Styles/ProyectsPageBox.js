@@ -18,9 +18,9 @@ export const Container = styled.div`
     h3{
         font-size:16px;
     }
-    @media (min-width:1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){
         margin-bottom:70px;
-        width:365px;
+        width:345px;
         h3{
             margin-top:20px;
             font-size:25px;
@@ -35,6 +35,22 @@ export const Container = styled.div`
         }
         
     }
+    @media (min-width:1600px){
+        margin-bottom:70px;
+        width:365px;
+        h3{
+            margin-top:20px;
+            font-size:25px;
+            font-family: 'Inter Tight', sans-serif;
+        }
+        p{
+            color:#21A6F3;
+            font-weight: 700;
+        }
+        &:hover ${Image} { // Al hacer hover en el contenedor, se aplica el efecto de zoom a la imagen
+            transform: scale(1.1); // Aumenta el tamaño de la imagen en un 10%
+        }
+    }
 `
 
 
@@ -42,12 +58,19 @@ export const ImageContainer = styled.div`
     width:160px;
     height:215px;
     margin-left:5px;
-    @media (min-width:1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){
+        width: 360px;
+        height: 490px;
+        overflow: hidden;
+        margin-left:0px;
+        overflow: hidden; // Oculta cualquier parte de la imagen que se desborde debido al zoom
+    }
+    @media (min-width:1600px){
         width: 372px;
         height: 496px;
         overflow: hidden;
         margin-left:0px;
-        overflow: hidden; // Oculta cualquier parte de la imagen que se desborde debido al zoom
+        overflow: hidden; 
     }
 `;
 

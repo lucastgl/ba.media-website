@@ -37,7 +37,12 @@ export const LogoApps = styled.img`
     height:45px;
     margin-right: 10px;
     cursor: pointer;
-    @media (min-width:1400px){ 
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
+        width:40px;
+        height:40px;
+        margin-top:40px;
+    }
+    @media (min-width:1600px){
         width:40px;
         height:40px;
         margin-top:40px;
@@ -48,7 +53,11 @@ export const DivLogos = styled.div`
     display:flex;
     flex-direction:column;
     align-items:center;
-    @media (min-width:1400px){ 
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
+        margin-right:50px;
+        margin-top:100px;
+    }
+    @media (min-width:1600px){
         margin-right:50px;
         margin-top:100px;
     }
@@ -59,7 +68,12 @@ export const DivContent = styled.div`
     text-align:center;
     padding:10px;
     height:410px;
-    @media (min-width:1400px){  
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
+        display:flex;
+        justify-content:center;
+        height:390px;
+    }
+    @media (min-width:1600px){
         display:flex;
         justify-content:center;
         height:390px;
@@ -71,12 +85,19 @@ export const Content = styled.div`
     justify-content:center;
     margin-left:40px;
     margin-bottom:40px;
-    @media (min-width:1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         width:450px;
         justify-content:space-around;
         margin-top:90px;
         margin-left:100px;
     }
+    @media (min-width:1600px){
+        width:450px;
+        justify-content:space-around;
+        margin-top:90px;
+        margin-left:100px;
+    }
+
 `
 
 export const Div = styled.div`
@@ -100,7 +121,7 @@ export const Div = styled.div`
         margin-bottom:5px;
         text-align:left;
     }
-    @media (min-width:1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         width:220px;
         align-items:start;
         margin-left:0px;
@@ -116,4 +137,22 @@ export const Div = styled.div`
             
         }
     }
+    @media (min-width:1600px){
+        width:220px;
+        align-items:start;
+        margin-left:0px;
+        margin-right:0px;
+        h4{
+            font-size:23px;
+            margin-top:30px;
+            margin-bottom:30px;
+        }
+        p{
+            font-size:15px;
+            margin-bottom:0px;
+            
+        }
+    }
+    }
+
 `

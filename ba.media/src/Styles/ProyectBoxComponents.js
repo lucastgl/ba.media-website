@@ -5,7 +5,6 @@ export const Image = styled.img`
     width: 100%;
     height: 100%;
     object-fit: fill;
-    //object-fit: cover; // Asegura que la imagen cubra todo el contenedor sin deformarse
     transition: transform 0.3s ease-in-out; // Añade una transición suave al efecto de zoom
 `;
 
@@ -13,8 +12,8 @@ export const Container = styled.div`
     margin-right:20px;
     margin-bottom:30px;
     width:165px;
-    @media (min-width:1400px){
-        width:375px;
+    @media screen and  (min-width: 725px) and (max-width: 1599px){
+        width:370px;
     }
     @media (min-width:1600px){
         width:375px;
@@ -29,9 +28,9 @@ export const ImageContainer = styled.div`
     width:160px;
     height:215px;
     margin-left:5px;
-    @media (min-width:1400px){
-        width: 372px;
-        height: 496px;
+    @media screen and  (min-width: 725px) and (max-width: 1599px){
+        width: 300px;
+        height: 400px;
         overflow: hidden;
     }
     @media (min-width:1600px){
@@ -55,7 +54,7 @@ export const InfoText = styled.p`
     font-size:14px;
     font-family: 'Inter Tight', sans-serif;
     font-weight: 700;
-    color: #3D9BE9;
+    color:grey;
 `;
 
 

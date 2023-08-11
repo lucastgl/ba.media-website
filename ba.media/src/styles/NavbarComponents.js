@@ -143,8 +143,6 @@ export const MobileIcon = styled.div`
     @media screen and  (max-width: 425px){
         display: flex;
         align-items: center;
-        justify-content: ${({ alignEnd }) => (alignEnd ? "flex-end" : "flex-start")}; // Alinea a la derecha si alignEnd es true
-        width:${({ alignEnd }) => (alignEnd ? "100%" : "auto")};
         svg{
             fill: ${({open}) => (open ? "#FFFFFF" : "#212121")};
             margin-right: 1.6rem;
@@ -157,3 +155,7 @@ export const StyledLink = styled(Link)`
     text-decoration: none;
     margin-right:80px;
 `;
+
+
+
+

@@ -20,7 +20,7 @@ export const DivTitles = styled.div`
 `
 export const DivContent = styled.div`
     margin-bottom:160px;
-    @media (min-width:1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         margin-bottom:0px;
     }
     @media (min-width:1600px){
@@ -52,7 +52,7 @@ export const SVGVIDEO = styled.svg`
 `
 export const GIF3 = styled.img`
     display:none;
-    @media (min-width:1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         display:inline;                       
         width:139px;
         margin-left:25px;
@@ -72,11 +72,14 @@ export const H2 = styled.h2`
     span{
         color:#FF0099;
     }
-    @media (min-width:1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         font-size:67px;
         text-align:left;
         margin-left:110px;
         letter-spacing: 2.5px;
+        display:flex;
+        align-items:center; 
+        margin-bottom:30px;
     }
     @media (min-width:1600px){ 
         display:flex;
@@ -101,12 +104,12 @@ export const H5 = styled.h5`
     bottom:0px;
     font-size:12px;
     margin-bottom:50px;
-    @media (min-width:1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         font-size:14px;
         text-align:left;
         margin-left:117px;
         position:relative;
-        bottom:120px;
+        bottom:160px;
     }
     @media (min-width:1600px){                       
         font-size:14px;
@@ -116,7 +119,6 @@ export const H5 = styled.h5`
         font-weight: 900;
         margin-bottom:0px;
         top:30px;
-        // ojo aca con el bottom
         bottom:0;
     }
 `
@@ -127,7 +129,7 @@ export const Content = styled.div`
     flex-direction:column;
     align-items:center;
     font-weight: bold;
-    @media (min-width:1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         display:flex;
         justify-content:center;
         flex-direction:row;
@@ -161,7 +163,7 @@ export const StyledDiv = styled.div`
     span{
         font-size:19px;
     }
-    @media (min-width:1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         margin-right:35px;
         width:250px;
         height:300px;
@@ -198,7 +200,7 @@ export const StyledDiv2 = styled.div`
     span{
         font-size:19px;
     }
-    @media (min-width:1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         margin-right:35px;
         width:250px;
         height:300px;

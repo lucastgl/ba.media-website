@@ -16,7 +16,7 @@ export const H1 = styled.h1`
     padding:10px;
     margin-left:15px;
     animation: ${InUp}  1s ease-out;
-    @media (min-width:1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){
         font-size:64px;
         margin-left:120px;
         padding:0px;
@@ -37,7 +37,7 @@ export const P = styled.p`
     span{
         color:#FF0099;
     }
-    @media (min-width:1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){
         margin-left:120px;
         padding:0px;
     }
@@ -54,11 +54,18 @@ export const GalleryBox =  styled.div`
     grid-template-columns: repeat(2, 1fr);
     margin : 0 auto;
     margin-left:20px;
-    
-    @media (min-width:1420px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){
         width: 1200px;
         grid-template-columns: repeat(3, 1fr);
         margin : 0 auto;
         cursor:pointer;
+        margin-bottom:200px;
+    }
+    @media (min-width:1600px){
+        width: 1200px;
+        grid-template-columns: repeat(3, 1fr);
+        margin : 0 auto;
+        cursor:pointer;
+        margin-bottom:40px;
     }
 `;

@@ -30,10 +30,18 @@ export const H3 = styled.span`
     span{
         color:#FF0099;
     }
-    @media (min-width: 1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){
         font-size:63px;
         text-align:left;
         margin-left:120px;
+        display:flex;
+        align-items:center;
+        padding-top:0px;
+        padding-bottom:0px;
+        margin-bottom:20px;
+        span{
+            margin-left:20px;
+        }
     }
     @media (min-width:1600px){ 
         font-weight: 700; 
@@ -62,12 +70,12 @@ export const H5 = styled.span`
     font-weight: 900;
     position:relative;
     top:10px;
-    @media (min-width: 1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){
         font-size:16px;
         text-align:left;
         margin-left:120px;
         position:relative;
-        top:90px;
+        top:40px;
     }
     @media (min-width:1600px){                       
         font-size:16px;
@@ -78,7 +86,7 @@ export const H5 = styled.span`
 `
 export const GIF = styled.img`
     display:none;
-    @media (min-width: 1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){
         display:inline;                       
         width:158px;
         width:158px;
@@ -111,10 +119,10 @@ export const ColumnWrapper = styled.div`
         transition: filter 0.5s ease;
         margin-left: 15px;
     }
-    @media (min-width: 1400px){
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         justify-content: center;
         animation: none;
-        width:1250px;
+        width:1200px;
         img{
             width:110px;
             margin-right: 15px;
@@ -123,7 +131,7 @@ export const ColumnWrapper = styled.div`
     @media (min-width: 1600px) {
         justify-content: center;
         animation: none;
-        gap:20px;
+        gap:40px;
         img {
             width: 108px;
             height: 100px;
