@@ -1,6 +1,6 @@
 import Navbar from "../Components/Navbar";
 import Home from "../Components/Home";
-import ProyectsPage from "../Components/ProyectsPage";
+import ProyectsPage from "../Components/ProyectsPage"
 
 export const routes = [
     {
