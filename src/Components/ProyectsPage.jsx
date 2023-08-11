@@ -1,8 +1,7 @@
-import Footer from "./Footer"
+import Footer from "./Footer";
 import {H1, P,GalleryBox } from "../Styles/Proyects.js";
-// import ButtonMobile from "./ButtonMobile";
 import ProyectPageBox from "./ProyectPageBox";
-import ProyectPageDetail from "./ProyectPageDetail"
+import ProyectPageDetail from "./ProyectPageDetail";
 import { galleryPage } from '../mocks/proyects'
 import { useState, useContext } from 'react';
 import { LenguageContext } from '../Context/LanguagesContext';
@@ -31,7 +30,6 @@ const ProyectsPage = () => {
         </>
       )
     }
-    {/* <ButtonMobile/> */}
     <GalleryBox >
       {
         galleryPage.map((proyect) => (

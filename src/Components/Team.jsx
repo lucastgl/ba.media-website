@@ -1,9 +1,9 @@
+import { useState,useEffect, useContext } from "react";
 import manolo from "../Images/manolo.jpg";
 import gustavo from "../Images/Gustavo.jpg";
 import jochi from "../Images/jochi.jpg";
 import martin from "../Images/martin.jpg";
 import { DivContent,Div,H3, H4, P } from "../Styles/Team";
-import { useState,useEffect, useContext } from "react";
 import { LenguageContext } from "../Context/LanguagesContext";
 
 

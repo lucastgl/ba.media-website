@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { DetailSection } from '../Styles/ProyectsPageBox';
-import { ModalContainer, GalleryContent, GallerySection,FaTimesIcono,FaAngleLeftIcono, FaAngleRightIcono, FaArrowLeftIcono} from '../styles/ProductDetailComponents';
+import { ModalContainer, GalleryContent, GallerySection,FaTimesIcono,FaAngleLeftIcono, FaAngleRightIcono, FaArrowLeftIcono} from '../Styles/ProductDetailComponents';
 import {galleryPage} from '../mocks/proyects.js';
 
 
