@@ -13,7 +13,7 @@ export const Container = styled.div`
     margin-bottom:30px;
     width:165px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
-        width:370px;
+        width:390px;
     }
     @media (min-width:1600px){
         width:375px;
@@ -29,7 +29,7 @@ export const ImageContainer = styled.div`
     height:215px;
     margin-left:5px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
-        width: 300px;
+        width: 100%;
         height: 400px;
         overflow: hidden;
     }

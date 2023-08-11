@@ -45,7 +45,7 @@ const Navbar = () => {
         <Container show={showNavbar} >
             <Wrapper open={showMobileMenu}>
                 <LogContainer>
-                {!showMobileMenu ? <Link to="/"><img src={BAM} alt="Logo"/></Link> : <></>}
+                    <Link to="/"><img src={BAM} alt="Logo"/></Link>
                 </LogContainer>
                 <MobileIcon open={showMobileMenu} onClick={()=> setShowMobileMenu(!showMobileMenu)}>
                     {showMobileMenu ? <FaTimes/> : <FaBars/>}  

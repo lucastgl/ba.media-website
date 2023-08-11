@@ -6,7 +6,7 @@ export const HeaderBox = styled.div`
 export const DesktopView = styled.div`
     display:none;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
-        height: 50vh; 
+        height: 90vh; 
         display: flex;
         align-items: center;
         justify-content: center;
@@ -57,14 +57,14 @@ export const Title = styled.div`
         align-items: center;
         height: 50%;
         img{
-            height: 150px;
+            height: 200px;
         }
         img:first-child {
-            right: -60px; // Ajustar según tus necesidades
+            right: -70px; // Ajustar según tus necesidades
             padding-top: 25px;
         }
         img:last-child {
-            left: -50px; // Ajustar según tus necesidades
+            left: -60px; // Ajustar según tus necesidades
             padding-top: 25px;
         }
     }
@@ -95,7 +95,7 @@ export const TVgif = styled.img`
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         z-index: -1;
         width: auto;
-        height: 250px!important;
+        height: 300px!important;
     }
     @media (min-width:1600px){ 
         z-index: -1;

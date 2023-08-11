@@ -33,7 +33,7 @@ function Team(){
         <>
         {
             state.lenguage ? (
-            <H3 id="team" showAnimate={showAnimate}>Quiénes <span>somos</span></H3>
+                <H3 id="team" showAnimate={showAnimate}>Quiénes <span>somos</span></H3>
             )
             :
             (

@@ -21,7 +21,7 @@ export const H3 = styled.div`
         color:#FF0099;
     }
     @media screen and  (min-width: 725px) and (max-width: 1599px){ 
-        font-size:63px;
+        font-size: 5.5rem;
         text-align:left;
         margin-left:120px;
         margin-bottom:90px;
@@ -67,13 +67,14 @@ export const Div = styled.div`
     }
     @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         img{
-            margin-right:20px;
-            margin-left:30px;
-            width:225px;
-            height:225px;
+            margin-right:35px;
+            margin-left:45px;
+            width:250px;
+            height:250px;
         }
         p,h4{
             margin-right:20px;
+            font-weight: 700;
         }
     }
     @media (min-width:1600px){  

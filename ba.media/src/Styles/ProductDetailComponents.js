@@ -14,7 +14,7 @@ export const  ModalContainer = styled.div`
     right: 0px;
     left: 0px;
     z-index: 120;
-    @media (min-width:1600px){
+    @media (min-width:725px){
         display: flex;
         flex-direction:row;
         justify-content:space-between;
@@ -33,7 +33,7 @@ export const  ModalContainer = styled.div`
 export const GalleryContent = styled.div`
     display:flex;
     flex-direction:column;
-    @media (min-width:1600px){
+    @media (min-width:725px){
         display: flex;
         flex-direction:row;
         justify-content:space-evenly;
@@ -49,6 +49,19 @@ export const GallerySection = styled.div`
     img{
         max-width: 30vw;
         height: auto;
+    }
+    @media screen and (min-width:725px) and (max-width: 1599px){
+        align-items: center;
+        justify-content:space-between;
+        width:1000px;
+        height:auto;
+        img{
+            max-width: 850px;
+            // height: auto;
+        }
+        iframe{
+            height: 500px;
+        }
     }
     @media (min-width:1600px){
         align-items: center;
@@ -67,7 +80,7 @@ export const DetailSection = styled.div`
     flex-direction:column;
     padding:10px;
     margin-top:100px;
-    @media (min-width:1600px){
+    @media (min-width:725px){
         width:500px;
         h2{
             font-size:50px;
@@ -81,7 +94,7 @@ export const DetailSection = styled.div`
 
 export const FaTimesIcono = styled(FaTimes)`
     display:none;
-    @media (min-width:1600px){
+    @media (min-width:725px){
         margin-right:50px;
         margin-top:10px;
         font-size:30px;
@@ -93,13 +106,13 @@ export const FaArrowLeftIcono = styled(FaArrowLeft)`
     margin-left:10px;
     font-size:20px;
     z-index: 130;
-    @media (min-width:1600px){
+    @media (min-width:725px){
         display:none;
     }
 `
 export const FaAngleRightIcono = styled(FaAngleRight)`
     display:none;
-    @media (min-width:1600px){
+    @media (min-width:725px){
         font-size:20px;
         display:block;
         cursor: pointer;
@@ -107,7 +120,7 @@ export const FaAngleRightIcono = styled(FaAngleRight)`
 `
 export const FaAngleLeftIcono = styled(FaAngleLeft)`
     display:none;
-    @media (min-width:1600px){
+    @media (min-width:725px){
         font-size:20px;
         margin-left:40px;
         display:block;

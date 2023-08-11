@@ -5,8 +5,7 @@ export const AboutContainer = styled.div`
     width: 100vw;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         width: 100vw; 
-        //height: 100vh;
-        //background-color:red;
+        height: auto;
     }
     @media (min-width:1600px){ 
         height: auto;
@@ -21,8 +20,7 @@ export const TextContainer = styled.div`
     justify-content: center;
     align-items: center;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
-        height:70vh;
-        font-size: 59px;
+        height:100vh;
     }
     @media (min-width:1600px){ 
         height: 70vh;
@@ -42,8 +40,8 @@ export const Text = styled.div`
         padding: 0px;
     }
     @media screen and  (min-width: 725px) and (max-width: 1599px){
-        width: 77%;
-        font-size: 59px;
+        width: 75%;
+        font-size: 4.5rem;
     }
     @media (min-width:1600px){ 
         width: 46%;
@@ -56,6 +54,7 @@ export const VideoContainer = styled.div`
     width: 100vw;
     @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         width: 100vw;
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -74,7 +73,7 @@ export const Video = styled.div`
     }
     @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         iframe{
-            width: 1000px;
+            width: 1400px;
             height: 800px;
         }
     }

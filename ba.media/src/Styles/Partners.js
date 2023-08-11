@@ -31,9 +31,9 @@ export const H3 = styled.span`
         color:#FF0099;
     }
     @media screen and  (min-width: 725px) and (max-width: 1599px){
-        font-size:63px;
+        font-size: 5rem;
         text-align:left;
-        margin-left:120px;
+        margin-left:80px;
         display:flex;
         align-items:center;
         padding-top:0px;
@@ -71,9 +71,9 @@ export const H5 = styled.span`
     position:relative;
     top:10px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
-        font-size:16px;
+        font-size: 1rem;
         text-align:left;
-        margin-left:120px;
+        margin-left:80px;
         position:relative;
         top:40px;
     }
@@ -122,7 +122,7 @@ export const ColumnWrapper = styled.div`
     @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         justify-content: center;
         animation: none;
-        width:1200px;
+        width:1350px;
         img{
             width:110px;
             margin-right: 15px;

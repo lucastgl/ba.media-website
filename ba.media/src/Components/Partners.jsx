@@ -2,7 +2,6 @@ import gif2 from "../Images/gif2.gif";
 import images from "../mocks/images"
 import {H3, H5, DivContent,GIF, ColumnWrapper } from "../Styles/Partners";
 import { useEffect, useState, useContext } from 'react';
-// import ButtonMobile from "./ButtonMobile";
 import { LenguageContext } from "./Context/LanguagesContext"; 
 
 
@@ -28,7 +27,6 @@ const Partners = () =>{
   }, []);
   return(
     <>
-      {/* <ButtonMobile/> */}
       <DivContent id="partners">
         
         {

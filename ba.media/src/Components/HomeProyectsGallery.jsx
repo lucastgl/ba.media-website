@@ -11,7 +11,7 @@ const HomeProyectsGallery = () => {
   const {state} = useContext(LenguageContext);
 
   return (
-    <div style={{position: "relative"}}>
+    <div >
       
       <HomeProductDetail productSelected={productSelected} onClose={()=>setProductSelected(undefined)}/>
       

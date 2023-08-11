@@ -50,7 +50,7 @@ const HomeProductDetail = ({ productSelected, onClose }) => {
                                         <img src={proyect.image} alt={proyect.title} />
                                     )
                                 }
-                            <FaAngleRightIcono onClick={handleNext}/>
+                                <FaAngleRightIcono onClick={handleNext}/>
                             </GallerySection>
                             <DetailSection>
                                 <h2>{proyect.title}</h2>

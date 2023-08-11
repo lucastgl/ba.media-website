@@ -9,13 +9,13 @@ export const Header = styled.div`
         font-weight: 900;
         margin-left: 130px;
         letter-spacing: 0.03em;
-        position: relative;
+        // position: relative;
         top: 10px;
         @media screen and  (min-width: 725px) and (max-width: 1599px){                        
             font-size:16px;
-            margin-left:120px;
+            margin-left:100px;
             position:relative;
-            top:620px;
+            top:90px;
         }
         @media (min-width: 1600px) {                       
             font-size: 16px;
@@ -36,10 +36,10 @@ export const Header = styled.div`
             color: #FF0099;
         }
         @media screen and  (min-width: 725px) and (max-width: 1599px){
-            margin-top:600px;
-            font-size:63px;
+            margin-top:60px;
+            font-size:5.5rem;
             text-align:left;
-            margin-left:120px;
+            margin-left:100px;
         }
         @media (min-width: 1600px) {  
             margin-top:0px;                   
@@ -59,7 +59,7 @@ export const GalleryContainer = styled.div`
     align-items: center;
     margin-bottom:50px;
     @media screen and  (min-width: 725px) and (max-width: 1599px) {                     
-        //width: 67%;
+        width: 100%;
         //margin-left: 110px;
     }
     @media (min-width: 1600px) {                     
@@ -77,6 +77,7 @@ export const GalleryBox =  styled.div`
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin : 0 auto;
+        width: 86%;
     }
     @media (min-width: 1600px){
         display: grid;
