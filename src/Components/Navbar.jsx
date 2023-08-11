@@ -42,7 +42,7 @@ const Navbar = () => {
       };
 
     return (
-        <Container show={showNavbar} >
+        <Container shouldShow={showNavbar} >
             <Wrapper open={showMobileMenu}>
                 <LogContainer>
                     <Link to="/"><img src={BAM} alt="Logo"/></Link>

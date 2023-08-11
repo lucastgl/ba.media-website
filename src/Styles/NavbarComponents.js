@@ -8,7 +8,7 @@ export const Container = styled.div`
     position: fixed;
     top: 0;
     transition: top 0.3s;
-    top: ${({show}) => (show ? "0" : "-70px")};
+    top: ${({ shouldShow }) => (shouldShow ? "0" : "-70px")};
     z-index: 100;
 `;
 
@@ -111,7 +111,7 @@ export const MenuItem = styled.li`
     }
 `;
 
-export const MenuItemLink = styled.a`
+export const MenuItemLink = styled.div`
     
     display: flex;
     justify-content: center;
