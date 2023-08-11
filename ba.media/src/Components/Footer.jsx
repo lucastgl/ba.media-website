@@ -5,9 +5,9 @@ import instagram from "../Images/instagram.png";
 import linkedin from "../Images/linkedin.png";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import {LenguageContext} from "../Components/Context/LanguagesContext";
+import { LenguageContext } from "./Context/LanguagesContext"; 
 
-function Footer(){
+const Footer = () =>{
     const [showAnimate, setShowAnimate] = useState(false);
     const [animationShown, setAnimationShown] = useState(false);
     const PercentageMin = 0.3;

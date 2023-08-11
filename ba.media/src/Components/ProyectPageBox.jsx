@@ -1,6 +1,6 @@
 import {Container,ImageContainer, Image, InfoText} from "../Styles/ProyectsPageBox";
 
-function ProyectPageBox({handleClick, image, title, episodes, country, genre, network, liveEvent, days, location, season,streamLiveEvent,id}){
+const ProyectPageBox = ({handleClick, image, title, episodes, country, genre, network, liveEvent, days, location, season,streamLiveEvent,id}) =>{
     return (
       <Container onClick={()=>{handleClick(id)}}>
         <ImageContainer>

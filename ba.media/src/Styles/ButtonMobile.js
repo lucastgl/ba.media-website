@@ -10,7 +10,7 @@ export const Button = styled.button`
     padding:10px;
     margin-right:20px;
     margin-bottom:25px;
-    z-index:99;
+    z-index:90;
     @media (min-width:750px){ 
         display:none;
     }
