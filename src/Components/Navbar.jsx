@@ -2,7 +2,7 @@ import  {useState, useEffect, useContext} from 'react'
 import BAM from "../Images/BAM.webp"
 import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper,StyledLink, Select,Option} from '../styles/NavbarComponents'
 import {FaBars, FaTimes} from "react-icons/fa"
-import { LenguageContext } from './Context/LanguagesContext';
+import { LenguageContext } from '../Context/LanguagesContext';
 import { Link } from 'react-router-dom';
 
 

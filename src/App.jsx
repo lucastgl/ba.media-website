@@ -2,8 +2,8 @@ import React from 'react'
 import './App.css'
 import { routes, Navbar } from './Routes/Routes'
 import {BrowserRouter, Route, Routes, Navigate} from "react-router-dom"
-import LenguageContextProvider from './components/Context/LanguagesContext'
-import ButtonMobile from "./components/ButtonMobile"
+import LenguageContextProvider from './Context/LanguagesContext'
+import ButtonMobile from "./Components/ButtonMobile"
 
 
 function App() {

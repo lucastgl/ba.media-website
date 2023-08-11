@@ -4,7 +4,7 @@ import jochi from "../Images/jochi.jpg";
 import martin from "../Images/martin.jpg";
 import { DivContent,Div,H3, H4, P } from "../Styles/Team";
 import { useState,useEffect, useContext } from "react";
-import { LenguageContext } from "./Context/LanguagesContext";
+import { LenguageContext } from "../Context/LanguagesContext";
 
 
 function Team(){

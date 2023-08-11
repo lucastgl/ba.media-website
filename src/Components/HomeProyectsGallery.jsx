@@ -3,7 +3,7 @@ import { GalleryContainer, GalleryBox, Header,DivButton,ButtonMore, DivLinea, Li
 import HomeProyectBox from './HomeProyectBox'
 import HomeProductDetail from './HomeProductDetail'
 import { gallery } from '../mocks/proyects'
-import { LenguageContext } from "./Context/LanguagesContext"
+import { LenguageContext } from "../Context/LanguagesContext"
 import {useNavigate} from "react-router-dom"
 
 

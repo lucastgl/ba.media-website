@@ -5,7 +5,7 @@ import instagram from "../Images/instagram.png";
 import linkedin from "../Images/linkedin.png";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import { LenguageContext } from "./Context/LanguagesContext"; 
+import { LenguageContext } from "../Context/LanguagesContext"; 
 
 const Footer = () =>{
     const [showAnimate, setShowAnimate] = useState(false);

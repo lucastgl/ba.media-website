@@ -5,7 +5,7 @@ import ProyectPageBox from "./ProyectPageBox";
 import ProyectPageDetail from "./ProyectPageDetail"
 import { galleryPage } from '../mocks/proyects'
 import { useState, useContext } from 'react';
-import { LenguageContext } from './Context/LanguagesContext';
+import { LenguageContext } from '../Context/LanguagesContext';
 
 const ProyectsPage = () => {
 
