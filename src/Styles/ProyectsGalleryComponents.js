@@ -3,26 +3,29 @@ import styled , {keyframes}from "styled-components"
 export const Header = styled.div`
     p {
         color: #21A6F3;
-        font-size: 12px;
+        font-size: 14px;
         padding-bottom: 20px;
-        padding-left: 10px;
         font-weight: 900;
-        margin-left: 130px;
+        //margin-left: 130px;
         letter-spacing: 0.03em;
         // position: relative;
         top: 10px;
+        margin-right:10px;
+        text-align:center;
         @media screen and  (min-width: 725px) and (max-width: 1599px){                        
             font-size:16px;
             margin-left:100px;
             position:relative;
             top:90px;
+            text-align:left;
         }
         @media (min-width: 1600px) {                       
             font-size: 16px;
-            margin-left: 333px;
+            margin-left: 340px;
             position:relative;
             padding-bottom: 0px;
             top:10px;
+            text-align:left;
         }
     }
 
