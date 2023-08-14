@@ -104,7 +104,7 @@ export const H5 = styled.h5`
     position:relative;
     font-weight: 900;
     bottom:0px;
-    font-size:12px;
+    font-size:13px;
     margin-bottom:50px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         //font-size:14px;
