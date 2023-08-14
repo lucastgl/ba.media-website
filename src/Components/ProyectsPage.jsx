@@ -1,11 +1,10 @@
-import Footer from "./Footer"
+import Footer from "./Footer";
 import {H1, P,GalleryBox } from "../Styles/Proyects.js";
-// import ButtonMobile from "./ButtonMobile";
 import ProyectPageBox from "./ProyectPageBox";
-import ProyectPageDetail from "./ProyectPageDetail"
+import ProyectPageDetail from "./ProyectPageDetail";
 import { galleryPage } from '../mocks/proyects'
 import { useState, useContext } from 'react';
-import { LenguageContext } from './Context/LanguagesContext';
+import { LenguageContext } from '../Context/LanguagesContext';
 
 const ProyectsPage = () => {
 
@@ -20,7 +19,7 @@ const ProyectsPage = () => {
     {
       state.lenguage ? (
         <>
-          <H1 id="inicio">Proyectos</H1>
+          <H1 id="inicio" >Proyectos</H1>
           <P>Descubrí nuestros proyectos audiovisuales de <span>gran impacto</span> </P>
         </>
       ) : 
@@ -31,8 +30,7 @@ const ProyectsPage = () => {
         </>
       )
     }
-    {/* <ButtonMobile/> */}
-    <GalleryBox>
+    <GalleryBox >
       {
         galleryPage.map((proyect) => (
           <ProyectPageBox 

@@ -1,10 +1,10 @@
-import manolo from "../Images/manolo.jpg";
-import gustavo from "../Images/Gustavo.jpg";
-import jochi from "../Images/jochi.jpg";
-import martin from "../Images/martin.jpg";
-import { DivContent,Div,H3, H4, P } from "../Styles/Team";
 import { useState,useEffect, useContext } from "react";
-import { LenguageContext } from "./Context/LanguagesContext";
+import manolo from "../Images/MANOLO.jpg";
+import gustavo from "../Images/GUSTAVO.jpg";
+import jochi from "../Images/JOCHI.jpg";
+import martin from "../Images/MARTIN.jpg";
+import { DivContent,Div,H3, H4, P } from "../Styles/Team";
+import { LenguageContext } from "../Context/LanguagesContext";
 
 
 function Team(){

@@ -55,14 +55,14 @@ export const GalleryBox =  styled.div`
     margin : 0 auto;
     margin-left:20px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
-        width: 1200px;
+        width: 1250px;
         grid-template-columns: repeat(3, 1fr);
         margin : 0 auto;
         cursor:pointer;
         margin-bottom:200px;
     }
     @media (min-width:1600px){
-        width: 1200px;
+        width: 1230px;
         grid-template-columns: repeat(3, 1fr);
         margin : 0 auto;
         cursor:pointer;

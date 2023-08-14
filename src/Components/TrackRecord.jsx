@@ -1,7 +1,7 @@
 import {DivContent,H5, H2, GIF3, DivTitles,DivChild,Content, SVG, SVGVIDEO,StyledDiv, StyledDiv2} from "../Styles/TrackRecord";
 import gif3 from "../Images/gif3.gif";
 import { useState,useEffect, useContext } from "react";
-import { LenguageContext } from "./Context/LanguagesContext"; 
+import { LenguageContext } from "../Context/LanguagesContext"; 
 
 
 function TrackRecord(){

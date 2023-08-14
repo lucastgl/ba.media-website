@@ -24,6 +24,10 @@ export const Logo = styled.img`
     width:200px;
     margin-top:20px;
     animation:  ${({ showAnimate }) => (showAnimate ? InUpMobile : 'none')} 1s ease-in-out ;
+    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
+        width:330px;
+        margin-top:0px;
+    }
     @media (min-width:1600px){ 
         width:330px;
         animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-in-out ;

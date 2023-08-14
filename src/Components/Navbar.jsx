@@ -1,8 +1,8 @@
 import  {useState, useEffect, useContext} from 'react'
 import BAM from "../Images/BAM.webp"
-import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper,StyledLink, Select,Option} from '../styles/NavbarComponents'
+import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper,StyledLink, Select,Option} from '../Styles/NavbarComponents'
 import {FaBars, FaTimes} from "react-icons/fa"
-import { LenguageContext } from './Context/LanguagesContext';
+import { LenguageContext } from '../Context/LanguagesContext';
 import { Link } from 'react-router-dom';
 
 
@@ -42,7 +42,7 @@ const Navbar = () => {
       };
 
     return (
-        <Container show={showNavbar} >
+        <Container shouldShow={showNavbar} >
             <Wrapper open={showMobileMenu}>
                 <LogContainer>
                     <Link to="/"><img src={BAM} alt="Logo"/></Link>
@@ -82,7 +82,7 @@ const Navbar = () => {
                     </MenuItem>
                     <MenuItem>
                         <MenuItemLink>
-                            <Select onChange={toggleLanguage}  onClick={state.language ? 'ES' : 'EN'}>
+                            <Select onChange={toggleLanguage}  onClick={()=>{state.language ? 'ES' : 'EN'}}>
                                 {state.language ? (
                                     <>
                                     <Option value="EN" >EN</Option>

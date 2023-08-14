@@ -2,7 +2,7 @@ import gif2 from "../Images/gif2.gif";
 import images from "../mocks/images"
 import {H3, H5, DivContent,GIF, ColumnWrapper } from "../Styles/Partners";
 import { useEffect, useState, useContext } from 'react';
-import { LenguageContext } from "./Context/LanguagesContext"; 
+import { LenguageContext } from "../Context/LanguagesContext"; 
 
 
 const Partners = () =>{

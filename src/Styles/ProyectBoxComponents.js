@@ -45,8 +45,10 @@ export const Title = styled.p`
     font-weight: 700;
     color: #091405;
     margin-top: 10px;
+    margin-left:7px;
     @media (min-width:1400px){
         font-size: 2rem;
+        margin-left:7px;
     }
 `;
 
@@ -54,7 +56,8 @@ export const InfoText = styled.p`
     font-size:14px;
     font-family: 'Inter Tight', sans-serif;
     font-weight: 700;
-    color:grey;
+    color:#21A6F3;
+    margin-left:7px;
 `;
 
 

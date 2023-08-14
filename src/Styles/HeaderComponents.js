@@ -60,11 +60,11 @@ export const Title = styled.div`
             height: 200px;
         }
         img:first-child {
-            right: -70px; // Ajustar según tus necesidades
+            right: -40px; 
             padding-top: 25px;
         }
         img:last-child {
-            left: -60px; // Ajustar según tus necesidades
+            left: -30px; 
             padding-top: 25px;
         }
     }
@@ -77,11 +77,11 @@ export const Title = styled.div`
             height: 150px;
         }
         img:first-child {
-            right: -60px; // Ajustar según tus necesidades
+            right: -40px; 
             padding-top: 25px;
         }
         img:last-child {
-            left: -50px; // Ajustar según tus necesidades
+            left: -25px; 
             padding-top: 25px;
         }
     }

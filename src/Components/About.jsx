@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import { AboutContainer , TextContainer, Text, VideoContainer, Video} from '../styles/AboutComponents';
+import { AboutContainer , TextContainer, Text, VideoContainer, Video} from '../Styles/AboutComponents';
 import Player from '@vimeo/player';
-import { LenguageContext } from './Context/LanguagesContext';
+import { LenguageContext } from '../Context/LanguagesContext';
 
 const About = () => {
 

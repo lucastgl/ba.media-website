@@ -1,11 +1,11 @@
 import { DivContent,DivLogos,Logo,LogoApps, Content, Div} from "../Styles/Footer";
-import logo from "../Images/logo.webp";
+import logo from "../Images/Logo.webp";
 import vimeo from "../Images/vimeo.png";
 import instagram from "../Images/instagram.png";
 import linkedin from "../Images/linkedin.png";
 import { useEffect, useState, useContext } from "react";
-import { Link } from "react-router-dom";
-import { LenguageContext } from "./Context/LanguagesContext"; 
+import { Link} from "react-router-dom";
+import { LenguageContext } from "../Context/LanguagesContext"; 
 
 const Footer = () =>{
     const [showAnimate, setShowAnimate] = useState(false);
@@ -56,7 +56,7 @@ const Footer = () =>{
                   <>
                   <Div>
                     <h4>EXPLORA</h4>
-                    <p> <Link to="/proyects">Proyectos</Link></p>
+                    <p> <Link to="/projects">Proyectos</Link></p>
                     <p><a href="#partners" onClick={(event) => handleLinkClick(event, 'partners')} >Socios</a></p>
                     <p><a href="#team" onClick={(event) => handleLinkClick(event, 'team')}>Nosotros</a></p>
                   </Div>
@@ -71,7 +71,7 @@ const Footer = () =>{
                   <>
                   <Div>
                     <h4>EXPLORE</h4>
-                    <p> <Link to="/proyects">Proyects</Link></p>
+                    <p> <Link to="/projects">Proyects</Link></p>
                     <p><a href="#partners" onClick={(event) => handleLinkClick(event, 'partners')} >Partners</a></p>
                     <p><a href="#team" onClick={(event) => handleLinkClick(event, 'team')}>Us</a></p>
                   </Div>

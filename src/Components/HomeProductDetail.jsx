@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ModalContainer, GalleryContent, GallerySection, DetailSection,FaTimesIcono,FaAngleLeftIcono, FaAngleRightIcono,FaArrowLeftIcono} from '../styles/ProductDetailComponents';
+import { ModalContainer, GalleryContent, GallerySection, DetailSection,FaTimesIcono,FaAngleLeftIcono, FaAngleRightIcono,FaArrowLeftIcono} from '../Styles/ProductDetailComponents';
 import {gallery} from '../mocks/proyects.js';
-//import {FaAngleRight, FaAngleLeft, FaTimes} from "react-icons/fa"
 
 
 const HomeProductDetail = ({ productSelected, onClose }) => {
@@ -31,11 +30,11 @@ const HomeProductDetail = ({ productSelected, onClose }) => {
                 proyect &&
                 (
                     <ModalContainer>
-                        <FaArrowLeftIcono onClick={onClose}/> 
+                        <FaArrowLeftIcono onClick={()=>{onClose}}/> 
                        
                         <GalleryContent>
                             <GallerySection>
-                                <FaAngleLeftIcono onClick={handlePrev}/>
+                                <FaAngleLeftIcono onClick={()=>{handlePrev}}/>
                                 {
                                     proyect.video ? (
                                         <iframe

@@ -58,14 +58,13 @@ export const H3 = styled.span`
         }
     }
 `
-export const H5 = styled.span`
+export const H5 = styled.p`
     animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-out;
     color:#21A6F3;
     text-align:center;
-    font-size:12px;
+    font-size:14px;
     padding:10px;
     font-weight: bold;
-    margin-left:65px;
     letter-spacing: 0.03em;
     font-weight: 900;
     position:relative;
@@ -82,6 +81,7 @@ export const H5 = styled.span`
         margin-left:333px;
         position:relative;
         top:40px;
+        text-align:left;
     }
 `
 export const GIF = styled.img`
