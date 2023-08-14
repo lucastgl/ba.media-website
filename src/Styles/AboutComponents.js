@@ -79,7 +79,7 @@ export const Video = styled.div`
     }
     @media screen and  (min-width: 725px) and (max-width: 1599px){ 
         iframe{
-            width: 1400px;
+            width: 1300px;
             height: 800px;
         }
     }

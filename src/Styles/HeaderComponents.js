@@ -57,7 +57,7 @@ export const Title = styled.div`
         align-items: center;
         height: 50%;
         img{
-            height: 200px;
+            height: 180px;
         }
         img:first-child {
             right: -40px; 

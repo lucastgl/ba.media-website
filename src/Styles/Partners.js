@@ -127,6 +127,9 @@ export const ColumnWrapper = styled.div`
             width:110px;
             margin-right: 15px;
         }
+        img:hover {
+            filter: grayscale(0%);
+        }
     }
     @media (min-width: 1600px) {
         justify-content: center;
