@@ -23,10 +23,8 @@ const HomeProyectsGallery = () => {
 
 
   return (
-    <div >
-      
+    <div>
       <HomeProductDetail productSelected={productSelected} onClose={()=>setProductSelected(undefined)}/>
-      
       <Header>
         {
           state.lenguage ? (
@@ -53,9 +51,16 @@ const HomeProyectsGallery = () => {
           ))}
         </GalleryBox>
       </GalleryContainer>
-      <DivLinea><Linea></Linea></DivLinea>
-      <DivButton><ButtonMore onClick={handleVerMas}>VER MÁS</ButtonMore></DivButton>
-      
+      <DivLinea><Linea/></DivLinea>
+      {
+        state.lenguage ? 
+        (
+          <DivButton><ButtonMore onClick={handleVerMas}>VER MÁS</ButtonMore></DivButton>
+        ) :
+        (
+          <DivButton><ButtonMore onClick={handleVerMas}>SEE MORE</ButtonMore></DivButton>
+        )
+      }
     </div>
   )
 }

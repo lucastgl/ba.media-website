@@ -6,9 +6,7 @@ export const Header = styled.div`
         font-size: 14px;
         padding-bottom: 20px;
         font-weight: 900;
-        //margin-left: 130px;
         letter-spacing: 0.03em;
-        // position: relative;
         top: 10px;
         margin-right:10px;
         text-align:center;
@@ -63,12 +61,10 @@ export const GalleryContainer = styled.div`
     margin-bottom:50px;
     @media screen and  (min-width: 725px) and (max-width: 1599px) {                     
         width: 100%;
-        //margin-left: 110px;
     }
     @media (min-width: 1600px) {                     
         margin-left: 320px;
         width: 65%;
-        //margin-left: 110px;
     }
 `;
 

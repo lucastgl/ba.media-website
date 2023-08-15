@@ -47,7 +47,7 @@ export const ImageContainer = styled.div`
     margin-left:5px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         width: 100%;
-        height: 400px;
+        height: 75vh;
         overflow: hidden;
     }
     @media (min-width:1600px){
