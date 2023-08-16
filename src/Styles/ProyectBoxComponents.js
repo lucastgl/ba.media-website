@@ -13,14 +13,31 @@ export const Container = styled.div`
     margin-bottom:30px;
     width:165px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
-        width:390px;
-    }
-    @media (min-width:1600px){
-        width:375px;
+        margin-bottom:70px;
+        width:345px;
+        h3{
+            margin-top:20px;
+            font-size:25px;
+            margin-left:0px;
+            font-family: 'Inter Tight', sans-serif;
+        }
         &:hover ${Image} { // Al hacer hover en el contenedor, se aplica el efecto de zoom a la imagen
             transform: scale(1.1); // Aumenta el tamaño de la imagen en un 10%
         }
-
+        
+    }
+    @media (min-width:1600px){
+        margin-bottom:70px;
+        width:365px;
+        h3{
+            margin-top:20px;
+            font-size:25px;
+            margin-left:0px;
+            font-family: 'Inter Tight', sans-serif;
+        }
+        &:hover ${Image} { // Al hacer hover en el contenedor, se aplica el efecto de zoom a la imagen
+            transform: scale(1.1); // Aumenta el tamaño de la imagen en un 10%
+        }
     }
 `;
 
@@ -30,7 +47,7 @@ export const ImageContainer = styled.div`
     margin-left:5px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         width: 100%;
-        height: 400px;
+        height: 75vh;
         overflow: hidden;
     }
     @media (min-width:1600px){
