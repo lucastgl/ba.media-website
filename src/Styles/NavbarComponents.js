@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     margin: auto;
-    @media screen and (max-width: 425px){
+    @media screen and (max-width: 724px){
         background-color: ${({open}) => (open ? "#035772" : "#EDEDED")};
         transition: 0.5s all ease;
     }
@@ -49,7 +49,7 @@ export const Select = styled.select`
         background-color:white;
         font-size:12px;
     }
-    @media (min-width:1000px){
+    @media (min-width:724px){
         font-size:15px;
         background-color: #EDEDED;
         border: none;
@@ -85,7 +85,7 @@ export const Menu = styled.ul`
     justify-content: space-between;
     list-style: none;
 
-    @media screen and  (max-width: 425px){
+    @media screen and  (max-width: 724px){
         background-color: #035772;
         position: absolute;
         top: 70px;
@@ -102,7 +102,7 @@ export const Menu = styled.ul`
 export const MenuItem = styled.li`
     height: 100%;
     
-    @media screen and  (max-width: 425px){
+    @media screen and  (max-width: 724px){
         width: 100%;
         height: 70px;
         display: flex;
@@ -130,7 +130,7 @@ export const MenuItemLink = styled.div`
         transition: 0.5 all ease;
     }
 
-    @media screen and (max-width: 425px){
+    @media screen and (max-width: 724px){
         width: 100%;
         color: #FFFFFF;
     }
@@ -140,7 +140,7 @@ export const MenuItemLink = styled.div`
 export const MobileIcon = styled.div`
     display: none;
     
-    @media screen and  (max-width: 425px){
+    @media screen and  (max-width: 724px){
         display: flex;
         align-items: center;
         svg{

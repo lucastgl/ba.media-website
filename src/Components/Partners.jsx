@@ -1,6 +1,6 @@
 import gif2 from "../Images/gif2.gif";
 import images from "../mocks/images"
-import {H3, H5, DivContent,GIF, ColumnWrapper } from "../Styles/Partners";
+import {H3, H5, DivContainer,DivContent,GIF, ColumnWrapper } from "../Styles/Partners";
 import { useEffect, useState, useContext } from 'react';
 import { LenguageContext } from "../Context/LanguagesContext"; 
 
@@ -43,13 +43,13 @@ const Partners = () =>{
             </>
           )
         }
-        <div style={{ overflowX: "hidden" }}>
+        <DivContainer style={{ overflowX: "hidden"}}>
           <ColumnWrapper>
             {images.map((image,index) => (
               <img src={image.img} key={index} alt={image.alt} />
             ))}
           </ColumnWrapper>
-        </div>
+        </DivContainer>
       </DivContent>
     </>
   )

@@ -13,7 +13,7 @@ const InUp = keyframes`
 
 export const H3 = styled.div`
     animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-out;
-    font-size:30px;
+    font-size:2rem;
     text-align:center;
     font-weight: bold;
     margin-bottom:50px;
@@ -21,14 +21,14 @@ export const H3 = styled.div`
         color:#FF0099;
     }
     @media screen and  (min-width: 725px) and (max-width: 1599px){ 
-        font-size: 5.5rem;
+        font-size: 5rem;
         text-align:left;
-        margin-left:120px;
+        margin-left:80px;
         margin-bottom:90px;
         
     }
     @media (min-width:1600px){                     
-        font-size:63px;
+        font-size:4rem;
         text-align:left;
         margin-left:340px;
         margin-bottom:80px;
@@ -41,10 +41,17 @@ export const DivContent = styled.div`
     justify-content:center;
     flex-direction:column;
     margin-bottom:70px;
-    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
+    @media screen and  (min-width: 725px) and (max-width: 1000px){ 
         display:flex;
         justify-content:center;
         flex-direction:row;
+        width:max-content;
+    }
+    @media screen and  (min-width: 1001px) and (max-width: 1599px){ 
+        justify-content:center;
+        flex-direction:row;
+        width:max-content;
+
     }
     @media (min-width:1600px){                       
         display:flex;

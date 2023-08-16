@@ -72,15 +72,24 @@ export const DivContent = styled.div`
     text-align:center;
     padding:10px;
     height:410px;
-    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
+    @media screen and  (min-width: 725px) and (max-width: 1000px){ 
         display:flex;
         justify-content:center;
         height:390px;
+        width:1400px;
+    }
+    @media screen and  (min-width: 1001px) and (max-width: 1599px){ 
+        width:100%;
+        width:1400px;
+        display:flex;
+        justify-content:center;
+
     }
     @media (min-width:1600px){
         display:flex;
         justify-content:center;
         height:390px;
+        width:auto;
     }
 `
 export const Content = styled.div`
@@ -89,11 +98,14 @@ export const Content = styled.div`
     justify-content:center;
     margin-left:40px;
     margin-bottom:40px;
-    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
+    @media screen and  (min-width: 725px) and (max-width: 1000px){ 
         width:450px;
         justify-content:space-around;
         margin-top:90px;
         margin-left:100px;
+    }
+    @media screen and  (min-width: 1001px) and (max-width: 1599px){
+        margin-top:90px;
     }
     @media (min-width:1600px){
         width:450px;

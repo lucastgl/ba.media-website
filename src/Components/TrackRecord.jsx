@@ -41,7 +41,7 @@ function TrackRecord(){
                   <H5 showAnimate={showAnimate}>MANAGEMENT, PROFESSIONALISM AND TRAJECTORY</H5>
                 )
               }
-            <H2 showAnimate={showAnimate}>Track <span>Record</span> <GIF3 src={gif3} alt="" /></H2> 
+            <H2 showAnimate={showAnimate}>Track <span> Record</span> <GIF3 src={gif3} alt="" /></H2> 
             </DivTitles>
             <Content >
                 <StyledDiv >

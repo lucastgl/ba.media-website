@@ -17,8 +17,8 @@ export const H1 = styled.h1`
     margin-left:15px;
     animation: ${InUp}  1s ease-out;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
-        font-size:64px;
-        margin-left:120px;
+        font-size:5rem;
+        margin-left:80px;
         padding:0px;
     }
     @media (min-width:1600px){
@@ -38,7 +38,7 @@ export const P = styled.p`
         color:#FF0099;
     }
     @media screen and  (min-width: 725px) and (max-width: 1599px){
-        margin-left:120px;
+        margin-left:80px;
         padding:0px;
     }
     @media (min-width:1600px){
@@ -55,7 +55,7 @@ export const GalleryBox =  styled.div`
     margin : 0 auto;
     margin-left:20px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
-        width: 1250px;
+        width: 1350px;
         grid-template-columns: repeat(3, 1fr);
         margin : 0 auto;
         cursor:pointer;

@@ -1,11 +1,28 @@
 import styled,  { keyframes }  from "styled-components"
 
-export const HeaderBox = styled.div`    
+export const HeaderBox = styled.div` 
+    background-color: #EDEDED;   
+    @media screen and (min-width: 725px) and (max-width: 1000px){
+        width:1400px;
+    }
+    @media screen and (min-width: 1001px) and (max-width: 1599px){
+        width:1450px;
+    }
+    @media (min-width:1600px){
+        //width: 1400px;
+    }
 `;
 
 export const DesktopView = styled.div`
     display:none;
-    @media screen and  (min-width: 725px) and (max-width: 1599px){
+    @media screen and  (min-width: 725px) and (max-width: 1000px){
+        height: 90vh; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #EDEDED;
+    }
+    @media screen and  (min-width: 1001px) and (max-width: 1599px){
         height: 90vh; 
         display: flex;
         align-items: center;
@@ -28,7 +45,7 @@ export const MobileView = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #EDEDED;
-    @media (min-width:750px){ 
+    @media (min-width:725px){ 
         display: none;
     }
 `;
@@ -47,11 +64,12 @@ const slideInUp = keyframes`
 export const Title = styled.div`
     display: flex;
     img{
-        height: 70px;
+        height: 60px;
         position: relative;  // Agregar esta línea
     }
     opacity: 0;
     animation: ${slideInUp} 1s ease-in-out 1s forwards;
+
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         display: flex;
         align-items: center;

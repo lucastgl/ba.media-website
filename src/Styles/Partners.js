@@ -1,5 +1,15 @@
 import styled,{ keyframes } from 'styled-components';
 
+
+export const DivContainer = styled.div`
+    @media screen and  (min-width: 725px) and (max-width: 1000px){
+        width:max-content;
+    }
+    @media screen and  (min-width: 1001px) and (max-width: 1599px){
+        //width:100vw;
+        //width:max-content;
+    }
+`
 const InUp = keyframes`
     0% {
         opacity: 0;
@@ -22,7 +32,7 @@ const ScrollToEnd = keyframes`
 export const H3 = styled.span`
     animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-out;
     display:block;
-    font-size:30px;
+    font-size:2rem;
     margin-bottom:44px;
     text-align:center;
     font-weight: bold;
@@ -47,7 +57,7 @@ export const H3 = styled.span`
         font-weight: 700; 
         display:flex;
         align-items:center;                     
-        font-size:63px;
+        font-size:4rem;
         text-align:left;
         margin-left:340px;
         padding-top:0px;
@@ -62,22 +72,22 @@ export const H5 = styled.p`
     animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-out;
     color:#21A6F3;
     text-align:center;
-    font-size:14px;
+    font-size:0.9rem;
     padding:10px;
     font-weight: bold;
-    letter-spacing: 0.03em;
+    //letter-spacing: 0.03em;
     font-weight: 900;
     position:relative;
     top:10px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         font-size: 1rem;
         text-align:left;
-        margin-left:80px;
+        margin-left:75px;
         position:relative;
         top:40px;
     }
     @media (min-width:1600px){                       
-        font-size:16px;
+        font-size:0.9rem;
         margin-left:333px;
         position:relative;
         top:40px;
@@ -99,7 +109,9 @@ export const GIF = styled.img`
 `
 export const DivContent = styled.div`
     margin-bottom:130px;
-    
+    @media screen and  (min-width: 1001px) and (max-width: 1599px){
+        width:1400px;
+    }
     @media (min-width:1600px){ 
         animation:none;
         margin-bottom:200px;
@@ -112,17 +124,32 @@ export const ColumnWrapper = styled.div`
     animation-fill-mode: forwards;
     grid-template-columns: repeat(8, 1fr);
     margin: 0 auto;
-    width:600px;
+    //width:600px;
+    width:max-content;
     img {
         width: 60px;
         filter: grayscale(100%);
         transition: filter 0.5s ease;
         margin-left: 15px;
     }
-    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
+    @media screen and  (min-width: 650px){
+        animation:none;
+    }
+    @media screen and  (min-width: 725px) and (max-width: 1000px){ 
         justify-content: center;
         animation: none;
         width:1350px;
+        img{
+            width:110px;
+            margin-right: 15px;
+        }
+        img:hover {
+            filter: grayscale(0%);
+        }
+    }
+    @media screen and  (min-width: 1001px) and (max-width: 1599px){
+        justify-content: center;
+        animation: none;
         img{
             width:110px;
             margin-right: 15px;

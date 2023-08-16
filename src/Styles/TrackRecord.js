@@ -20,8 +20,13 @@ export const DivTitles = styled.div`
 `
 export const DivContent = styled.div`
     margin-bottom:160px;
-    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
+    @media screen and  (min-width: 725px) and (max-width: 1000px){ 
         margin-bottom:0px;
+        width: max-content;
+    }
+    @media screen and  (min-width: 1001px) and (max-width: 1599px){ 
+        margin-bottom:0px;
+        width: max-content;
     }
     @media (min-width:1600px){
         margin-bottom:0px;
@@ -66,18 +71,17 @@ export const GIF3 = styled.img`
 `
 export const H2 = styled.h2`
     animation:  ${({ showAnimate }) => (showAnimate ? InUp : 'none')} 1s ease-out;
-    font-size:30px;
+    font-size:2rem;
     text-align:center;
     font-weight: bold;
     span{
         color:#FF0099;
     }
     @media screen and  (min-width: 725px) and (max-width: 1599px){ 
-        //font-size:67px;
         padding-top:10px;
         font-size:5rem;
         text-align:left;
-        margin-left:110px;
+        margin-left:80px;
         letter-spacing: 2.5px;
         display:flex;
         align-items:center; 
@@ -87,7 +91,7 @@ export const H2 = styled.h2`
         display:flex;
         align-items:center; 
         letter-spacing: 2.5px;                    
-        font-size:67px;
+        font-size:4rem;
         text-align:left;
         margin-left:340px;
         margin-bottom:30px;
@@ -104,18 +108,17 @@ export const H5 = styled.h5`
     position:relative;
     font-weight: 900;
     bottom:0px;
-    font-size:13px;
+    font-size:0.9rem;
     margin-bottom:50px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){ 
-        //font-size:14px;
         font-size:1rem;
         text-align:left;
-        margin-left:117px;
+        margin-left:85px;
         position:relative;
-        bottom:160px;
+        bottom:180px;
     }
     @media (min-width:1600px){                       
-        font-size:14px;
+        font-size:0.9rem;
         text-align:left;
         margin-left:345px;
         position:relative;
@@ -132,8 +135,12 @@ export const Content = styled.div`
     flex-direction:column;
     align-items:center;
     font-weight: bold;
-    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
+    @media screen and  (min-width: 725px) and (max-width: 1000px){ 
         display:flex;
+        justify-content:center;
+        flex-direction:row;
+    }
+    @media screen and  (min-width: 1001px) and (max-width: 1599px){
         justify-content:center;
         flex-direction:row;
     }
@@ -161,16 +168,17 @@ export const StyledDiv = styled.div`
     width:300px;
     p{
         font-size:40px;
-
     }
     span{
         font-size:19px;
     }
-    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
+    @media screen and  (min-width: 725px) and (max-width: 1000px){ 
         margin-right:35px;
-        width:250px;
         height:300px;
-        
+    }
+    @media screen and  (min-width: 1001px) and (max-width: 1599px){ 
+        margin-right:35px;
+        height:300px;
     }
     @media (min-width:1600px){                       
         width:255px;
@@ -203,9 +211,12 @@ export const StyledDiv2 = styled.div`
     span{
         font-size:19px;
     }
-    @media screen and  (min-width: 725px) and (max-width: 1599px){ 
+    @media screen and  (min-width: 725px) and (max-width: 1000px){ 
         margin-right:35px;
-        width:250px;
+        height:300px;
+    }
+    @media screen and  (min-width: 1001px) and (max-width: 1599px){ 
+        margin-right:35px;
         height:300px;
     }
     @media (min-width:1600px){                    

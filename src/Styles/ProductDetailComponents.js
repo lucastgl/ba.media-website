@@ -14,12 +14,12 @@ export const  ModalContainer = styled.div`
     right: 0px;
     left: 0px;
     z-index: 120;
-    @media (min-width:725px){
+    @media screen and (min-width:725px) and (max-width: 1000px){
         display: flex;
         flex-direction:row;
         justify-content:space-between;
-        width: 100vw;
-        height: 100vh;
+        width:100%;
+        height:100%;
         position: fixed;
         top: 0px;
         bottom: 0px;
@@ -28,16 +28,39 @@ export const  ModalContainer = styled.div`
         z-index: 120;
         background-color: rgba(246,249,245,1) ;
     }
+    @media screen and (min-width:1001px) and (max-width: 1599px){
+        width:100%;
+        height:100%;
+        display: flex;
+        flex-direction:row;
+        justify-content:space-between;
+    }
+    @media (min-width:1600px){
+        display: flex;
+        flex-direction:row;
+    }
 `;
 
 export const GalleryContent = styled.div`
     display:flex;
     flex-direction:column;
-    @media (min-width:725px){
+    @media screen and (min-width:725px) and (max-width: 1000px){
         display: flex;
         flex-direction:row;
         justify-content:space-evenly;
-        width: 100vw;
+        width:95%;
+    }
+    @media screen and (min-width:1001px) and (max-width: 1599px){
+        display: flex;
+        flex-direction:row;
+        justify-content:space-evenly;
+        width:95%;
+    }
+    @media (min-width:1600px){
+        display: flex;
+        flex-direction:row;
+        justify-content:space-evenly;
+        width:100%;
     }
 `;
 
@@ -50,14 +73,25 @@ export const GallerySection = styled.div`
         max-width: 30vw;
         height: auto;
     }
-    @media screen and (min-width:725px) and (max-width: 1599px){
+    @media screen and (min-width:725px) and (max-width: 1000px){
         align-items: center;
         justify-content:space-between;
         width:1000px;
         height:auto;
         img{
             max-width: 850px;
-            // height: auto;
+        }
+        iframe{
+            height: 500px;
+        }
+    }
+    @media screen and (min-width:1001px) and (max-width: 1599px){
+        align-items: center;
+        justify-content:space-between;
+        width:1000px;
+        height:auto;
+        img{
+            max-width: 850px;
         }
         iframe{
             height: 500px;

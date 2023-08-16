@@ -3,24 +3,24 @@ import styled , {keyframes}from "styled-components"
 export const Header = styled.div`
     p {
         color: #21A6F3;
-        font-size: 14px;
+        font-size: 0.9rem;
         padding-bottom: 20px;
         font-weight: 900;
-        //margin-left: 130px;
         letter-spacing: 0.03em;
-        // position: relative;
-        top: 10px;
         margin-right:10px;
         text-align:center;
+        position:relative;
+        top:10px;
+
         @media screen and  (min-width: 725px) and (max-width: 1599px){                        
             font-size:16px;
-            margin-left:100px;
+            margin-left:80px;
             position:relative;
             top:90px;
             text-align:left;
         }
         @media (min-width: 1600px) {                       
-            font-size: 16px;
+            font-size:0.9rem;
             margin-left: 340px;
             position:relative;
             padding-bottom: 0px;
@@ -30,7 +30,7 @@ export const Header = styled.div`
     }
 
     h2 {
-        font-size: 30px;
+        font-size: 2rem;
         text-align: center;
         font-weight: bold;
         margin-bottom: 50px;
@@ -40,13 +40,14 @@ export const Header = styled.div`
         }
         @media screen and  (min-width: 725px) and (max-width: 1599px){
             margin-top:60px;
-            font-size:5.5rem;
+            font-size:5rem;
             text-align:left;
-            margin-left:100px;
+            margin-left:80px;
         }
         @media (min-width: 1600px) {  
             margin-top:0px;                   
-            font-size: 63px;
+            font-size: 4rem;
+            //font-size:63px;
             text-align: left;
             margin-left: 340px;
             margin-bottom: 80px;
@@ -93,8 +94,12 @@ export const DivButton = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    //width: 65%;
-
+    @media screen and  (min-width: 725px) and (max-width: 1000px){
+        width:1400px;
+    }
+    @media screen and  (min-width: 1001px) and (max-width: 1599px){
+        width:1400px;
+    }
 `
 const InUp = keyframes`
     0% {
@@ -110,16 +115,15 @@ export const ButtonMore = styled.button`
     border-radius:40px;
     border: 1px #21A6F3 solid ;
     font-weight:900;
-    font-size:13px;
+    font-size:0.9rem;
     color:#21A6F3;
     background-color:white;
-    width:130px;
+    width:30%;
     padding:12px;
     margin-top:50px;
     margin-bottom:90px;
-    margin-right:20px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
-        width:240px;
+        width:30%;
         border-radius:10px;
         margin-right:20px;
         &:hover{
@@ -146,12 +150,23 @@ export const ButtonMore = styled.button`
 export const DivLinea = styled.div`
     display:flex;
     justify-content:center;
+    align-items:center;
+    width:1400px;
+    @media (min-width:1600px){
+        width:auto;
+    }
 `
 export const Linea = styled.div`
     border: 1px solid #ECECEC;
     display:none;
-    @media screen and  (min-width: 725px) and (max-width: 1599px){
+    @media screen and  (min-width: 725px) and (max-width: 1000px){
         width:70%;
+        display:inline;
+        border: 1px solid #ECECEC;
+    }
+    @media screen and  (min-width: 1001px) and (max-width: 1599px){
+        width:70%;
+        display:flex;
         display:inline;
         border: 1px solid #ECECEC;
     }
