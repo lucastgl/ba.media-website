@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Image = styled.img`
     display: block;
     width: 100%;
-   // height: 100%;
+    height: 100%;
     object-fit: fill;
     //object-fit: cover; // Asegura que la imagen cubra todo el contenedor sin deformarse
     transition: transform 0.3s ease-in-out; // Añade una transición suave al efecto de zoom
