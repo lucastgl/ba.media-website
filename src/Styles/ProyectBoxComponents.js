@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Image = styled.img`
     display: block;
     width: 100%;
-    height: 100%;
+    //height: 100%;
     object-fit: fill;
     transition: transform 0.3s ease-in-out; // Añade una transición suave al efecto de zoom
 `;
@@ -15,6 +15,7 @@ export const Container = styled.div`
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         margin-bottom:70px;
         width:345px;
+        //background-color:red;
         h3{
             margin-top:20px;
             font-size:25px;
@@ -47,7 +48,7 @@ export const ImageContainer = styled.div`
     margin-left:5px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         width: 100%;
-        height: 75vh;
+        height: 60vh;
         overflow: hidden;
     }
     @media (min-width:1600px){
@@ -61,7 +62,7 @@ export const Title = styled.p`
     font-family: 'Inter Tight', sans-serif;
     font-weight: 700;
     color: #091405;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-left:7px;
     @media (min-width:1400px){
         font-size: 2rem;

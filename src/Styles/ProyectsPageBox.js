@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Image = styled.img`
     display: block;
     width: 100%;
-    height: 100%;
+   // height: 100%;
     object-fit: fill;
     //object-fit: cover; // Asegura que la imagen cubra todo el contenedor sin deformarse
     transition: transform 0.3s ease-in-out; // Añade una transición suave al efecto de zoom
@@ -13,7 +13,7 @@ export const Container = styled.div`
     width:165px;
     margin-bottom:30px;
     h3{
-        margin-top:10px;
+        margin-top:40px;
         font-size:16px;
         margin-left:8px;
     }
@@ -53,7 +53,7 @@ export const ImageContainer = styled.div`
     margin-left:5px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         width: 360px;
-        height: 75vh;
+        height: 65vh;
         overflow: hidden;
         margin-left:0px;
         overflow: hidden; // Oculta cualquier parte de la imagen que se desborde debido al zoom
