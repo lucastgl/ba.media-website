@@ -77,7 +77,7 @@ const Footer = () =>{
                   </Div>
                   <Div>
                     <h4>CONTACT</h4>
-                    <p>September 11,1888 2761,</p>
+                    <p>11 de Septiembre de 1888 2761,</p>
                     <p>C1428AJI CABA.</p>
                     <p>info@ba.media</p>
                   </Div>
