@@ -2,6 +2,7 @@ import styled,{ keyframes } from 'styled-components';
 
 
 export const DivContainer = styled.div`
+    overflow: hidden;
     @media screen and  (min-width: 725px) and (max-width: 1000px){
         width:max-content;
     }
@@ -120,7 +121,7 @@ export const DivContent = styled.div`
 `
 export const ColumnWrapper = styled.div`
     display: grid;
-    animation: ${ScrollToEnd} 5s linear;
+    animation: ${({ isScroll }) => (isScroll ? 'none': ScrollToEnd)} 5s linear;
     animation-fill-mode: forwards;
     grid-template-columns: repeat(8, 1fr);
     margin: 0 auto;
@@ -132,7 +133,7 @@ export const ColumnWrapper = styled.div`
         transition: filter 0.5s ease;
         margin-left: 15px;
     }
-    @media screen and  (min-width: 650px){
+    @media screen and  (min-width: 600px){
         animation:none;
     }
     @media screen and  (min-width: 725px) and (max-width: 1000px){ 
