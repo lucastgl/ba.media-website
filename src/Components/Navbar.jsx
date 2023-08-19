@@ -1,14 +1,12 @@
-import  {useState, useEffect, useContext} from 'react'
-import BAM from "../Images/BAM.webp"
-import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper,StyledLink, Select,Option} from '../Styles/NavbarComponents'
-import {FaBars, FaTimes} from "react-icons/fa"
+import { useState, useEffect, useContext } from 'react';
+import BAM from "../Images/BAM.webp";
+import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper, StyledLink, Select, Option } from '../Styles/NavbarComponents';
+import { FaBars, FaTimes } from "react-icons/fa";
 import { LenguageContext } from '../Context/LanguagesContext';
 import { Link } from 'react-router-dom';
 
-
 const Navbar = () => {
-
-   const { state, dispatch } = useContext(LenguageContext);
+    const { state, dispatch } = useContext(LenguageContext);
 
     const toggleLanguage = () => {
         dispatch({ type: 'lenguage' });
@@ -26,7 +24,7 @@ const Navbar = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
-        
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
@@ -34,12 +32,17 @@ const Navbar = () => {
 
     const handleLinkClick = (event, targetId) => {
         event.preventDefault();
-        setShowMobileMenu(!showMobileMenu);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: "smooth" });
+        setShowMobileMenu(false);
+        
+        if (window.location.pathname === '/') {
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+        } else {
+            window.location.href = `/${targetId}`;
         }
-      };
+    };
 
     return (
         <Container shouldShow={showNavbar} >
