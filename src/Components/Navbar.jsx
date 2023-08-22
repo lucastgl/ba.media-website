@@ -40,7 +40,7 @@ const Navbar = () => {
                 targetElement.scrollIntoView({ behavior: "smooth" });
             }
         } else {
-            window.location.href = `/${targetId}`;
+            window.location.href = `/`;
         }
     };
 
