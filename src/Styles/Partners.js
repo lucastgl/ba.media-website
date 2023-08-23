@@ -6,6 +6,10 @@ export const DivContainer = styled.div`
     @media screen and  (min-width: 725px) and (max-width: 1000px){
         width:max-content;
     }
+    @media screen and  (min-width: 1001px) and (max-width: 1599px){
+        //width:100vw;
+        //width:max-content;
+    }
 `
 const InUp = keyframes`
     0% {
@@ -22,7 +26,7 @@ const ScrollToEnd = keyframes`
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-37%);
+        transform: translateX(-34%);
     }
 `;
 
@@ -72,6 +76,7 @@ export const H5 = styled.p`
     font-size:0.9rem;
     padding:10px;
     font-weight: bold;
+    //letter-spacing: 0.03em;
     font-weight: 900;
     position:relative;
     top:10px;
@@ -105,11 +110,8 @@ export const GIF = styled.img`
 `
 export const DivContent = styled.div`
     margin-bottom:130px;
-    @media screen and  (min-width: 725px) and (max-width: 1400px){
+    @media screen and  (min-width: 1001px) and (max-width: 1599px){
         width:1400px;
-    }
-    @media screen and  (min-width: 1401px) and (max-width: 1599px){
-        //width:1400px;
     }
     @media (min-width:1600px){ 
         animation:none;
@@ -119,9 +121,11 @@ export const DivContent = styled.div`
 `
 export const ColumnWrapper = styled.div`
     display: grid;
-    transform: translateX(${({ currentX }) => `${currentX}px`});
+    animation: ${({ isScroll }) => (isScroll ? 'none': ScrollToEnd)} 5s linear;
+    animation-fill-mode: forwards;
     grid-template-columns: repeat(8, 1fr);
     margin: 0 auto;
+    //width:600px;
     width:max-content;
     img {
         width: 60px;
@@ -134,46 +138,39 @@ export const ColumnWrapper = styled.div`
     }
     @media screen and  (min-width: 725px) and (max-width: 1000px){ 
         justify-content: center;
-        animation: scroll 8s linear infinite;
-        grid-template-columns: repeat(5, 1fr);
-        img {
-            width: 70px;
+        animation: none;
+        width:1350px;
+        img{
+            width:110px;
+            margin-right: 15px;
+        }
+        img:hover {
+            filter: grayscale(0%);
         }
     }
-    @media screen and (min-width: 1001px) and (max-width: 1024px) {
-        grid-template-columns: repeat(8, 1fr);
-        img {
-            width: 90px;
+    @media screen and  (min-width: 1001px) and (max-width: 1599px){
+        justify-content: center;
+        animation: none;
+        img{
+            width:110px;
+            margin-right: 15px;
+        }
+        img:hover {
+            filter: grayscale(0%);
         }
     }
-    @media screen and (min-width: 1025px) and (max-width: 1300px) {
-        grid-template-columns: repeat(8, 1fr);
+    @media (min-width: 1600px) {
+        justify-content: center;
+        animation: none;
+        gap:40px;
         img {
-            width: 90px;
+            width: 108px;
+            height: 100px;
+            margin-left: 12px;
+        }
+        img:hover {
+            filter: grayscale(0%);
         }
     }
-    @media screen and (min-width: 1301px) and (max-width: 1600px) {
-        grid-template-columns: repeat(8, 1fr);
-        img {
-            width: 100px;
-        }
-    }
-    @media screen and (min-width: 1601px) and (max-width: 1920px) {
-        grid-template-columns: repeat(8, 1fr);
-        img {
-            width: 120px;
-        }
-    }
-    @media screen and (min-width: 1921px) and (max-width: 2560px) {
-        grid-template-columns: repeat(8, 1fr);
-        img {
-            width: 150px;
-        }
-    }
-    @media screen and (min-width: 2561px) and (max-width: 3440px) {
-        grid-template-columns: repeat(8, 1fr);
-        img {
-            width: 200px;
-        }
-    }
+
 `;

@@ -5,8 +5,8 @@ export const Image = styled.img`
     width: 100%;
     height: 100%;
     object-fit: fill;
-    //object-fit: cover; // Asegura que la imagen cubra todo el contenedor sin deformarse
-    transition: transform 0.3s ease-in-out; // Añade una transición suave al efecto de zoom
+    //object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 `;
 
 export const Container = styled.div`
@@ -27,18 +27,17 @@ export const Container = styled.div`
             margin-left:0px;
             font-family: 'Inter Tight', sans-serif;
         }
-        &:hover ${Image} { // Al hacer hover en el contenedor, se aplica el efecto de zoom a la imagen
-            transform: scale(1.1); // Aumenta el tamaño de la imagen en un 10%
+        &:hover ${Image} { 
+            transform: scale(1.1);
         }
         
     }
     @media screen and  (min-width: 1371px) and (max-width: 1599px){
         margin-bottom:70px;
         width:345px;
-        background-color:brown;
         margin-right:35px;
-        &:hover ${Image} { // Al hacer hover en el contenedor, se aplica el efecto de zoom a la imagen
-            transform: scale(1.1); // Aumenta el tamaño de la imagen en un 10%
+        &:hover ${Image} {
+            transform: scale(1.1);
         }
         
     }
@@ -51,8 +50,8 @@ export const Container = styled.div`
             margin-left:0px;
             font-family: 'Inter Tight', sans-serif;
         }
-        &:hover ${Image} { // Al hacer hover en el contenedor, se aplica el efecto de zoom a la imagen
-            transform: scale(1.1); // Aumenta el tamaño de la imagen en un 10%
+        &:hover ${Image} {
+            transform: scale(1.1); 
         }
     }
 `
@@ -67,7 +66,7 @@ export const ImageContainer = styled.div`
         height: 65vh;
         overflow: hidden;
         margin-left:0px;
-        overflow: hidden; // Oculta cualquier parte de la imagen que se desborde debido al zoom
+        overflow: hidden; 
     }
     @media (min-width:1600px){
         width: 372px;
@@ -78,7 +77,6 @@ export const ImageContainer = styled.div`
     }
 `;
 
-//revisar
 export const DetailSection = styled.div`
     display: flex;
     flex-direction:column;
