@@ -2,11 +2,12 @@ import styled,  { keyframes }  from "styled-components"
 
 export const HeaderBox = styled.div` 
     background-color: #EDEDED;   
-    @media screen and (min-width: 725px) and (max-width: 1000px){
-        width:1400px;
-    }
-    @media screen and (min-width: 1001px) and (max-width: 1599px){
+    @media screen and (min-width: 725px) and (max-width: 1400px){
         width:1450px;
+    }
+    @media screen and (min-width: 1401px) and (max-width: 1599px){
+        //width:1450px;
+        width:100%;
     }
     @media (min-width:1600px){
         //width: 1400px;

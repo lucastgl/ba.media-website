@@ -72,15 +72,14 @@ export const DivContent = styled.div`
     text-align:center;
     padding:10px;
     height:410px;
-    @media screen and  (min-width: 725px) and (max-width: 1000px){ 
+    @media screen and  (min-width: 725px) and (max-width: 1400px){ 
         display:flex;
         justify-content:center;
         height:390px;
-        width:1300px;
-    }
-    @media screen and  (min-width: 1001px) and (max-width: 1599px){ 
-        width:100%;
         width:1400px;
+    }
+    @media screen and  (min-width: 1401px) and (max-width: 1599px){ 
+        //width:100%;
         display:flex;
         justify-content:center;
 

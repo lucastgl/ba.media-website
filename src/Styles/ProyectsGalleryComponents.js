@@ -64,10 +64,12 @@ export const GalleryContainer = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom:50px;
-    @media screen and  (min-width: 725px) and (max-width: 1599px) {                     
+    @media screen and  (min-width: 725px) and (max-width: 1400px) {                     
         //width: 100%;
         //width:auto;
         width: 1400px;
+    }
+    @media screen and  (min-width: 1401px) and (max-width: 1599px) {                     
     }
     @media (min-width: 1600px) {                     
         display: flex;
@@ -102,11 +104,11 @@ export const DivButton = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    @media screen and  (min-width: 725px) and (max-width: 1000px){
+    @media screen and  (min-width: 725px) and (max-width: 1410px){
         width:1400px;
     }
-    @media screen and  (min-width: 1001px) and (max-width: 1599px){
-        width:1400px;
+    @media screen and  (min-width: 1411px) and (max-width: 1599px){
+        width:auto;
     }
 `
 const InUp = keyframes`
@@ -133,7 +135,6 @@ export const ButtonMore = styled.button`
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         width:30%;
         border-radius:10px;
-        margin-right:20px;
         &:hover{
             background-color:#21A6F3;
             color:white;
@@ -160,6 +161,12 @@ export const DivLinea = styled.div`
     justify-content:center;
     align-items:center;
     width:1400px;
+    @media screen and  (min-width: 725px) and (max-width: 1400px){
+        width:1400px;
+    }
+    @media screen and  (min-width: 1401px) and (max-width: 1599px){
+        width:100%;
+    }
     @media (min-width:1600px){
         width:auto;
     }
@@ -167,12 +174,12 @@ export const DivLinea = styled.div`
 export const Linea = styled.div`
     border: 1px solid #ECECEC;
     display:none;
-    @media screen and  (min-width: 725px) and (max-width: 1000px){
+    @media screen and  (min-width: 725px) and (max-width: 1400px){
         width:70%;
         display:inline;
         border: 1px solid #ECECEC;
     }
-    @media screen and  (min-width: 1001px) and (max-width: 1599px){
+    @media screen and  (min-width: 1401px) and (max-width: 1599px){
         width:70%;
         display:flex;
         display:inline;
