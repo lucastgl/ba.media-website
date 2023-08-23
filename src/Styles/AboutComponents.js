@@ -3,13 +3,13 @@ import styled from "styled-components"
 export const AboutContainer = styled.div`
     height: 100vh;
     width: 100vw;
-    @media screen and  (min-width: 725px) and (max-width: 1000px){
+    @media screen and  (min-width: 725px) and (max-width: 1400px){
         height: auto;
         width:1400px;
     }
-    @media screen and  (min-width: 1001px) and (max-width: 1599px){
+    @media screen and  (min-width: 1401px) and (max-width: 1599px){
         height: auto;
-        width:1450px;
+        //width:1450px;
     }
     @media (min-width:1600px){ 
         width: 100%;
@@ -51,7 +51,8 @@ export const Text = styled.div`
         font-size: 4.5rem;
     }
     @media screen and  (min-width: 1001px) and (max-width: 1599px){
-        width: max-content;
+        //width: max-content;
+        width: 95%;
         font-size: 4.5rem;
     }
     @media (min-width:1600px){ 
@@ -76,7 +77,7 @@ export const VideoContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        width:max-content;
+        //width:max-content;
     }
     @media (min-width:1600px){ 
         width: 100vw;
@@ -90,15 +91,21 @@ export const Video = styled.div`
     iframe{
         width: 100%;
     }
-    @media screen and  (min-width: 725px) and (max-width: 1000px){ 
+    @media screen and  (min-width: 725px) and (max-width: 1450px){ 
         iframe{
             width: 1400px;
             height: 800px;
         }
     }
-    @media screen and  (min-width: 1001px) and (max-width: 1599px){ 
+    @media screen and  (min-width: 1451px) and (max-width: 1500px){ 
         iframe{
             width: 1450px;
+            height: 800px;
+        }
+    }
+    @media screen and  (min-width: 1501px) and (max-width: 1599px){
+        iframe{
+            width: 1500px;
             height: 800px;
         }
     }

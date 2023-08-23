@@ -54,13 +54,13 @@ export const GalleryBox =  styled.div`
     flex-wrap:wrap;
     justify-content:space-evenly;
     @media screen and  (min-width: 725px) and (max-width: 1200px){
-        width:1300px;
+        width:1420px;
         cursor:pointer;
         margin-bottom:200px;
     }
     @media screen and  (min-width: 1201px) and (max-width: 1599px){
         display:flex;
-        width:100%;
+        //width:1410px;
         flex-wrap:wrap;
         justify-content:space-evenly;
         cursor:pointer;

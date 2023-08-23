@@ -105,8 +105,11 @@ export const GIF = styled.img`
 `
 export const DivContent = styled.div`
     margin-bottom:130px;
-    @media screen and  (min-width: 1001px) and (max-width: 1599px){
+    @media screen and  (min-width: 725px) and (max-width: 1400px){
         width:1400px;
+    }
+    @media screen and  (min-width: 1401px) and (max-width: 1599px){
+        //width:1400px;
     }
     @media (min-width:1600px){ 
         animation:none;

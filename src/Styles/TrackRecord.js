@@ -20,13 +20,13 @@ export const DivTitles = styled.div`
 `
 export const DivContent = styled.div`
     margin-bottom:160px;
-    @media screen and  (min-width: 725px) and (max-width: 1000px){ 
+    @media screen and  (min-width: 725px) and (max-width: 1400px){ 
         margin-bottom:0px;
         width: max-content;
     }
-    @media screen and  (min-width: 1001px) and (max-width: 1599px){ 
+    @media screen and  (min-width: 1401px) and (max-width: 1599px){ 
         margin-bottom:0px;
-        width: max-content;
+        //width: max-content;
     }
     @media (min-width:1600px){
         margin-bottom:0px;
