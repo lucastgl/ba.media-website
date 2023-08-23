@@ -50,22 +50,29 @@ export const P = styled.p`
 `
 
 export const GalleryBox =  styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin : 0 auto;
-    margin-left:20px;
-    @media screen and  (min-width: 725px) and (max-width: 1599px){
-        width: 1350px;
-        grid-template-columns: repeat(3, 1fr);
-        margin : 0 auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    @media screen and  (min-width: 725px) and (max-width: 1200px){
+        width:1300px;
         cursor:pointer;
         margin-bottom:200px;
     }
+    @media screen and  (min-width: 1201px) and (max-width: 1599px){
+        display:flex;
+        width:100%;
+        flex-wrap:wrap;
+        justify-content:space-evenly;
+        cursor:pointer;
+    }
     @media (min-width:1600px){
         width: 1230px;
+        display:grid;
         grid-template-columns: repeat(3, 1fr);
         margin : 0 auto;
+        justify-items: center; /* Centrar horizontalmente los elementos */
         cursor:pointer;
         margin-bottom:40px;
+        grid-gap: 50px;
     }
 `;

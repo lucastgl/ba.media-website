@@ -9,7 +9,7 @@ export const Image = styled.img`
 `;
 
 export const Container = styled.div`
-    margin-right:20px;
+    //margin-right:20px;
     margin-bottom:30px;
     width:165px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
@@ -29,6 +29,7 @@ export const Container = styled.div`
     }
     @media (min-width:1600px){
         margin-bottom:70px;
+        margin-right:40px;
         width:365px;
         h3{
             margin-top:20px;

@@ -44,6 +44,7 @@ export const Header = styled.div`
             font-size:5rem;
             text-align:left;
             margin-left:80px;
+            width:1000px;
         }
         @media (min-width: 1600px) {  
             margin-top:0px;                   
@@ -64,29 +65,37 @@ export const GalleryContainer = styled.div`
     align-items: center;
     margin-bottom:50px;
     @media screen and  (min-width: 725px) and (max-width: 1599px) {                     
-        width: 100%;
+        //width: 100%;
+        //width:auto;
+        width: 1400px;
     }
     @media (min-width: 1600px) {                     
-        margin-left: 320px;
-        width: 65%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //background-color:blue;
     }
 `;
 
 export const GalleryBox =  styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin : 0 auto;
+    //display: grid;
+    //grid-template-columns: repeat(2, 1fr);
+    //margin : 0 auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin : 0 auto;
-        width: 86%;
+        cursor: pointer;
+        grid-gap:50px;
     }
     @media (min-width: 1600px){
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin : 0 auto;
-
+        cursor: pointer;
     }
 `;
 export const DivButton = styled.div`
