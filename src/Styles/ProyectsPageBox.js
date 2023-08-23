@@ -17,15 +17,26 @@ export const Container = styled.div`
         font-size:16px;
         margin-left:8px;
     }
-    @media screen and  (min-width: 725px) and (max-width: 1599px){
+    @media screen and  (min-width: 725px) and (max-width: 1370px){
         margin-bottom:70px;
         width:345px;
+        margin-right:35px;
         h3{
             margin-top:20px;
             font-size:25px;
             margin-left:0px;
             font-family: 'Inter Tight', sans-serif;
         }
+        &:hover ${Image} { // Al hacer hover en el contenedor, se aplica el efecto de zoom a la imagen
+            transform: scale(1.1); // Aumenta el tamaño de la imagen en un 10%
+        }
+        
+    }
+    @media screen and  (min-width: 1371px) and (max-width: 1599px){
+        margin-bottom:70px;
+        width:345px;
+        background-color:brown;
+        margin-right:35px;
         &:hover ${Image} { // Al hacer hover en el contenedor, se aplica el efecto de zoom a la imagen
             transform: scale(1.1); // Aumenta el tamaño de la imagen en un 10%
         }

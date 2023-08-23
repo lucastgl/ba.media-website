@@ -48,13 +48,15 @@ export const GalleryContent = styled.div`
         display: flex;
         flex-direction:row;
         justify-content:space-evenly;
-        width:95%;
+        //width:95%;
+        width: inherit;
     }
     @media screen and (min-width:1001px) and (max-width: 1599px){
         display: flex;
         flex-direction:row;
         justify-content:space-evenly;
-        width:95%;
+        //width:95%;
+        width: inherit;
     }
     @media (min-width:1600px){
         display: flex;

@@ -51,7 +51,8 @@ export const Text = styled.div`
         font-size: 4.5rem;
     }
     @media screen and  (min-width: 1001px) and (max-width: 1599px){
-        width: max-content;
+        //width: max-content;
+        width: 95%;
         font-size: 4.5rem;
     }
     @media (min-width:1600px){ 
@@ -76,7 +77,7 @@ export const VideoContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        width:max-content;
+        //width:max-content;
     }
     @media (min-width:1600px){ 
         width: 100vw;
