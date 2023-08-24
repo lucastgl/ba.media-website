@@ -179,6 +179,7 @@ export const StyledDiv = styled.div`
     @media screen and  (min-width: 1001px) and (max-width: 1599px){ 
         margin-right:35px;
         height:300px;
+        width:275px;
     }
     @media (min-width:1600px){                       
         width:255px;
@@ -218,6 +219,7 @@ export const StyledDiv2 = styled.div`
     @media screen and  (min-width: 1001px) and (max-width: 1599px){ 
         margin-right:35px;
         height:300px;
+        width:275px;
     }
     @media (min-width:1600px){                    
         width:255px;
