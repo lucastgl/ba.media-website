@@ -13,8 +13,8 @@ const About = () => {
     if (videoRef.current) {
       const options = {
         id: 832656662,
-        autopause: true,
-        autoplay: false,
+        autoplay: true,
+        autopause: false,
       };
 
       playerRef.current = new Player(videoRef.current, options);

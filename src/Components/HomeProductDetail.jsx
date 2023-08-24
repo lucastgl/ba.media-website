@@ -30,7 +30,7 @@ const HomeProductDetail = ({ productSelected, onClose }) => {
                 proyect &&
                 (
                     <ModalContainer>
-                        <FaArrowLeftIcono onClick={()=>{onClose}}/> 
+                        <FaArrowLeftIcono onClick={onClose}/> 
                        
                         <GalleryContent>
                             <GallerySection>
@@ -43,9 +43,11 @@ const HomeProductDetail = ({ productSelected, onClose }) => {
                                             height="560"
                                             frameborder="0"
                                             allow="autoplay; fullscreen; picture-in-picture"
+                                            autoplay="true"
                                             allowfullscreen
                                         ></iframe>
-                                    ) : (
+                                    ) : 
+                                    (
                                         <img src={proyect.image} alt={proyect.title} />
                                     )
                                 }

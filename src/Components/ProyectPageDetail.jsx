@@ -32,11 +32,9 @@ const ProyectPageDetail = ({ productSelected, onClose }) => {
                 proyect &&
                 (
                     <ModalContainer>
-                         {/* icono de la flecha izq para mobile  */}
-                         <FaArrowLeftIcono onClick={onClose}/>
+                        <FaArrowLeftIcono onClick={onClose}/>
                         
                         <GalleryContent>
-                            {/* Gallery section */}
                             <GallerySection>
                                 <FaAngleLeftIcono onClick={handlePrev}/>
                                 {
@@ -47,6 +45,7 @@ const ProyectPageDetail = ({ productSelected, onClose }) => {
                                             height="660"
                                             frameborder="0"
                                             allow="autoplay; fullscreen; picture-in-picture"
+                                            autoplay="true"
                                             allowfullscreen
                                         ></iframe>
                                     ) : (
