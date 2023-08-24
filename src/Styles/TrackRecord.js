@@ -26,7 +26,6 @@ export const DivContent = styled.div`
     }
     @media screen and  (min-width: 1401px) and (max-width: 1599px){ 
         margin-bottom:0px;
-        //width: max-content;
     }
     @media (min-width:1600px){
         margin-bottom:0px;
@@ -165,7 +164,7 @@ export const StyledDiv = styled.div`
     padding-top:40px;
     border-radius:14px;
     margin-bottom:30px;
-    width:300px;
+    width:18.5vw;
     p{
         font-size:40px;
     }
@@ -198,7 +197,7 @@ export const StyledDiv = styled.div`
 export const StyledDiv2 = styled.div`
     background-color:#21A6F3;
     height:280px;
-    width:300px;
+    width:18.5vw;
     border-radius:14px;
     text-align:center;
     color:white;
