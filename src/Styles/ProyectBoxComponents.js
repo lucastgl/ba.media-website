@@ -14,7 +14,7 @@ export const Container = styled.div`
     width:165px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         margin-bottom:70px;
-        width:345px;
+        width:370px;
         //background-color:red;
         h3{
             margin-top:20px;
@@ -31,6 +31,7 @@ export const Container = styled.div`
         margin-bottom:70px;
         margin-right:40px;
         width:365px;
+        background-color:red;
         h3{
             margin-top:20px;
             font-size:25px;

@@ -135,6 +135,7 @@ export const ButtonMore = styled.button`
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         width:30%;
         border-radius:10px;
+        margin-bottom:60px;
         &:hover{
             background-color:#21A6F3;
             color:white;
