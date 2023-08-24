@@ -72,7 +72,7 @@ const ProyectPageDetail = ({ productSelected, onClose }) => {
                                 <p>
                                     {state.lenguage 
                                         ? 
-                                        <>Plataforma: {proyect.network}</>
+                                        <>Canal/Plataforma: {proyect.network}</>
                                         :
                                         <>Network: {proyect.network}</> 
                                     }

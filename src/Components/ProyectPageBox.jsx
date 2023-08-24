@@ -22,7 +22,7 @@ const ProyectPageBox = ({handleClick, image, title, episodes, country, genre, ne
           <InfoText>
             {state.lenguage 
               ? 
-              <>Plataforma: {network}</> 
+              <>Canal/Plataforma: {network}</> 
               :
               <>Network: {network}</> 
             }
