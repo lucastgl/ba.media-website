@@ -6,7 +6,6 @@ export const HeaderBox = styled.div`
         width:1450px;
     }
     @media screen and (min-width: 1401px) and (max-width: 1599px){
-        //width:1450px;
         width:100%;
     }
     @media (min-width:1600px){

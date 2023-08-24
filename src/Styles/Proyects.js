@@ -60,7 +60,6 @@ export const GalleryBox =  styled.div`
     }
     @media screen and  (min-width: 1201px) and (max-width: 1599px){
         display:flex;
-        //width:1410px;
         flex-wrap:wrap;
         justify-content:space-evenly;
         cursor:pointer;

@@ -23,7 +23,7 @@ export const gallery = [
     id: 1,
     image: MasterChefimage,
     title: "MasterChef",
-    country: "6",
+    country: "6 countries",
     episodes: 120,
     video: "https://player.vimeo.com/video/823205473?h=a7a62002c6"
   },
@@ -163,7 +163,6 @@ export const galleryPage = [
     country: "Argentina, Belgium, Denmark & Sweden",
     network: "Telefe, TV3 & Kanal 5",
     genre:"Entertainment"
-    //episodes: 6,
   },
   {
     id: 10,
@@ -188,7 +187,7 @@ export const galleryPage = [
     id: 12,
     image: goalStars,
     title: "Goal Stars",
-    country: "Isreel",
+    country: "Israel",
     network: "HOT TV",
     genre:"Reality/Comedy",
     episodes: 30,
@@ -207,7 +206,7 @@ export const galleryPage = [
     image: foodSound,
     title: "Food Sound",
     country: "Argentina",
-    LOCATION : "Costanera Vicente López",
+    location : "Costanera Vicente López",
     liveEvent : "Food & music Festival",
     days: 2,
     video: "https://player.vimeo.com/video/823205357?h=1a59864c6b"
@@ -216,6 +215,7 @@ export const galleryPage = [
     id: 15,
     image: exodo,
     title: "Éxodo",
+    location: "Provincial Government of Jujuy",
     country: "Argentina",
     genre:"4D Experience",
     video: "https://player.vimeo.com/video/823205213?h=1507ec3d31"

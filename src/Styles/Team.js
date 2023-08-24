@@ -50,7 +50,6 @@ export const DivContent = styled.div`
     @media screen and  (min-width: 1401px) and (max-width: 1599px){ 
         justify-content:center;
         flex-direction:row;
-        //width:max-content;
 
     }
     @media (min-width:1600px){                       

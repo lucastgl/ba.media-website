@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect , useContext} from 'react';
 import { ModalContainer, GalleryContent, GallerySection, DetailSection,FaTimesIcono,FaAngleLeftIcono, FaAngleRightIcono,FaArrowLeftIcono} from '../Styles/ProductDetailComponents';
 import {gallery} from '../mocks/proyects.js';
+import { LenguageContext } from '../Context/LanguagesContext';
 
 
 const HomeProductDetail = ({ productSelected, onClose }) => {
     const initialProjectIndex = gallery.findIndex(p => p.id === productSelected);
     const [currentImageIndex, setCurrentImageIndex] = useState(initialProjectIndex);
     const proyect = gallery[currentImageIndex];
+    const {state} = useContext(LenguageContext);
 
     const handleNext = () => {
         if (currentImageIndex < gallery.length - 1) {
@@ -55,8 +57,15 @@ const HomeProductDetail = ({ productSelected, onClose }) => {
                             </GallerySection>
                             <DetailSection>
                                 <h2>{proyect.title}</h2>
-                                <p>Country: {proyect.country}</p>
-                                <p>Episodes: {proyect.episodes}</p>
+                                <p>{proyect.country}</p>
+                                <p>
+                                    {state.lenguage 
+                                        ? 
+                                        <>Episodios: {proyect.episodes}</> 
+                                        :
+                                        <>Episodes: {proyect.episodes}</> 
+                                    }
+                                </p>
                             </DetailSection>
                             <FaTimesIcono onClick={onClose}/>
                         </GalleryContent>

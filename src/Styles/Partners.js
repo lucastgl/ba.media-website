@@ -75,7 +75,6 @@ export const H5 = styled.p`
     font-size:0.9rem;
     padding:10px;
     font-weight: bold;
-    //letter-spacing: 0.03em;
     font-weight: 900;
     position:relative;
     top:10px;
@@ -124,7 +123,6 @@ export const ColumnWrapper = styled.div`
     animation-fill-mode: forwards;
     grid-template-columns: repeat(8, 1fr);
     margin: 0 auto;
-    //width:600px;
     width:max-content;
     img {
         width: 60px;

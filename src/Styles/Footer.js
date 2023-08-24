@@ -79,10 +79,8 @@ export const DivContent = styled.div`
         width:1400px;
     }
     @media screen and  (min-width: 1401px) and (max-width: 1599px){ 
-        //width:100%;
         display:flex;
         justify-content:center;
-
     }
     @media (min-width:1600px){
         display:flex;
