@@ -5,25 +5,23 @@ export const Image = styled.img`
     width: 100%;
     height: 100%;
     object-fit: fill;
-    transition: transform 0.3s ease-in-out; // Añade una transición suave al efecto de zoom
+    transition: transform 0.3s ease-in-out;
 `;
 
 export const Container = styled.div`
-    //margin-right:20px;
     margin-bottom:30px;
     width:165px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         margin-bottom:70px;
         width:370px;
-        //background-color:red;
         h3{
             margin-top:20px;
             font-size:25px;
             margin-left:0px;
             font-family: 'Inter Tight', sans-serif;
         }
-        &:hover ${Image} { // Al hacer hover en el contenedor, se aplica el efecto de zoom a la imagen
-            transform: scale(1.1); // Aumenta el tamaño de la imagen en un 10%
+        &:hover ${Image} { 
+            transform: scale(1.1);
         }
         
     }
@@ -31,15 +29,14 @@ export const Container = styled.div`
         margin-bottom:70px;
         margin-right:40px;
         width:365px;
-        background-color:red;
         h3{
             margin-top:20px;
             font-size:25px;
             margin-left:0px;
             font-family: 'Inter Tight', sans-serif;
         }
-        &:hover ${Image} { // Al hacer hover en el contenedor, se aplica el efecto de zoom a la imagen
-            transform: scale(1.1); // Aumenta el tamaño de la imagen en un 10%
+        &:hover ${Image} {
+            transform: scale(1.1);
         }
     }
 `;
@@ -56,7 +53,7 @@ export const ImageContainer = styled.div`
     @media (min-width:1600px){
         width: 372px;
         height: 496px;
-        overflow: hidden; // Oculta cualquier parte de la imagen que se desborde debido al zoom
+        overflow: hidden;
     }
 `;
 
@@ -79,5 +76,3 @@ export const InfoText = styled.p`
     color:#21A6F3;
     margin-left:7px;
 `;
-
-

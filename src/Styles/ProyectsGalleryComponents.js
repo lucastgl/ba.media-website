@@ -49,7 +49,6 @@ export const Header = styled.div`
         @media (min-width: 1600px) {  
             margin-top:0px;                   
             font-size: 4rem;
-            //font-size:63px;
             text-align: left;
             margin-left: 340px;
             margin-bottom: 80px;
@@ -59,14 +58,12 @@ export const Header = styled.div`
 
 export const GalleryContainer = styled.div`
     margin-left: 0px;
-    width: 100%;  // Para móviles, usaremos el ancho completo
+    width: 100%;  
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom:50px;
-    @media screen and  (min-width: 725px) and (max-width: 1400px) {                     
-        //width: 100%;
-        //width:auto;
+    @media screen and  (min-width: 725px) and (max-width: 1400px) {      
         width: 1400px;
     }
     @media screen and  (min-width: 1401px) and (max-width: 1599px) {                     
@@ -75,14 +72,10 @@ export const GalleryContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        //background-color:blue;
     }
 `;
 
 export const GalleryBox =  styled.div`
-    //display: grid;
-    //grid-template-columns: repeat(2, 1fr);
-    //margin : 0 auto;
     display:flex;
     flex-wrap:wrap;
     justify-content:space-evenly;
@@ -100,6 +93,7 @@ export const GalleryBox =  styled.div`
         cursor: pointer;
     }
 `;
+
 export const DivButton = styled.div`
     display:flex;
     justify-content:center;
@@ -121,6 +115,7 @@ const InUp = keyframes`
         transform: translateY(0px);
     }
 `;
+
 export const ButtonMore = styled.button`
     border-radius:40px;
     border: 1px #21A6F3 solid ;
