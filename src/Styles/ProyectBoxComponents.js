@@ -13,7 +13,7 @@ export const Container = styled.div`
     width:165px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         margin-bottom:70px;
-        width:370px;
+        width: 370px;
         h3{
             margin-top:20px;
             font-size:25px;
@@ -22,8 +22,7 @@ export const Container = styled.div`
         }
         &:hover ${Image} { 
             transform: scale(1.1);
-        }
-        
+        } 
     }
     @media (min-width:1600px){
         margin-bottom:70px;
@@ -47,7 +46,7 @@ export const ImageContainer = styled.div`
     margin-left:5px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         width: 100%;
-        height: 60vh;
+        height: 80vh;
         overflow: hidden;
     }
     @media (min-width:1600px){

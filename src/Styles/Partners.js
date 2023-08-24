@@ -7,8 +7,7 @@ export const DivContainer = styled.div`
         width:max-content;
     }
     @media screen and  (min-width: 1001px) and (max-width: 1599px){
-        //width:100vw;
-        //width:max-content;
+        margin-left: 35px;
     }
 `
 const InUp = keyframes`
@@ -153,7 +152,9 @@ export const ColumnWrapper = styled.div`
         animation: none;
         img{
             width:110px;
-            margin-right: 15px;
+            margin-right: 35px;
+            margin-bottom: 20px;
+            scale: 1.2;
         }
         img:hover {
             filter: grayscale(0%);
