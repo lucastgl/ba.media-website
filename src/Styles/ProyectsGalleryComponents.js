@@ -150,6 +150,7 @@ export const ButtonMore = styled.button`
         margin-top:100px;
         cursor: pointer;
         margin-right:40px;
+        margin-bottom:60px;
         animation:  ${InUp} 5s ease-in-out ;
         &:hover{
             background-color:#21A6F3;
