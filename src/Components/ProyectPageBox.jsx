@@ -22,7 +22,7 @@ const ProyectPageBox = ({handleClick, image, title, episodes, country, genre, ne
           <InfoText>
             {state.lenguage 
               ? 
-              <>Network: {network}</> //aca tendrias que poner la palabra en español
+              <>Plataforma: {network}</> 
               :
               <>Network: {network}</> 
             }

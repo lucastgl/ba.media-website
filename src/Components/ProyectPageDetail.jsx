@@ -72,7 +72,7 @@ const ProyectPageDetail = ({ productSelected, onClose }) => {
                                 <p>
                                     {state.lenguage 
                                         ? 
-                                        <>Network: {proyect.network}</> //palabra en español
+                                        <>Plataforma: {proyect.network}</>
                                         :
                                         <>Network: {proyect.network}</> 
                                     }
