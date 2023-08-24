@@ -8,7 +8,7 @@ const HomeProyectBox = ({handleClick, image, title, episodes, country, id}) => {
         </ImageContainer>
         <Title>{title}</Title>
         <InfoText>Paises: {country}</InfoText>
-        <InfoText>Espisodios: {episodes}</InfoText>
+        <InfoText>Episodios: {episodes}</InfoText>
     </Container>
   )
 }
