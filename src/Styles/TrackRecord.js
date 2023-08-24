@@ -13,7 +13,7 @@ const InUp = keyframes`
 
 export const DivTitles = styled.div`
     display:flex;
-    flex-direction:column-reverse;
+    flex-direction:column;
     @media (min-width:1600px){
         flex-direction:column;
     }
@@ -73,6 +73,7 @@ export const H2 = styled.h2`
     font-size:2rem;
     text-align:center;
     font-weight: bold;
+    margin-bottom:30px;
     span{
         color:#FF0099;
     }
@@ -106,7 +107,7 @@ export const H5 = styled.h5`
     text-align:center;
     position:relative;
     font-weight: 900;
-    bottom:0px;
+    top:40px;
     font-size:0.9rem;
     margin-bottom:50px;
     @media screen and  (min-width: 725px) and (max-width: 1599px){ 
@@ -124,7 +125,7 @@ export const H5 = styled.h5`
         font-weight: 900;
         margin-bottom:0px;
         top:30px;
-        bottom:0;
+        bottom:0px;
     }
 `
 
