@@ -164,7 +164,7 @@ export const StyledDiv = styled.div`
     padding-top:40px;
     border-radius:14px;
     margin-bottom:30px;
-    width:18.5vw;
+    width:300px;
     p{
         font-size:40px;
     }
@@ -197,7 +197,7 @@ export const StyledDiv = styled.div`
 export const StyledDiv2 = styled.div`
     background-color:#21A6F3;
     height:280px;
-    width:18.5vw;
+    width:300px;
     border-radius:14px;
     text-align:center;
     color:white;
