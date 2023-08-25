@@ -14,7 +14,7 @@ export const Container = styled.div`
     h3{
         margin-top:40px;
         font-size:16px;
-        margin-left:8px;
+        // margin-left:8px;
     }
     @media screen and  (min-width: 725px) and (max-width: 1370px){
         margin-bottom:70px;

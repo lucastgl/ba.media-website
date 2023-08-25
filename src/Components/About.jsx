@@ -14,7 +14,6 @@ const About = () => {
       const options = {
         id: 832656662,
         autoplay: true,
-        autopause: false,
       };
 
       playerRef.current = new Player(videoRef.current, options);
@@ -61,12 +60,18 @@ const About = () => {
         <TextContainer>
           {
             state.lenguage ? (
-              <Text>Con <span style={{color: "#3D9BE9"}}>el mejor equipo</span> de trabajo, combinamos creatividad, agilidad y eficiencia consiguiendo como resultado contenido audiovisual <span style={{color: "#FF0099"}}>de alta calidad.</span></Text>
+              <Text>
+                Con <span style={{color: "#3D9BE9"}}>el mejor equipo</span> de trabajo, combinamos creatividad, agilidad y eficiencia consiguiendo como 
+                resultado contenido audiovisual <span style={{color: "#FF0099"}}>de alta calidad.</span>
+              </Text>
             ) 
             :
-            ( <Text>
-              With the<span style={{color: "#3D9BE9"}}> best team</span>, we combine creativity, agility, and efficiency, 
-              achieving high-quality audiovisual <span style={{color: "#FF0099"}}> content as a result.</span></Text>)
+            ( 
+              <Text>
+                With the<span style={{color: "#3D9BE9"}}> best team</span>, we combine creativity, agility, and efficiency, 
+                achieving high-quality audiovisual <span style={{color: "#FF0099"}}> content as a result.</span>
+              </Text>
+            )
           }
         </TextContainer>
         <VideoContainer>

@@ -24,6 +24,7 @@ export const gallery = [
     image: MasterChefimage,
     title: "MasterChef",
     country: "6 countries",
+    pais: "6 paises",
     episodes: 120,
     video: "https://player.vimeo.com/video/823205473?h=a7a62002c6"
   },
