@@ -1,13 +1,14 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { ModalContainer, GalleryContent, GallerySection, DetailSection, FaTimesIcono, FaAngleLeftIcono, FaAngleRightIcono, FaArrowLeftIcono } from '../Styles/ProductDetailComponents';
-import { gallery } from '../mocks/proyects.js';
+import React, { useState, useEffect , useContext} from 'react';
+import { ModalContainer, GalleryContent, GallerySection, DetailSection,FaTimesIcono,FaAngleLeftIcono, FaAngleRightIcono,FaArrowLeftIcono} from '../Styles/ProductDetailComponents';
+import {gallery} from '../mocks/proyects.js';
 import { LenguageContext } from '../Context/LanguagesContext';
+
 
 const HomeProductDetail = ({ productSelected, onClose }) => {
     const initialProjectIndex = gallery.findIndex(p => p.id === productSelected);
     const [currentImageIndex, setCurrentImageIndex] = useState(initialProjectIndex);
     const proyect = gallery[currentImageIndex];
-    const { state } = useContext(LenguageContext);
+    const {state} = useContext(LenguageContext);
 
     const handleNext = () => {
         if (currentImageIndex < gallery.length - 1) {
@@ -35,18 +36,20 @@ const HomeProductDetail = ({ productSelected, onClose }) => {
                        
                         <GalleryContent>
                             <GallerySection>
-                                <FaAngleLeftIcono onClick={handlePrev}/>
+                                <FaAngleLeftIcono onClick={()=>{handlePrev}}/>
                                 {
                                     proyect.video ? (
                                         <iframe
-                                            src={`${proyect.video}?autoplay=1&muted=1`} 
+                                            src={proyect.video}
                                             width="1340"
                                             height="560"
-                                            frameBorder="0"
+                                            frameborder="0"
                                             allow="autoplay; fullscreen; picture-in-picture"
-                                            allowFullScreen
+                                            autoplay="true"
+                                            allowfullscreen
                                         ></iframe>
-                                    ) : (
+                                    ) : 
+                                    (
                                         <img src={proyect.image} alt={proyect.title} />
                                     )
                                 }
