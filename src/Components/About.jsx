@@ -36,7 +36,6 @@ const About = () => {
       observer.observe(videoRef.current);
 
       return () => {
-        observer.unobserve(videoRef.current);
         if (playerRef.current) {
           playerRef.current.destroy();
         }

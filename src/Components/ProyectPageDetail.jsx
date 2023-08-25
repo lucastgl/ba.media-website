@@ -57,7 +57,6 @@ const ProyectPageDetail = ({ productSelected, onClose }) => {
                                 }
                                 <FaAngleRightIcono onClick={handleNext}/>
                             </GallerySection>
-                            {/* Details section */}
                             <DetailSection>
                                 <h2>{proyect.title}</h2>
                                 <p>
