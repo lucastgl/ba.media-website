@@ -36,7 +36,7 @@ const HomeProductDetail = ({ productSelected, onClose }) => {
                        
                         <GalleryContent>
                             <GallerySection>
-                                <FaAngleLeftIcono onClick={()=>{handlePrev}}/>
+                                <FaAngleLeftIcono onClick={handlePrev}/>
                                 {
                                     proyect.video ? (
                                         <iframe
