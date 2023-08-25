@@ -4,7 +4,6 @@ import Player from '@vimeo/player';
 import { LenguageContext } from '../Context/LanguagesContext';
 
 const About = () => {
-
   const {state} = useContext(LenguageContext);
   const videoRef = useRef(null);
   const playerRef = useRef(null);
@@ -12,47 +11,37 @@ const About = () => {
   useEffect(() => {
     if (videoRef.current) {
       const options = {
-        id: 832656662,
-        autoplay: true,
+        id: 832656662
       };
-
+      
       playerRef.current = new Player(videoRef.current, options);
-    }
 
-    return () => {
-      if (playerRef.current) {
-        playerRef.current.destroy();
-      }
-    };
-  }, []);
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              playerRef.current.play();
+            } else {
+              playerRef.current.pause();
+            }
+          });
+        },
+        {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1,
+        }
+      );
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            playerRef.current.play();
-          } else {
-            playerRef.current.pause();
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1,
-      }
-    );
-
-    if (videoRef.current) {
       observer.observe(videoRef.current);
-    }
 
-    return () => {
-      if (videoRef.current) {
+      return () => {
         observer.unobserve(videoRef.current);
-      }
-    };
+        if (playerRef.current) {
+          playerRef.current.destroy();
+        }
+      };
+    }
   }, []);
 
   return (
