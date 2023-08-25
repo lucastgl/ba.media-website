@@ -86,6 +86,10 @@ export const H2 = styled.h2`
         display:flex;
         align-items:center; 
         margin-bottom:30px;
+        span{
+            color:#FF0099;
+            margin-left:15px;
+        }
     }
     @media (min-width:1600px){ 
         display:flex;

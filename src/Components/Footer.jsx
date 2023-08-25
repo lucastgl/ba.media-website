@@ -4,14 +4,16 @@ import vimeo from "../Images/vimeo.png";
 import instagram from "../Images/instagram.png";
 import linkedin from "../Images/linkedin.png";
 import { useEffect, useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LenguageContext } from "../Context/LanguagesContext"; 
 
 const Footer = () => {
     const [showAnimate, setShowAnimate] = useState(false);
     const [animationShown, setAnimationShown] = useState(false);
-    const PercentageMin = 0.3;
+    const PercentageMin = 1;
     const { state } = useContext(LenguageContext);
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -32,16 +34,38 @@ const Footer = () => {
         };
     }, [animationShown]);
 
-    const handleLinkClick = (targetId) => {
-        if (window.location.pathname === "/") {
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: "smooth" });
-            }
-        } else {
-            window.location.href = `/`;
-        }
+    const handleLinkClick = async (event, targetId) => {
+      event.preventDefault();
+  
+      const scrollWhenReady = (element) => {
+          const observer = new IntersectionObserver((entries) => {
+              if (entries[0].isIntersecting) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                  observer.disconnect();
+              }
+          }, {
+              root: null,
+              rootMargin: '0px',
+              threshold: 0.1
+          });
+  
+          observer.observe(element);
+      }
+  
+      if (window.location.pathname !== "/") {
+          await navigate('/');
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+              scrollWhenReady(targetElement);
+          }
+      } else {
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+              targetElement.scrollIntoView({ behavior: "smooth" });
+          }
+      }
     };
+  
   
     return (
         <>
@@ -61,8 +85,8 @@ const Footer = () => {
                   <Div>
                     <h4>EXPLORA</h4>
                     <p><Link to="/projects">Proyectos</Link></p>
-                    <p><a href="#partners" onClick={() => handleLinkClick('partners')}>Socios</a></p>
-                    <p><a href="#team" onClick={() => handleLinkClick('team')}>Nosotros</a></p>
+                    <p><a href="#partners" onClick={(e) => handleLinkClick(e, 'partners')}>Socios</a></p>
+                    <p><a href="#team" onClick={(e) => handleLinkClick(e, 'team')}>Nosotros</a></p>
                   </Div>
                   <Div>
                     <h4>CONTACTO</h4>
@@ -76,8 +100,8 @@ const Footer = () => {
                   <Div>
                     <h4>EXPLORE</h4>
                     <p><Link to="/projects">Projects</Link></p>
-                    <p><a href="#partners" onClick={() => handleLinkClick('partners')}>Partners</a></p>
-                    <p><a href="#team" onClick={() => handleLinkClick('team')}>Us</a></p>
+                    <p><a href="#partners" onClick={(e) => handleLinkClick(e, 'partners')}>Partners</a></p>
+                    <p><a href="#team" onClick={(e) => handleLinkClick(e, 'team')}>Us</a></p>
                   </Div>
                   <Div>
                     <h4>CONTACT</h4>

@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     const { state, dispatch } = useContext(LenguageContext);
 
+
     const toggleLanguage = () => {
         dispatch({ type: 'lenguage' });
     };
