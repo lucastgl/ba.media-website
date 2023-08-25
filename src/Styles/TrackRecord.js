@@ -115,7 +115,8 @@ export const H5 = styled.h5`
         text-align:left;
         margin-left:85px;
         position:relative;
-        bottom:180px;
+        bottom:150px;
+        margin-bottom:8px;
     }
     @media (min-width:1600px){                       
         font-size:0.9rem;
