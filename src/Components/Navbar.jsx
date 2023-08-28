@@ -3,12 +3,13 @@ import BAM from "../Images/BAM.webp";
 import { Container, LogContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wrapper, StyledLink, Select, Option } from '../Styles/NavbarComponents';
 import { FaBars, FaTimes } from "react-icons/fa";
 import { LenguageContext } from '../Context/LanguagesContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+    
     const { state, dispatch } = useContext(LenguageContext);
-
-
     const toggleLanguage = () => {
         dispatch({ type: 'lenguage' });
     };
@@ -16,6 +17,7 @@ const Navbar = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
     const [showNavbar, setShowNavbar] = useState(true);
     const [scrollPos, setScrollPos] = useState(window.scrollY);
+    const [targetToScroll, setTargetToScroll] = useState(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -31,18 +33,42 @@ const Navbar = () => {
         };
     }, [scrollPos]);
 
+    useEffect(() => {
+        if (targetToScroll && location.pathname === '/') {
+            const targetElement = document.getElementById(targetToScroll);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+            setTargetToScroll(null);
+        }
+    }, [location.pathname, targetToScroll]);
+
     const handleLinkClick = (event, targetId) => {
         event.preventDefault();
         setShowMobileMenu(false);
         
-        if (window.location.pathname === '/') {
+        if (location.pathname === '/projects') {
+            setTargetToScroll(targetId);
+            navigate('/');
+        } else if (location.pathname === '/') {
             const targetElement = document.getElementById(targetId);
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: "smooth" });
             }
-        } else {
-            window.location.href = `/`;
         }
+    };
+
+    const handleMenuItemClick = (event, defaultId, mobileId) => {
+        const targetId = window.innerWidth <= 724 ? mobileId : defaultId;
+        handleLinkClick(event, targetId);
+    };
+
+    const scrollToBottom = () => {
+        setShowMobileMenu(false);
+        window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: 'smooth'
+        });
     };
 
     return (
@@ -70,18 +96,18 @@ const Navbar = () => {
                         </StyledLink>
                     </MenuItem>
                     <MenuItem>
-                        <MenuItemLink onClick={(event) => handleLinkClick(event, 'partners')} >
+                        <MenuItemLink onClick={(event) => handleMenuItemClick(event, 'team', 'partners')} >
                             {state.lenguage ?  "Socios" : "Partners"}
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
-                        <MenuItemLink onClick={(event) => handleLinkClick(event, 'team')}>
+                        <MenuItemLink onClick={(event) => handleMenuItemClick(event, 'trackrecord', 'team')}>
                             {state.lenguage ?  "Nosotros" : "Us"}
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
-                        <MenuItemLink onClick={(event) => handleLinkClick(event, 'footer')}>
-                            { state.lenguage ?  "Contacto" : "Contact"}
+                        <MenuItemLink onClick={scrollToBottom}>
+                            {state.lenguage ?  "Contacto" : "Contact"}
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
@@ -109,4 +135,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;
