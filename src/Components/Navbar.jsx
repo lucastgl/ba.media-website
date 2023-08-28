@@ -59,7 +59,14 @@ const Navbar = () => {
     };
 
     const handleMenuItemClick = (event, defaultId, mobileId) => {
-        const targetId = window.innerWidth <= 724 ? mobileId : defaultId;
+        let targetId;
+    
+        if (location.pathname === '/') {
+            targetId = mobileId;
+        } else {
+            targetId = window.innerWidth <= 724 ? mobileId : defaultId;
+        }
+    
         handleLinkClick(event, targetId);
     };
 
@@ -113,18 +120,19 @@ const Navbar = () => {
                     <MenuItem>
                         <MenuItemLink>
                             <Select onChange={toggleLanguage}  onClick={()=>{state.language ? 'ES' : 'EN'}}>
-                                {state.language ? (
-                                    <>
-                                    <Option value="EN" >EN</Option>
-                                    <Option value="ES" >ES</Option>
-                                    </>
-                                ) 
-                                : (
-                                    <>
-                                    <Option value="ES" >ES</Option>
-                                    <Option value="EN" >EN</Option>
-                                    </>
-                                )
+                                {
+                                    state.language ? (
+                                        <>
+                                            <Option value="EN" >EN</Option>
+                                            <Option value="ES" >ES</Option>
+                                        </>
+                                    ) 
+                                    : (
+                                        <>
+                                            <Option value="ES" >ES</Option>
+                                            <Option value="EN" >EN</Option>
+                                        </>
+                                    )
                                 }
                             </Select>
                         </MenuItemLink>

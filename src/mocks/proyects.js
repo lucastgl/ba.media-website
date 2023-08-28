@@ -33,6 +33,7 @@ export const gallery = [
     image: BakeOffimage,
     title: "Bake Off Celebrity",
     country: "USA",
+    pais: "USA",
     episodes: 8,
   },
   {
@@ -40,6 +41,7 @@ export const gallery = [
     image: ElDomoimage,
     title: "El Domo del Dinero",
     country: "USA",
+    pais: "USA",
     episodes: 62,
     video : "https://player.vimeo.com/video/823204915?h=4ce39c3df9"
   },
@@ -48,6 +50,7 @@ export const gallery = [
     image: QatarLatinoimage,
     title: "Qatar Latino",
     country: "USA",
+    pais: "USA",
     episodes: 4,
     video: "https://player.vimeo.com/video/823205630?h=567e4e2e7f"
   },
@@ -56,6 +59,7 @@ export const gallery = [
     image: Elementoimage,
     title: "4 Elementos",
     country: "México",
+    pais: "USA",
     episodes: 80,
     video: "https://player.vimeo.com/video/823205728?h=d18ebf0363"
   },
@@ -64,6 +68,7 @@ export const gallery = [
     image: ElToqueimage,
     title: "El toque de Aarón",
     country: "USA",
+    pais: "USA",
     episodes: 6,
     video: "https://player.vimeo.com/video/823205102?h=dba6ec73f7"
   }

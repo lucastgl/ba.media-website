@@ -62,7 +62,7 @@ const ProyectPageDetail = ({ productSelected, onClose }) => {
                                 <p>
                                     {state.lenguage 
                                         ? 
-                                        <>Pais: {proyect.country}</> 
+                                        <>Paises: {proyect.country}</> 
                                         :
                                         <>Country: {proyect.country}</> 
                                     }
