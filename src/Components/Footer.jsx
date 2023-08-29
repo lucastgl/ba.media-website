@@ -99,7 +99,7 @@ const Footer = () => {
                   <>
                   <Div>
                     <h4>EXPLORE</h4>
-                    <p><Link to="/projects">Projects</Link></p>
+                    <p><Link to="/projects" onClick={()=>{window.scrollTo(0,0);}}>Projects</Link></p>
                     <p><a href="#partners" onClick={(e) => handleLinkClick(e, 'partners')}>Partners</a></p>
                     <p><a href="#team" onClick={(e) => handleLinkClick(e, 'team')}>Us</a></p>
                   </Div>
