@@ -84,7 +84,7 @@ const Footer = () => {
                   <>
                   <Div>
                     <h4>EXPLORA</h4>
-                    <p><Link to="/projects">Proyectos</Link></p>
+                    <p><Link to="/projects" onClick={()=>{window.scrollTo(0,0);}}>Proyectos</Link></p>
                     <p><a href="#partners" onClick={(e) => handleLinkClick(e, 'partners')}>Socios</a></p>
                     <p><a href="#team" onClick={(e) => handleLinkClick(e, 'team')}>Nosotros</a></p>
                   </Div>

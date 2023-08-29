@@ -90,13 +90,13 @@ const Navbar = () => {
                 <Menu open={showMobileMenu}>
                     <MenuItem>
                         <StyledLink to="/">
-                            <MenuItemLink onClick={()=> setShowMobileMenu(false)}>
+                            <MenuItemLink onClick={()=> {setShowMobileMenu(false); window.scrollTo(0,0);}}>
                                 Home
                             </MenuItemLink>
                         </StyledLink>
                     </MenuItem>
                     <MenuItem>
-                        <StyledLink to="/projects" onClick={()=> setShowMobileMenu(false)}>
+                        <StyledLink to="/projects" onClick={()=> {setShowMobileMenu(false); window.scrollTo(0,0);}}>
                             <MenuItemLink>
                                 {state.lenguage ?  "Proyectos" : "Projects"}
                             </MenuItemLink>
