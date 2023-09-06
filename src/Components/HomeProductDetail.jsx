@@ -57,7 +57,14 @@ const HomeProductDetail = ({ productSelected, onClose }) => {
                             </GallerySection>
                             <DetailSection>
                                 <h2>{proyect.title}</h2>
-                                <p>{proyect.country}</p>
+                                <p>
+                                    {state.lenguage
+                                        ?
+                                        proyect.pais
+                                        :
+                                        proyect.country
+                                    }
+                                </p>
                                 <p>
                                     {state.lenguage 
                                         ? 

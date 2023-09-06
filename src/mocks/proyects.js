@@ -1,7 +1,7 @@
 import MasterChefimage from "../Images/MASTERCHEF.jpeg"
 import BakeOffimage from "../Images/BAKEOFF.jpg"
 import ElDomoimage from "../Images/ELDOMODELDINERO.jpg"
-import QatarLatinoimage from "../Images/qatar.png"
+import QatarLatinoimage from "../Images/QATAR_LATINO_NEW.jpg"
 import Elementoimage from "../Images/4ELEMENTOS.jpg"
 import ElToqueimage from "../Images/ELTOQUEDEAARON.jpg"
 import elSaborDeAaron from "../Images/elsabordearon.png";
@@ -11,7 +11,7 @@ import laColeccion from "../Images/LACOLECCION.jpg";
 import myManCan from "../Images/MYMANCAN.jpg";
 import goalStars from "../Images/GOALSTARS.jpg"
 import nerdeala from "../Images/NERDEARLA.jpg"
-import foodSound from "../Images/foodsound.png"
+import foodSound from "../Images/FOOD_SOUND_NEW.jpg"
 import exodo from "../Images/EXODO.jpg"
 import tucumanLate from "../Images/TUCUMANLATE.jpg"
 import elGranBartender from "../Images/ELGRANBARTENDER.jpg"
@@ -23,8 +23,8 @@ export const gallery = [
     id: 1,
     image: MasterChefimage,
     title: "MasterChef",
-    country: "6 countries",
-    pais: "6 paises",
+    country: "Countries: Bolivia/ Uruguay/ Paraguay/ Dominican Republic/ Argentina/ USA.",
+    pais: "Países: Bolivia/ Uruguay/ Paraguay/ República Dominicana/ Argentina/ USA.",
     episodes: 120,
     video: "https://player.vimeo.com/video/823205473?h=a7a62002c6"
   },
@@ -32,16 +32,16 @@ export const gallery = [
     id: 2,
     image: BakeOffimage,
     title: "Bake Off Celebrity",
-    country: "USA",
-    pais: "USA",
+    country: "Country: USA",
+    pais: "País: USA",
     episodes: 8,
   },
   {
     id: 3,
     image: ElDomoimage,
     title: "El Domo del Dinero",
-    country: "USA",
-    pais: "USA",
+    country: "Country: USA",
+    pais: "País: USA",
     episodes: 62,
     video : "https://player.vimeo.com/video/823204915?h=4ce39c3df9"
   },
@@ -49,8 +49,8 @@ export const gallery = [
     id: 4,
     image: QatarLatinoimage,
     title: "Qatar Latino",
-    country: "USA",
-    pais: "USA",
+    country: "Country: USA",
+    pais: "País: USA",
     episodes: 4,
     video: "https://player.vimeo.com/video/823205630?h=567e4e2e7f"
   },
@@ -58,8 +58,8 @@ export const gallery = [
     id: 5,
     image: Elementoimage,
     title: "4 Elementos",
-    country: "México",
-    pais: "USA",
+    country: "Country: Mexico",
+    pais: "País: México",
     episodes: 80,
     video: "https://player.vimeo.com/video/823205728?h=d18ebf0363"
   },
@@ -67,8 +67,8 @@ export const gallery = [
     id: 6,
     image: ElToqueimage,
     title: "El toque de Aarón",
-    country: "USA",
-    pais: "USA",
+    country: "Country: USA",
+    pais: "País: USA",
     episodes: 6,
     video: "https://player.vimeo.com/video/823205102?h=dba6ec73f7"
   }
@@ -79,7 +79,8 @@ export const galleryPage = [
     id: 1,
     image: MasterChefimage,
     title: "MasterChef",
-    country: "Bolivia/ Uruguay/ Paraguay/ Dominican Republic/ Argentina/ USA",
+    country: "Countries: Bolivia/ Uruguay/ Paraguay/ Dominican Republic/ Argentina/ USA",
+    pais: "Países: Bolivia/ Uruguay/ Paraguay/ Dominican Republic/ Argentina/ USA",
     network: " Canal 10/ Telefuturo/ Tele sistemas/ Telefe/ Estrella Tv/ Unitel",
     genre:"Talent Show",
     episodes: "120+",
@@ -89,7 +90,8 @@ export const galleryPage = [
     id: 2,
     image: BakeOffimage,
     title: "Bake Off Celebrity México",
-    country: "Mexico",
+    country: "Country: Mexico",
+    pais: "País: México",
     network: "HBO Max",
     genre : "Talent Show",
     episodes: 8
@@ -98,7 +100,8 @@ export const galleryPage = [
     id: 3,
     image: ElDomoimage,
     title: "El Domo del Dinero",
-    country: "USA",
+    country: "Country: USA",
+    pais: "País: USA",
     network: "Telemundo",
     genre:"Entertainment",
     season : 1,
@@ -109,7 +112,8 @@ export const galleryPage = [
     id: 4,
     image: ElToqueimage,
     title: "El toque de Aarón",
-    country: "USA",
+    country: "Country: USA",
+    pais: "País: USA",
     network: "Discovery Familia",
     genre:"Entertainment",
     season: 1,
@@ -121,7 +125,8 @@ export const galleryPage = [
     id: 5,
     image: QatarLatinoimage,
     title: "Qatar Latino",
-    country: "USA",
+    country: "Country: USA",
+    pais: "País: USA",
     network: "Discovery Familia",
     genre:"Entertainment",
     season: 1,
@@ -132,7 +137,9 @@ export const galleryPage = [
     id: 6,
     image: Elementoimage,
     title: "4 Elementos",
-    country: "México",
+    country: "Country: Mexico",
+    pais: "País: México",
+    ountry: "País: México",
     network: "Televisa",
     genre:"Entertainment",
     episodes: 80,
@@ -145,7 +152,8 @@ export const galleryPage = [
     id: 7,
     image: elSaborDeAaron,
     title: "El sabor de Aarón",
-    country: "USA",
+    country: "Country: USA",
+    pais: "País: USA",
     network: "Discovery Familia",
     genre:"Entertainment",
     episodes: 6,
@@ -156,7 +164,8 @@ export const galleryPage = [
     id: 8,
     image: offline,
     title: "Offline",
-    country: "USA",
+    country: "Country: USA",
+    pais: "País: USA",
     network: "BYU TV",
     genre:"Reality",
     episodes: 12,
@@ -166,7 +175,8 @@ export const galleryPage = [
     id: 9,
     image: perdidosEnLaTribu,
     title: "Perdidos en la Tribu",
-    country: "Argentina, Belgium, Denmark & Sweden",
+    country: "Countries: Argentina, Belgium, Denmark & Sweden",
+    pais: "Países: Argentina, Bélgica , Dinamarca & Suecia",
     network: "Telefe, TV3 & Kanal 5",
     genre:"Entertainment"
   },
@@ -174,7 +184,8 @@ export const galleryPage = [
     id: 10,
     image: laColeccion,
     title: "La Colección",
-    country: "Argentina",
+    country: "Country: Argentina",
+    pais: "País: Argentina",
     network: "Telefe",
     genre:"Branded Content",
     episodes: 6,
@@ -184,7 +195,8 @@ export const galleryPage = [
     id: 11,
     image: myManCan,
     title: "My Man Can",
-    country: "USA",
+    country: "Country: USA",
+    pais: "País: USA",
     network: "ABC",
     genre:"Entertainment",
     episodes: 6,
@@ -193,7 +205,8 @@ export const galleryPage = [
     id: 12,
     image: goalStars,
     title: "Goal Stars",
-    country: "Israel",
+    country: "Country: Israel",
+    pais: "País: Israel",
     network: "HOT TV",
     genre:"Reality/Comedy",
     episodes: 30,
@@ -202,7 +215,8 @@ export const galleryPage = [
     id: 13,
     image: nerdeala,
     title: "Nerdeala",
-    country: "Argentina",
+    country: "Country: Argentina",
+    pais: "País: Argentina",
     location: "Konex",
     streamLiveEvent: "conferences & workshops",
     days: 5
@@ -211,7 +225,8 @@ export const galleryPage = [
     id: 14,
     image: foodSound,
     title: "Food Sound",
-    country: "Argentina",
+    country: "Country: Argentina",
+    pais: "País: Argentina",
     location : "Costanera Vicente López",
     liveEvent : "Food & music Festival",
     days: 2,
@@ -222,7 +237,8 @@ export const galleryPage = [
     image: exodo,
     title: "Éxodo",
     location: "Provincial Government of Jujuy",
-    country: "Argentina",
+    country: "Country: Argentina",
+    pais: "País: Argentina",
     genre:"4D Experience",
     video: "https://player.vimeo.com/video/823205213?h=1507ec3d31"
   },
@@ -230,7 +246,8 @@ export const galleryPage = [
     id: 16,
     image: tucumanLate,
     title: "Tucuman Late",
-    country: "Argentina",
+    country: "Country: Argentina",
+    pais: "País: Argentina",
     location : "Tucumán Racetrack",
     liveEvent: "Music and Food Festival",
     days: 3,
@@ -240,7 +257,8 @@ export const galleryPage = [
     id: 17,
     image: elGranBartender,
     title: "El Gran Bartender",
-    country: "Argentina",
+    country: "Country: Argentina",
+    pais: "País: Argentina",
     network: "Telefe",
     genre:"Talent Show",
     episodes: 32,
@@ -249,7 +267,8 @@ export const galleryPage = [
     id: 18,
     image: elEmprendedorDelMillon,
     title: "El Emprendedor del Millón",
-    country: "Argentina",
+    country: "Country: Argentina",
+    pais: "País: Argentina",
     network: "Telefe",
     genre:"Talent Show",
     episodes: 13,

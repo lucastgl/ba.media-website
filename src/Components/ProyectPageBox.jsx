@@ -2,7 +2,7 @@ import {Container,ImageContainer, Image, InfoText} from "../Styles/ProyectsPageB
 import { LenguageContext } from '../Context/LanguagesContext';
 import { useContext } from 'react';
 
-const ProyectPageBox = ({handleClick, image, title, episodes, country, genre, network, liveEvent, days, location, season,streamLiveEvent,id}) =>{
+const ProyectPageBox = ({handleClick, image, title, episodes, country, pais, genre, network, liveEvent, days, location, season,streamLiveEvent,id}) =>{
   const {state} = useContext(LenguageContext);
   return (
       <Container onClick={()=>{handleClick(id)}}>
@@ -13,9 +13,9 @@ const ProyectPageBox = ({handleClick, image, title, episodes, country, genre, ne
           <InfoText>
             {state.lenguage 
               ? 
-              <>Pais: {country}</> 
+              <>{pais}</> 
               :
-              <>Country: {country}</> 
+              <>{country}</> 
               }
           </InfoText>
           {network && 
