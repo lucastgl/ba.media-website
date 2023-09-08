@@ -35,38 +35,6 @@ const Footer = () => {
       };
   }, [animationShown]);
 
-  const handleLinkClick = async (event, targetId) => {
-    event.preventDefault();
-
-    const scrollWhenReady = (element) => {
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                element.scrollIntoView({ behavior: "smooth" });
-                observer.disconnect();
-            }
-        }, {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        });
-
-        observer.observe(element);
-    }
-
-    if (window.location.pathname !== "/") {
-        await navigate('/');
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          scrollWhenReady(targetElement);
-        }
-    } else {
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: "smooth" });
-        }
-    }
-  };
-  
   
   return (
     <>

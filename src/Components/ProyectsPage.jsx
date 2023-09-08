@@ -1,4 +1,4 @@
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import {H1, P,GalleryBox } from "../Styles/Proyects.js";
 import ProyectPageBox from "./ProyectPageBox";
 import ProyectPageDetail from "./ProyectPageDetail";
@@ -41,7 +41,7 @@ const ProyectsPage = () => {
         ))
       }
     </GalleryBox>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   )
 }
