@@ -4,7 +4,7 @@ import vimeo from "../Images/vimeo.png";
 import instagram from "../Images/instagram.png";
 import linkedin from "../Images/linkedin.png";
 import { useEffect, useState, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { LenguageContext } from "../Context/LanguagesContext"; 
 
 const Footer = () => {
@@ -14,27 +14,62 @@ const Footer = () => {
   const PercentageMin = 1;
   const { state } = useContext(LenguageContext);
   const navigate = useNavigate();
-
+  const location = useLocation();
+  const [targetToScroll, setTargetToScroll] = useState(null);
 
   useEffect(() => {
-      const handleScroll = () => {
-          const partnersSection = document.getElementById('footer');
-          if (partnersSection && !animationShown) {
-              const rect = partnersSection.getBoundingClientRect();
-              const scrollMin = partnersSection.offsetHeight * PercentageMin;
-              const isVisible = rect.top < window.innerHeight - scrollMin && rect.bottom >= scrollMin;
-              if (isVisible) {
-                  setShowAnimate(true);
-                  setAnimationShown(true);
-              }
-          }
-      };
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-          window.removeEventListener('scroll', handleScroll);
-      };
+    const handleScroll = () => {
+      const partnersSection = document.getElementById('footer');
+      if (partnersSection && !animationShown) {
+        const rect = partnersSection.getBoundingClientRect();
+        const scrollMin = partnersSection.offsetHeight * PercentageMin;
+        const isVisible = rect.top < window.innerHeight - scrollMin && rect.bottom >= scrollMin;
+        if (isVisible) {
+          setShowAnimate(true);
+          setAnimationShown(true);
+        }
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [animationShown]);
 
+  useEffect(() => {
+    if (targetToScroll && location.pathname === '/') {
+      const targetElement = document.getElementById(targetToScroll);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+      setTargetToScroll(null);
+    }
+  }, [location.pathname, targetToScroll]);
+
+  const handleLinkClick = (event, targetId) => {
+    event.preventDefault();
+    
+    if (location.pathname === '/projects') {
+      setTargetToScroll(targetId);
+      navigate('/');
+    } else if (location.pathname === '/') {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
+  const handleMenuItemClick = (event, defaultId, mobileId) => {
+    let targetId;
+
+    if (location.pathname === '/') {
+      targetId = mobileId;
+    } else {
+      targetId = window.innerWidth <= 724 ? mobileId : defaultId;
+    }
+    handleLinkClick(event, targetId);
+  };
   
   return (
     <>
@@ -54,8 +89,8 @@ const Footer = () => {
                 <Div>
                   <h4>EXPLORA</h4>
                   <p><Link to="/projects" onClick={()=>{window.scrollTo(0,0);}}>Proyectos</Link></p>
-                  <p><a href="#partners" onClick={(e) => handleLinkClick(e, 'partners')}>Socios</a></p>
-                  <p><a href="#team" onClick={(e) => handleLinkClick(e, 'team')}>Nosotros</a></p>
+                  <p><a href="#partners" onClick={(event) => handleMenuItemClick(event, 'team', 'partners')}>Socios</a></p>
+                  <p><a href="#team" onClick={(event) => handleMenuItemClick(event, 'trackrecord', 'team')}>Nosotros</a></p>
                 </Div>
                 <Div>
                   <h4>CONTACTO</h4>
@@ -69,8 +104,8 @@ const Footer = () => {
                 <Div>
                   <h4>EXPLORE</h4>
                   <p><Link to="/projects" onClick={()=>{window.scrollTo(0,0);}}>Projects</Link></p>
-                  <p><a href="#partners" onClick={(e) => handleLinkClick(e, 'partners')}>Partners</a></p>
-                  <p><a href="#team" onClick={(e) => handleLinkClick(e, 'team')}>Us</a></p>
+                  <p><a href="#partners" onClick={(event) => handleMenuItemClick(event, 'team', 'partners')}>Partners</a></p>
+                  <p><a href="#team" onClick={(event) => handleMenuItemClick(event, 'trackrecord', 'team')}>Us</a></p>
                 </Div>
                 <Div>
                   <h4>CONTACT</h4>

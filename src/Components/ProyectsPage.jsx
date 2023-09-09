@@ -1,4 +1,3 @@
-// import Footer from "./Footer";
 import {H1, P,GalleryBox } from "../Styles/Proyects.js";
 import ProyectPageBox from "./ProyectPageBox";
 import ProyectPageDetail from "./ProyectPageDetail";
@@ -13,35 +12,34 @@ const ProyectsPage = () => {
 
   return (
     <>
-    <div style={{position: "relative"}}>
-      <ProyectPageDetail productSelected={productSelected} onClose={()=>setProductSelected(undefined)}/>
-    </div>
-    {
-      state.lenguage ? (
-        <>
-          <H1 id="inicio" >Proyectos</H1>
-          <P>Descubrí nuestros proyectos audiovisuales de <span>gran impacto</span> </P>
-        </>
-      ) : 
-      (
-        <>
-          <H1 id="inicio">Projects</H1>
-          <P>Discover our high-impact <span> audiovisual projects.</span> </P>
-        </>
-      )
-    }
-    <GalleryBox >
+      <div style={{position: "relative"}}>
+        <ProyectPageDetail productSelected={productSelected} onClose={()=>setProductSelected(undefined)}/>
+      </div>
       {
-        galleryPage.map((proyect) => (
-          <ProyectPageBox 
-            key={galleryPage.id}
-            {... proyect}
-            handleClick={setProductSelected}>
-          </ProyectPageBox>
-        ))
+        state.lenguage ? (
+          <>
+            <H1 id="inicio">Proyectos</H1>
+            <P>Descubrí nuestros proyectos audiovisuales de <span>gran impacto</span> </P>
+          </>
+        ) : 
+        (
+          <>
+            <H1 id="inicio">Projects</H1>
+            <P>Discover our high-impact <span> audiovisual projects.</span> </P>
+          </>
+        )
       }
-    </GalleryBox>
-    {/* <Footer/> */}
+      <GalleryBox >
+        {
+          galleryPage.map((proyect) => (
+            <ProyectPageBox 
+              key={galleryPage.id}
+              {... proyect}
+              handleClick={setProductSelected}>
+            </ProyectPageBox>
+          ))
+        }
+      </GalleryBox>
     </>
   )
 }
