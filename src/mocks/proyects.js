@@ -80,7 +80,7 @@ export const galleryPage = [
     image: MasterChefimage,
     title: "MasterChef",
     country: "Countries: Bolivia/ Uruguay/ Paraguay/ Dominican Republic/ Argentina/ USA",
-    pais: "Países: Bolivia/ Uruguay/ Paraguay/ Republica Dominicana/ Argentina/ USA",
+    pais: "Países: Bolivia/ Uruguay/ Paraguay/ República Dominicana/ Argentina/ USA",
     network: " Canal 10/ Telefuturo/ Tele sistemas/ Telefe/ Estrella Tv/ Unitel",
     genre:"Talent Show",
     episodes: "120+",
