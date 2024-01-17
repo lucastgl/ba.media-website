@@ -16,6 +16,7 @@ const reducer = (state, action) => {
 export const LenguageContext = createContext();
 
 const LenguageContextProvider = ({children}) => {
+    //ejemplo para ezequiel
     const [state, dispatch] = useReducer(reducer, initialState);
 
     return(
