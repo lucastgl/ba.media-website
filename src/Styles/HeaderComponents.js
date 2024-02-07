@@ -73,35 +73,39 @@ export const Title = styled.div`
     @media screen and  (min-width: 725px) and (max-width: 1599px){
         display: flex;
         align-items: center;
+        justify-content: center;
+        scale: 1.1;
         height: 50%;
         img{
             height: 180px;
         }
-        img:first-child {
-            right: -40px; 
-            padding-top: 25px;
-        }
-        img:last-child {
-            left: -30px; 
-            padding-top: 25px;
-        }
+        // img:first-child {
+        //     right: -40px; 
+        //     padding-top: 25px;
+        // }
+        // img:last-child {
+        //     left: -30px; 
+        //     padding-top: 25px;
+        // }
     }
     @media (min-width:1600px){ 
         display: flex;
         align-items: center;
+        justify-content: center;
+        scale: 1.3;
         width: 50%;
         height: 50%;
         img{
             height: 150px;
         }
-        img:first-child {
-            right: -40px; 
-            padding-top: 25px;
-        }
-        img:last-child {
-            left: -25px; 
-            padding-top: 25px;
-        }
+        // img:first-child {
+        //     right: -40px; 
+        //     padding-top: 25px;
+        // }
+        // img:last-child {
+        //     left: -25px; 
+        //     padding-top: 25px;
+        // }
     }
 `;
 

@@ -71,13 +71,19 @@ const Partners = () =>{
           state.lenguage ? (
             <>
             <H5 showAnimate={showAnimate}>CONFIANZA, CALIDAD Y RESULTADOS</H5> 
-            <H3 showAnimate={showAnimate}>Nuestros <span> socios</span><GIF src={gif2} alt=""/></H3>
+            <H3 showAnimate={showAnimate}>
+              Nuestros <span> socios</span>
+              {/* <GIF src={gif2} alt=""/> */}
+            </H3>
             </>
           ) :
           (
             <>
             <H5 showAnimate={showAnimate}>TRUST, QUALITY AND RESULTS</H5> 
-            <H3 showAnimate={showAnimate}>Our <span>partners</span><GIF src={gif2} alt=""/></H3>
+            <H3 showAnimate={showAnimate}>
+              Our <span>partners</span>
+              {/* <GIF src={gif2} alt=""/> */}
+            </H3>
             </>
           )
         }

@@ -84,6 +84,7 @@ export const H5 = styled.p`
         margin-left:75px;
         position:relative;
         top:40px;
+        margin-bottom: 20px;
     }
     @media (min-width:1600px){                       
         font-size:0.9rem;
@@ -91,6 +92,7 @@ export const H5 = styled.p`
         position:relative;
         top:40px;
         text-align:left;
+        margin-bottom: 20px;
     }
 `
 export const GIF = styled.img`

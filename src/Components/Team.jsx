@@ -1,8 +1,7 @@
 import { useState,useEffect, useContext } from "react";
-import manolo from "../Images/MANOLO.jpg";
-import gustavo from "../Images/GUSTAVO.jpg";
-import jochi from "../Images/JOCHI.jpg";
-import martin from "../Images/MARTIN.jpg";
+import manolo from "../Images/MANOLO-PROFILE.jpg";
+import jochi from "../Images/JOSEFINA-PROFILE.jpg";
+import martin from "../Images/MARTIN-PROFILE.jpg";
 import { DivContent,Div,H3, H4, P } from "../Styles/Team";
 import { LenguageContext } from "../Context/LanguagesContext";
 
@@ -47,11 +46,11 @@ function Team(){
                 <H4 showAnimate={showAnimate}>Juan M. Urdampilleta </H4>
                 <P showAnimate={showAnimate}>CEO & Founder</P>
             </Div>
-            <Div>
+            {/* <Div>
                 <img src={gustavo} alt="" />
                 <H4 showAnimate={showAnimate}>Gustavo N. Perednik</H4>
                 <P showAnimate={showAnimate}>CCO & Founder</P>
-            </Div>
+            </Div> */}
             <Div>
                 <img src={jochi} alt="" />
                 <H4 showAnimate={showAnimate}>Jochi Urdampilleta </H4>

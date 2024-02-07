@@ -120,7 +120,7 @@ export const H5 = styled.h5`
         margin-left:85px;
         position:relative;
         bottom:150px;
-        margin-bottom:8px;
+        margin-bottom: 20px;
     }
     @media (min-width:1600px){                       
         font-size:0.9rem;
@@ -128,7 +128,7 @@ export const H5 = styled.h5`
         margin-left:345px;
         position:relative;
         font-weight: 900;
-        margin-bottom:0px;
+        margin-bottom: 20px;
         top:30px;
         bottom:0px;
     }
